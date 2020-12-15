@@ -21,9 +21,17 @@ module.exports = {
         path: 'content/landing/**/*.md',
         typeName: 'LandingSection'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/pages/**/*.md',
+        typeName: 'PageA'
+      }
     }
   ],
   templates: {
-    BlogPost: '/blog/:slug'
+    BlogPost: '/blog/:slug',
+    PageA: '/:slug'
   }
 }
