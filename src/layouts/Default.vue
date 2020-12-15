@@ -6,8 +6,13 @@
       </strong>
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/course/">Course</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
+        <a class="nav__link" href="https://lab.quantumflytrap.com"
+          >Virtual Lab</a
+        >
+        <g-link class="nav__link" to="/course/">Quantum Course</g-link>
+        <g-link class="nav__link" to="/scientists/">For Scientists</g-link>
+        <g-link class="nav__link" to="/invest/">For Investors</g-link>
+        <g-link class="nav__link" to="/press/">Press Kit</g-link>
       </nav>
     </header>
     <slot />

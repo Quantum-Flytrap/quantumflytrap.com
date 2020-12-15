@@ -5,33 +5,33 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Quantum Lab',
-  siteDescription: 'A simple blog designed with Gridsome',
+  siteName: "Quantum Flytrap",
+  siteDescription: "A simple blog designed with Gridsome",
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'content/posts/**/*.md',
-        typeName: 'BlogPost'
-      }
+        path: "content/posts/**/*.md",
+        typeName: "BlogPost",
+      },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'content/landing/**/*.md',
-        typeName: 'LandingSection'
-      }
+        path: "content/landing/**/*.md",
+        typeName: "LandingSection",
+      },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'content/pages/**/*.md',
-        typeName: 'PageA'
-      }
-    }
+        path: "content/pages/**/*.md",
+        typeName: "PageA",
+      },
+    },
   ],
   templates: {
-    BlogPost: '/blog/:slug',
-    PageA: '/:slug'
-  }
-}
+    BlogPost: "/blog/:slug",
+    PageA: "/:slug",
+  },
+};
