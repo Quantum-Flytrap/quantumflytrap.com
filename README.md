@@ -1,14 +1,21 @@
-# Default starter for Gridsome
+# Quantum Flytrap landing page
 
-This is the project you get when you run `gridsome create new-project`.
+It uses [Gridsome](https://gridsome.org/).
 
-### 1. Install Gridsome CLI tool if you don't have
+## Install & run locally
 
-`npm install --global @gridsome/cli`
+Install Gridsome CLI globally: `yarn global add @gridsome/cli` (or `npm install --global @gridsome/cli`).
 
-### 2. Create a Gridsome project
+Then to clone and install dependencies:
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+```{bash}
+git clone git@github.com:Quantum-Game/quantumflytrap.com.git
+cd quantumflytrap.com
+yarn
+```
+
+To run it `gridsome develop` to start a local dev server at `http://localhost:8080`
+
+## Deployment
+
+Right now it is automatically deployed (from the `master` branch) to Neltify.
