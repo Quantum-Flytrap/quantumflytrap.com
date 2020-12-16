@@ -1,21 +1,25 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <a class="nav__link" href="https://lab.quantumflytrap.com"
-          >Virtual Lab</a
-        >
-        <g-link class="nav__link" to="/course/">Quantum Course</g-link>
-        <g-link class="nav__link" to="/scientists/">For Scientists</g-link>
-        <g-link class="nav__link" to="/invest/">For Investors</g-link>
-        <g-link class="nav__link" to="/press/">Press Kit</g-link>
-      </nav>
+  <div>
+    <header class="bg-brand-violet text-white">
+      <div class="container mx-auto px-4 flex-row">
+        <nav class="nav flex flex-row space-x-10 uppercase">
+          <g-link to="/">
+            <g-image
+              src="~/imgs/QF_logo_wave.png"
+              width="100"
+              :alt="$static.metadata.siteName"
+          /></g-link>
+          <a href="https://lab.quantumflytrap.com">Virtual Lab</a>
+          <g-link to="/course/">Quantum Course</g-link>
+          <g-link to="/scientists/">For Scientists</g-link>
+          <g-link to="/invest/">For Investors</g-link>
+          <g-link to="/press/">Press Kit</g-link>
+        </nav>
+      </div>
     </header>
-    <slot />
+    <main>
+      <slot />
+    </main>
   </div>
 </template>
 
@@ -31,27 +35,10 @@ query {
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
+.nav a {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
 }
 </style>
