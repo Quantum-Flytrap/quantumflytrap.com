@@ -2,18 +2,23 @@
   <Layout>
     <section class="bg-brand-violet">
       <div class="container mx-auto px-4 flex-row py-20">
-        <div class="flex flex-row space-x-4">
-          <g-image alt="Experiment" src="~/imgs/experiment-1.png" />
-          <div class="flex-1 prose text-white p-16">
+        <div
+          class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-4 items-stretch"
+        >
+          <div class="flex items-center">
+            <g-image alt="Experiment" src="~/imgs/experiment-1.png" />
+          </div>
+          <div class="flex-1 prose text-white md:p-4 lg:p-16">
             <h1 class="uppercase text-white">Your quantum lab</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
-              corporis quasi nihil quibusdam accusamus labore, dolore sit nulla
-              autem, vero tenetur! Sint a, provident nostrum nihil quibusdam
-              quasi magni nisi?
+              Quantum "LEGO Bricks". An in-browser simulation &amp;
+              visualization of quantum mechanics. The go-to place for learning
+              quantum before the quantum computing revolution takes off.
             </p>
 
-            <div class="flex flex-row space-x-4">
+            <div
+              class="flex flex-row space-x-4 md:flex-col md:space-x-0 md:space-y-4 xl:flex-row xl:space-x-4 xl:space-y-0 max-w-full"
+            >
               <button class="bg-intense-violet flex-auto px-5 py-0.5">
                 VIRTUAL LAB
               </button>
