@@ -18,11 +18,25 @@ module.exports = {
         typeName: "BlogPost",
       },
     },
+    // {
+    //   use: "@gridsome/source-filesystem",
+    //   options: {
+    //     path: "content/testimonials/faces/*",
+    //     typeName: "FaceImage",
+    //   },
+    // },
     {
       use: "@gridsome/source-filesystem",
       options: {
         path: "content/landing/**/*.md",
         typeName: "LandingSection",
+      },
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/testimonials/**/*.md",
+        typeName: "Testimonial",
       },
     },
     {
