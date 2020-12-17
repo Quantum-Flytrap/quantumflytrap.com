@@ -7,14 +7,13 @@ date: 2019-05-23
 
 Quantum Lab is a virtual optical table. With a drag and drop interface, you can show phenomena, recreate existing experiments, and prototype new.
 
-Within this environment, it is already possible to recreate interference or quantum cryptography protocols. It will be possible to show entanglement, Bell test, quantum teleportation, and the many-worlds interpretation
+Within this environment it is possible to recreate interference, quantum cryptography protocols, to show entanglement, Bell test, quantum teleportation, and the many-worlds interpretation.
 
 ## Why we made it?
 
-It was born out of need - while teaching quantum mechanics Piotr saw that numerics overshadowed key conceptual aspects, and created an interactive way to create quantum setups, which left computing to computers. Only later, he created a game out of it - to reach a wider audience, and provide concrete motivation for solving quantum puzzles.
-Now it is a Lab again, back to its roots, with UX lessons from the unforgiving world of games.
+The idea was born out of need - while teaching quantum mechanics Piotr saw that numerics overshadowed key conceptual aspects, and created an interactive way to create quantum setups, which left computing to computers. Only later, he created a game out of it - to reach a wider audience, and provide concrete motivation for solving quantum puzzles. Now it is a Lab again, back to its roots, with UX lessons from the unforgiving world of games.
 
-It is an ongoing process. If you want to include your experiment, or are interested about additional functionality - I would love to talk: piotr@quantumflytrap.com .
+It is an ongoing process. If you want to include your experiment, or are interested about additional functionality - I would love to talk: piotr@quantumflytrap.com.
 
 ## Key features
 
@@ -27,16 +26,13 @@ It is an ongoing process. If you want to include your experiment, or are interes
 
 ## For your classes
 
-If you want to teach classical optics (polarization, optical activity, interference), quantum physics (superposition, entanglement), quantum information & cryptography (Bell inequality, BB84, Ekert protocol). It goes from a simple level of a beamsplitter, to some more advanced e.g. unambiguous discrimination of non-orthogonal states.
+If you teach classical optics (polarization, optical activity, interference), quantum physics (superposition, entanglement), quantum information & cryptography (Bell inequality, BB84, Ekert protocol). From a simple level of a beamsplitter, to more advanced e.g. unambiguous discrimination of non-orthogonal states.
 
 We prepared a few classical setups, but you are free to modify them, or make your own from the scratch.
 
 ## For your materials and slides
 
-Quantum Flytrap in your materials and presentations.
-
-These tools can be used in any quantum context, even not related to the Quantum Lab board at all.
-For example: quantum chemistry, abstract quantum computing, energy levels, or even other modes of light (e.g. spatial degrees of freedom such as orbital angular momentum).
+Our tools can be used in any quantum context, also outside of our Quantum Lab environment. For example: quantum chemistry, abstract quantum computing, energy levels, or even other modes of light (e.g. spatial degrees of freedom such as orbital angular momentum).
 
 We released open-source tools you can use anywhere:
 
