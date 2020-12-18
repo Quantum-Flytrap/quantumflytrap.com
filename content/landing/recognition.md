@@ -1,7 +1,7 @@
 ---
 title: "Recognition"
 order: 4
-extClass: bg-dark-violet text-white
+extClass: bg-dark-violet text-white py-5
 ---
 
 Cited in [numerous academic publications](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22quantumgame.io%22+OR+%22Quantum+Game+with+Photons%22&btnG=), the Top Pick for Education in Gamyfing Quantum Theory, mentioned in VICE and Boing Boing.
