@@ -44,11 +44,10 @@
       <section
         v-for="(edge, index) in $page.allLandingSection.edges"
         :key="index"
-        :class="edge.node.extClass"
+        :class="sectionClass(index)"
       >
-        <div class="container mx-auto">
-          <h1 class="title" v-html="edge.node.title" />
-          <div v-html="edge.node.content" />
+        <div class="container mx-auto py-6">
+          <div class="section prose max-w-2xl" v-html="edge.node.content" />
         </div>
       </section>
     </div>
@@ -63,7 +62,12 @@ export default {
     Testimonials,
   },
   metaInfo: {
-    title: "Hello, world!",
+    title: "Welcome to the",
+  },
+  methods: {
+    sectionClass(index) {
+      return index % 2 === 0 ? "bg-dark-violet text-white" : "bg-pink-beige";
+    },
   },
 };
 </script>
@@ -100,7 +104,10 @@ query {
 </page-query>
 
 <style>
-.bg-brand-violet .prose h1 {
-  color: white;
+.bg-dark-violet.text-white .section.prose {
+  color: #e5e7eb;
+}
+.bg-dark-violet.text-white .section.prose a {
+  color: #e5e7eb;
 }
 </style>

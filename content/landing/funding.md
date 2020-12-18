@@ -1,7 +1,6 @@
 ---
 title: "Funding"
 order: 9
-extClass: bg-pink-beige
 ---
 
 Quantum Lab is a project by Quantum Flytrap - a limited company registered in Poland.
