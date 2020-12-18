@@ -6,7 +6,7 @@
           class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 lg:space-x-20 items-stretch"
         >
           <div class="flex items-center">
-            <g-image alt="Experiment" src="~/imgs/experiment-1.png" />
+            <g-image alt="Experiment" src="~/imgs/mach-zender.gif" />
           </div>
           <div class="flex-1 prose text-white md:p-4 lg:py-16 max-w-full">
             <h1 class="uppercase text-white">Your quantum lab</h1>

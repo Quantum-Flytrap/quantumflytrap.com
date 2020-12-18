@@ -13,3 +13,10 @@ query PageA ($path: String!) {
   }
 }
 </page-query>
+
+<style>
+.link {
+  font-size: 0.8rem;
+  color: rgba(37, 11, 56, 0.5);
+}
+</style>

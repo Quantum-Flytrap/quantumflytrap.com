@@ -1,9 +1,10 @@
 ---
 slug: "press"
-title: "For press"
+title: "Press Kit"
 description: "Testing it"
 date: 2019-05-23
 ---
+##
 
 Contact us at <klem@quantumflytrap.com>.
 
