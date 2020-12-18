@@ -6,25 +6,37 @@
           class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 lg:space-x-20 items-stretch"
         >
           <div class="flex items-center">
-            <g-image alt="Experiment" src="~/imgs/mach-zender.gif" />
+            <g-link to="https://lab.quantumflytrap.com/lab/mach-zehnder">
+              <g-image alt="Experiment" src="~/imgs/mach-zender.gif" />
+            </g-link>
           </div>
           <div class="flex-1 prose text-white md:p-4 lg:py-16 max-w-full">
-            <h1 class="uppercase text-white">Your quantum lab</h1>
-            <p>
-              Quantum "LEGO Bricks". An in-browser simulation &amp;
-              visualization of quantum mechanics. The go-to place for learning
-              quantum before the quantum computing revolution takes off.
-            </p>
+            <div>
+              <h1 class="uppercase text-white">Your quantum lab</h1>
+              <p>
+                Quantum "LEGO Bricks". An in-browser simulation &amp;
+                visualization of quantum mechanics. The go-to place for learning
+                quantum before the quantum computing revolution takes off.
+              </p>
+            </div>
 
             <div
               class="flex flex-row space-x-4 md:flex-col md:space-x-0 md:space-y-4 xl:flex-row xl:space-x-4 xl:space-y-0 max-w-full"
             >
-              <button class="bg-intense-violet flex-auto px-5 py-0.5">
-                VIRTUAL LAB
-              </button>
-              <button class="border border-white flex-auto px-5 py-0.5">
-                Go to this experiment
-              </button>
+              <a href="https://lab.quantumflytrap.com/">
+                <button
+                  class="bg-intense-violet text-white flex-auto px-5 py-0.5"
+                >
+                  VIRTUAL LAB
+                </button>
+              </a>
+              <a href="https://lab.quantumflytrap.com/lab/mach-zehnder">
+                <button
+                  class="border border-white text-white flex-auto px-5 py-0.5"
+                >
+                  Go to this experiment
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -108,5 +120,8 @@ query {
 }
 .bg-dark-violet.text-white .section.prose a {
   color: #e5e7eb;
+}
+.prose .text-white {
+  color: white;
 }
 </style>
