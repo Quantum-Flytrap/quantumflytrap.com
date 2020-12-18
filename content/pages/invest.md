@@ -1,11 +1,11 @@
 ---
 slug: "invest"
-title: "For investors"
+title: "Join the quantum revolution before your competition does."
 description: "Testing it"
 date: 2019-05-23
 ---
 
-## Join the quantum revolution before your competition does.
+<!-- ![quantum](~/imgs/QF_logo_wave.png) -->
 
 “This is the decade that quantum computing gets real”
 Katie Pizzolato, 

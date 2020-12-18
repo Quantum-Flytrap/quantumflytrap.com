@@ -1,11 +1,11 @@
 ---
 slug: "course"
-title: "Quantum Course"
+title: "Learn quantum before the quantum revolution takes off."
 description: "Testing it"
 date: 2019-05-23
 ---
 
-## Learn quantum before the quantum revolution takes off.
+## 
 
 Always wanted to learn the basics of quantum mechanics?
 Sign up for our upcoming Quantum Course and learn the basics of quantum mechanics over a weekend, or on a two-week at-your-pace basis.
