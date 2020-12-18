@@ -1,15 +1,12 @@
 ---
 title: "Funding"
-description: "Testing it"
-date: 2019-05-23
 order: 9
 extClass: bg-pink-beige
 ---
 
-Previously, Quantum Flytrap got funding from:
+Quantum Lab is a project by Quantum Flytrap - a limited company registered in Poland.
 
-- CQT
-- Unitary Fund
-- Private investors
+Previously, the project got support from the [Centre for Quantum Technologies, National University of Singapore](https://www.quantumlah.org/about/highlight/2020-04-play-new-quantum-game) and the [Unitary Fund](https://unitary.fund/).
 
-We give an investment opportunity...
+We provide an [investment opportunity](./invest).
+Join the quantum computing revolution, before others do!

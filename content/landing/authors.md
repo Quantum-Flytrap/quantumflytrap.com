@@ -1,11 +1,7 @@
 ---
 title: "Authors"
-description: "Testing it"
-date: 2019-05-23
 order: 3
 extClass: bg-dark-violet text-white
 ---
 
-- Piotr Migdał
-- Klem Jankiewicz
-- Paweł Grabarz
+Quuantum Lab is being developed by [Piotr Migdał](https://p.migdal.pl/), [Klem Jankiewicz](http://jankiewiczstudio.com/), [Paweł Grabarz](https://github.com/frizi), among other contributors.
