@@ -5,7 +5,7 @@
         <nav class="nav flex flex-row space-x-10 uppercase">
           <g-link to="/">
             <g-image
-              src="~/imgs/quantum_lab_logo_wave_white.png"
+              src="~/imgs/quantum_flytrap_logo_wave_white.png"
               width="100"
               :alt="$static.metadata.siteName"
           /></g-link>
@@ -33,8 +33,8 @@ query {
 
 <style>
 body {
-  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 .nav a {
