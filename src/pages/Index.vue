@@ -81,7 +81,6 @@ query {
         title
         order
         content
-        extClass
       }
     }
   }
