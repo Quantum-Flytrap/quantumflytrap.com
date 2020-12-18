@@ -3,7 +3,7 @@
     <header class="bg-brand-violet text-white">
       <div class="container mx-auto px-4 flex-row">
         <nav class="nav flex flex-row space-x-6 uppercase">
-          <g-link to="/">
+          <g-link class="landing--link" to="/">
             <g-image
               src="~/imgs/quantum_flytrap_logo_wave_white.png"
               width="100"
@@ -43,7 +43,7 @@ body {
   padding: 5px 0;
 }
 
-.nav a.active--exact {
+.nav a.active--exact:not(.landing--link) {
   color: rgba(37, 11, 56, var(--tw-text-opacity));
   background-color: white;
 }
