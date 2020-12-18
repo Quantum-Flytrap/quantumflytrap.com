@@ -1,11 +1,13 @@
 <template>
   <Layout>
-    <br />
-    <g-link to="/" class="link"> &larr; Go Back</g-link>
-    <div class="post-title prose">
-      <h1>{{ $page.pageA.title }}</h1>
+    <div class="container max-w-xl mx-auto">
+      <br />
+      <g-link to="/" class="link"> &larr; Go Back</g-link>
+      <div class="post-title prose">
+        <h1>{{ $page.pageA.title }}</h1>
+      </div>
+      <div class="post-content prose" v-html="$page.pageA.content"></div>
     </div>
-    <div class="post-content prose" v-html="$page.pageA.content"></div>
   </Layout>
 </template>
 
