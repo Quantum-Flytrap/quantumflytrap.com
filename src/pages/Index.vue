@@ -47,7 +47,7 @@
         :class="sectionClass(index)"
       >
         <div class="container mx-auto py-6">
-          <div class="section prose max-w-2xl" v-html="edge.node.content" />
+          <div class="section prose max-w-4xl" v-html="edge.node.content" />
         </div>
       </section>
     </div>
