@@ -13,7 +13,9 @@ Sign up for our upcoming Quantum Course and learn the basics of quantum mechanic
 No matter if for pure curiosity, to understand a reference from Rick and Morty, or to be among the first ones to get a job at quantum computing. 
 
 ## Early Bird: $̶2̶0̶0̶ $99
-## [ENTROLL](https://forms.gle/cfHgXTNwhuDkycgJA)
+## [ENROLL](https://forms.gle/cfHgXTNwhuDkycgJA)
+
+![mach zehnder](./interference_mach_zehnder.gif)
 
 What you will learn:
 

@@ -1,13 +1,16 @@
 ---
 slug: "scientists"
-title: "For scientists"
+title: "Quantum Lab for scientists"
 description: "Testing it"
 date: 2019-05-23
 ---
+##  
 
 Quantum Lab is a virtual optical table. With a drag and drop interface, you can show phenomena, recreate existing experiments, and prototype new.
 
 Within this environment it is possible to recreate interference, quantum cryptography protocols, to show entanglement, Bell test, quantum teleportation, and the many-worlds interpretation.
+
+![mach zehnder](./interference_mach_zehnder.gif)
 
 ## Why we made it?
 
@@ -24,11 +27,24 @@ It is an ongoing process. If you want to include your experiment, or are interes
 - Measurement tree to show all possible outcomes at the same time
 - Display of quantum operators, with their tensor structure
 
+![measurement tree](./measurement_tree.gif)
+
 ## For your classes
 
 If you teach classical optics (polarization, optical activity, interference), quantum physics (superposition, entanglement), quantum information & cryptography (Bell inequality, BB84, Ekert protocol). From a simple level of a beamsplitter, to more advanced e.g. unambiguous discrimination of non-orthogonal states.
 
-We prepared a few classical setups, but you are free to modify them, or make your own from the scratch.
+We prepared a few classical setups, but you are free to modify them, or make your own from the scratch.  
+
+Bell
+![Bell](./bell.gif) 
+
+Ekert protocol
+![Ekert](./ekert.gif)  
+
+Manual BB84
+![BB84 Manual](./bb84_manual.gif)
+
+<!-- TODO Add links to the setups -->
 
 ## For your materials and slides
 
@@ -51,6 +67,12 @@ Examples:
 - Distill in R Markdown: <https://p.migdal.pl/bra-ket-vue-art/>
   - [Quantum computing states and operators](https://p.migdal.pl/bra-ket-vue-art/ket.html)
   - [Classic logic operation truth tables](https://p.migdal.pl/bra-ket-vue-art/logic_operations.html)
+
+Toffoli gate
+![BB84 Manual](./bkv_toffoli.gif)
+
+Ket List
+![BB84 Manual](./bkv_list.gif)
 
 ### Quantum Tensors
 
