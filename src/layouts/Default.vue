@@ -2,7 +2,7 @@
   <div>
     <header class="bg-brand-violet text-white">
       <div class="container mx-auto px-4 flex-row">
-        <nav class="nav flex flex-row space-x-10 uppercase">
+        <nav class="nav flex flex-row space-x-6 uppercase">
           <g-link to="/">
             <g-image
               src="~/imgs/quantum_flytrap_logo_wave_white.png"
@@ -41,5 +41,14 @@ body {
   display: flex;
   align-items: center;
   padding: 5px 0;
+}
+
+.nav a.active--exact {
+  color: rgba(37, 11, 56, var(--tw-text-opacity));
+  background-color: white;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 </style>
