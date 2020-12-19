@@ -7,7 +7,7 @@
         >
           <div class="flex items-center">
             <g-link to="https://lab.quantumflytrap.com/lab/mach-zehnder">
-              <g-image alt="Experiment" src="~/imgs/mach-zender.gif" />
+              <g-image alt="Experiment" src="~/imgs/mach-zehnder2.gif" />
             </g-link>
           </div>
           <div class="flex-1 prose text-white md:p-4 lg:py-16 max-w-full">

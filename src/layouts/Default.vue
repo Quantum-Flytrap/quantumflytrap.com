@@ -44,11 +44,10 @@ body {
 }
 
 .nav a.active--exact:not(.landing--link) {
-  color: rgba(37, 11, 56, var(--tw-text-opacity));
-  background-color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .nav a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
 }
 </style>
