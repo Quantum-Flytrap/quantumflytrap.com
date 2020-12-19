@@ -6,7 +6,8 @@
 
 module.exports = {
   siteName: "Quantum Flytrap",
-  siteDescription: "A simple blog designed with Gridsome",
+  siteDescription:
+    '"Quantum simulation LEGO bricks." An in-browser simulation & visualization of quantum mechanics. The go-to place for learning quantum before the quantum computing revolution takes off.',
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",
@@ -18,13 +19,6 @@ module.exports = {
         typeName: "BlogPost",
       },
     },
-    // {
-    //   use: "@gridsome/source-filesystem",
-    //   options: {
-    //     path: "content/testimonials/faces/*",
-    //     typeName: "FaceImage",
-    //   },
-    // },
     {
       use: "@gridsome/source-filesystem",
       options: {

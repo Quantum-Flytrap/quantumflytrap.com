@@ -52,23 +52,23 @@ export default function(Vue, { router, head, isClient }) {
 
   // Facebook
   head.meta.push({
-    name: "og:type",
+    property: "og:type",
     content: "website",
   });
   head.meta.push({
-    name: "og:title",
+    property: "og:title",
     content: title,
   });
   head.meta.push({
-    name: "og:description",
+    property: "og:description",
     content: descriptiom,
   });
   head.meta.push({
-    name: "og:url",
+    property: "og:url",
     content: url,
   });
   head.meta.push({
-    name: "og:image",
+    property: "og:image",
     content: image,
   });
 }
