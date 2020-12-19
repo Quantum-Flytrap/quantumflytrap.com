@@ -4,7 +4,7 @@ title: "Quantum Lab for scientists"
 description: "Testing it"
 date: 2019-05-23
 ---
-##  
+## Quantum Lab for scientists
 
 Quantum Lab is a virtual optical table. With a drag and drop interface, you can show phenomena, recreate existing experiments, and prototype new.
 
