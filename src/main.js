@@ -61,7 +61,7 @@ export default function(Vue, { router, head, isClient }) {
   });
   head.meta.push({
     property: "og:description",
-    content: descriptiom,
+    content: description,
   });
   head.meta.push({
     property: "og:url",
