@@ -4,7 +4,7 @@ title: "Join the quantum revolution before your competition does."
 description: "Testing it"
 date: 2019-05-23
 ---
-##
+## Join the quantum revolution before your competition does.
 
 “*This is the decade that quantum computing gets real*”  
 Katie Pizzolato,  
