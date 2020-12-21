@@ -18,4 +18,4 @@ To run it `gridsome develop` to start a local dev server at `http://localhost:80
 
 ## Deployment
 
-Right now it is automatically deployed (from the `master` branch) to Neltify.
+Right now it is automatically deployed (automatically from the `master` branch) to Netlify.
