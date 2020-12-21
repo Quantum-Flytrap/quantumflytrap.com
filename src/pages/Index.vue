@@ -10,6 +10,7 @@
               <video
                 :poster="require('~/../content/pages/mach-zehnder-poster.png')"
                 autoplay
+                muted
                 loop
                 class="max-w-xl"
               >
