@@ -4,6 +4,7 @@ title: "Quantum Lab for scientists"
 description: "Testing it"
 date: 2019-05-23
 ---
+
 ## Quantum Lab for scientists
 
 Quantum Lab is a virtual optical table. With a drag and drop interface, you can show phenomena, recreate existing experiments, and prototype new.
@@ -12,11 +13,13 @@ Within this environment it is possible to recreate interference, quantum cryptog
 
 ![mach zehnder](./interference_mach_zehnder.gif)
 
+Interactive: <https://lab.quantumflytrap.com/lab/mach-zehnder>
+
 ## Why we made it?
 
 The idea was born out of need - while teaching quantum mechanics Piotr saw that numerics overshadowed key conceptual aspects, and created an interactive way to create quantum setups, which left computing to computers. Only later, he created a game out of it - to reach a wider audience, and provide concrete motivation for solving quantum puzzles. Now it is a Lab again, back to its roots, with UX lessons from the unforgiving world of games.
 
-It is an ongoing process. If you want to include your experiment, or are interested about additional functionality - I would love to talk: piotr@quantumflytrap.com.
+It is an ongoing process. If you want to include your experiment, or are interested about additional functionality - I would love to talk: <piotr@quantumflytrap.com>.
 
 ## Key features
 
@@ -29,36 +32,35 @@ It is an ongoing process. If you want to include your experiment, or are interes
 
 ![measurement tree](./measurement_tree.gif)
 
+Interactive: <https://lab.quantumflytrap.com/lab/feed-us-everett>
+
 ## For your classes
 
 If you teach classical optics (polarization, optical activity, interference), quantum physics (superposition, entanglement), quantum information & cryptography (Bell inequality, BB84, Ekert protocol). From a simple level of a beamsplitter, to more advanced e.g. unambiguous discrimination of non-orthogonal states.
 
-We prepared a few classical setups, but you are free to modify them, or make your own from the scratch.  
+We prepared a few classical setups, but you are free to modify them, or make your own from the scratch.
 
-Bell
-![Bell](./bell.gif) 
+![BB84 quantum key distribution protocol](./bb84_manual.gif)
 
-Ekert protocol
-![Ekert](./ekert.gif)  
+Interactive: <https://lab.quantumflytrap.com/lab/bb84>
 
-Manual BB84
-![BB84 Manual](./bb84_manual.gif)
+![Photon entangled Bell pair measurement](./bell.gif)
 
-<!-- TODO Add links to the setups -->
+Interactive: <https://lab.quantumflytrap.com/lab/conditional-state>
+
+![Ekert quantum key distribution protocol](./ekert.gif)
+
+Interactive: <https://lab.quantumflytrap.com/lab/ekert-bell>
 
 ## For your materials and slides
 
 Our tools can be used in any quantum context, also outside of our Quantum Lab environment. For example: quantum chemistry, abstract quantum computing, energy levels, or even other modes of light (e.g. spatial degrees of freedom such as orbital angular momentum).
 
-We released open-source tools you can use anywhere:
-
-### bra-ket-vue / ⟨𝜑|𝜓⟩.vue
+### ⟨𝜑|𝜓⟩.vue
 
 [bra-ket-vue / ⟨𝜑|𝜓⟩.vue](https://github.com/Quantum-Game/bra-ket-vue) for interactive operators and kets.
 It works for any discrete states, also defined by you.
-
 Supported by the [Unitary Fund](https://unitary.fund/).
-
 Examples:
 
 - Quantum Game element encyclopedia (e.g. [Faraday rotator](https://quantumgame.io/info/faraday-rotator)).
@@ -68,21 +70,19 @@ Examples:
   - [Quantum computing states and operators](https://p.migdal.pl/bra-ket-vue-art/ket.html)
   - [Classic logic operation truth tables](https://p.migdal.pl/bra-ket-vue-art/logic_operations.html)
 
-Toffoli gate
-![BB84 Manual](./bkv_toffoli.gif)
+![Toffoli gate](./bkv_toffoli.gif)
 
-Ket List
-![BB84 Manual](./bkv_list.gif)
+![Ket state list](./bkv_list.gif)
 
 ### Quantum Tensors
 
-[Quantum Tensors](https://github.com/Quantum-Game/quantum-tensors) for quantum numerics (quantum computing, optics) isnide interactive visualizations (supported by [Centre of Quantum Technologies, National University of Singapore](https://www.quantumlah.org/))
+[Quantum Tensors](https://github.com/Quantum-Game/quantum-tensors) for quantum numerics (quantum computing, optics) inside interactive visualizations. It uses TypeScript (a dialect of JavaScript with types) so that can be used in any modern browser, without installation. It is supported by [Centre of Quantum Technologies, National University of Singapore](https://www.quantumlah.org/).
 
-Examples:
-
-- [quantum computing example](https://jsfiddle.net/stared/wusev5a9/8/)
+For example, see [quantum computing example](https://jsfiddle.net/stared/wusev5a9/8/).
 
 ## Cited in
+
+Quantum Lab and its direct predecessor Quantum Game with Photons, were cited in papers by multiple research groups:
 
 - Stephen Ornes, [Quantum games aim to demystify heady science](https://doi.org/10.1073/pnas.1800744115), PNAS February 20, 2018 115 (8) 1667-1669, [PDF](https://www.pnas.org/content/pnas/115/8/1667.full.pdf)
 - Matthew S. Leifer, [Gamifying Quantum Theory
@@ -96,8 +96,11 @@ More as [a Google Scholar search](https://scholar.google.com/scholar?hl=en&as_sd
 
 ## Collaboration
 
-We would be delighted to collaborate!
+We would be delighted to collaborate! We would like to help:
 
 - Animations and interactive visualization showcasing your research.
 - Creating tools for you for prototyping your experimental setups.
-- Collaborating on research on visualizing quantum mechanics (education, geometry of quantum state).
+- Collaborating on research on visualizing quantum mechanics (education, the geometry of quantum state).
+- Mentoring and support with writing interactive blog posts.
+
+Interested? Mail us at <piotr@quantumflytrap.com>!
