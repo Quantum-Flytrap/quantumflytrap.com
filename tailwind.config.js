@@ -9,6 +9,12 @@ module.exports = {
             }
         }
     },
+    purge: [
+        './content/**/*.md',
+        './src/**/*.html',
+        './src/**/*.vue',
+        './src/**/*.js',
+    ],
     plugins: [
         require('@tailwindcss/typography'),
     ]    
