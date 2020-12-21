@@ -12,7 +12,7 @@ export default function(Vue, { router, head, isClient }) {
   const description =
     '"Quantum simulation LEGO bricks." An in-browser simulation & visualization of quantum mechanics. The go-to place for learning quantum before the quantum computing revolution takes off.';
   const twitter = "QuantumGameIO";
-  const image = "~/imgs/experiment-1.png";
+  const image = require("~/imgs/mach-zehnder2.gif");
 
   // general
   head.meta.push({
