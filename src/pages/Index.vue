@@ -7,7 +7,19 @@
         >
           <div class="flex items-center">
             <g-link to="https://lab.quantumflytrap.com/lab/mach-zehnder">
-              <g-image alt="Experiment" src="~/imgs/mach-zehnder2.gif" />
+              <video
+                :poster="require('~/../content/pages/mach-zehnder-poster.png')"
+                autoplay
+                loop
+                class="max-w-xl"
+              >
+                <source
+                  type="video/webm"
+                  :src="
+                    require('~/../content/pages/interference_mach_zehnder.webm')
+                  "
+                />
+              </video>
             </g-link>
           </div>
           <div class="flex-1 prose text-white md:p-4 lg:py-16 max-w-full">
