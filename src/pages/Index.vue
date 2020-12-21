@@ -19,6 +19,12 @@
                     require('~/../content/pages/interference_mach_zehnder.webm')
                   "
                 />
+                <source
+                  type="video/mp4"
+                  :src="
+                    require('~/../content/pages/interference_mach_zehnder.mp4')
+                  "
+                />
               </video>
             </g-link>
           </div>
