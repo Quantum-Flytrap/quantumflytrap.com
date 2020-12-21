@@ -3,7 +3,7 @@ title: "Media"
 order: 11
 ---
 
-See recent updates on Twitter [@QuantumGameIO](twitter.com/quantumgameio).
+See recent updates on Twitter [@QuantumGameIO](https://twitter.com/quantumgameio).
 Some of our previous blog posts:
 
 - [Quantum mechanics for high-school students](https://p.migdal.pl/2016/08/15/quantum-mechanics-for-high-school-students.html) - problems, materials, and course outlines
