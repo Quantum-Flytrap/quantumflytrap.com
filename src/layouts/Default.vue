@@ -15,7 +15,7 @@
           <g-link to="/invest/">For Investors</g-link>
           <g-link to="/press/">Press Kit</g-link>
           <div class="monetization" v-if="monetizationState === 'started'">
-            Thank you for supporting us with web monetization.
+            Thank you for supporting us with web monetization! ❤️
           </div>
         </nav>
       </div>
