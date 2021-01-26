@@ -40,6 +40,13 @@ module.exports = {
         typeName: "PageA",
       },
     },
+    {
+      use: "gridsome-plugin-monetization",
+      options: {
+        paymentPointer: "$ilp.uphold.com/Gnn7yq7XUiwj", // your payment pointer
+        global: true, // add monetization to every page; default: true
+      },
+    },
   ],
   templates: {
     BlogPost: "/blog/:slug",

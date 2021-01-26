@@ -37,6 +37,8 @@
                 visualization of quantum mechanics. The go-to place for learning
                 quantum before the quantum computing revolution takes off.
               </p>
+
+              <p>Monetization: {{ state }}</p>
             </div>
 
             <div
@@ -56,6 +58,12 @@
                   Go to this experiment
                 </button>
               </a>
+              <button
+                class="border border-white text-white px-5 py-0.5"
+                @click="toggleMonetization"
+              >
+                Toggle Monetization
+              </button>
             </div>
           </div>
         </div>
@@ -95,10 +103,28 @@ export default {
   metaInfo: {
     title: "Welcome to the",
   },
+  data() {
+    return {
+      state: "Waiting for monetization to load...",
+    };
+  },
   methods: {
     sectionClass(index) {
       return index % 2 === 0 ? "bg-dark-violet text-white" : "bg-pink-beige";
     },
+    toggleMonetization() {
+      console.log(this.$monetization.isEnabled());
+      this.$monetization.isEnabled()
+        ? this.$monetization.disable()
+        : this.$monetization.enable();
+    },
+  },
+  mounted() {
+    this.state = this.$monetization.getState();
+    this.$monetization.onStateChange((event) => {
+      console.log(event);
+      this.state = this.$monetization.getEventStateString(event);
+    });
   },
 };
 </script>
