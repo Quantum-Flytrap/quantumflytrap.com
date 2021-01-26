@@ -14,6 +14,9 @@
           <g-link to="/scientists/">For Scientists</g-link>
           <g-link to="/invest/">For Investors</g-link>
           <g-link to="/press/">Press Kit</g-link>
+          <div class="monetization" v-if="monetizationState === 'started'">
+            Thank you for supporting us with web monetization! ❤️
+          </div>
         </nav>
       </div>
     </header>
@@ -22,6 +25,25 @@
     </main>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => {
+    return {
+      monetizationState: "",
+    };
+  },
+  mounted() {
+    if (!this.$monetization.isEnabled()) {
+      this.$monetization.enable();
+    }
+    this.monetizationState = this.$monetization.getState();
+    this.$monetization.onStateChange((event) => {
+      this.monetizationState = this.$monetization.getEventStateString(event);
+    });
+  },
+};
+</script>
 
 <static-query>
 query {
@@ -41,6 +63,13 @@ body {
   display: flex;
   align-items: center;
   padding: 5px 0;
+}
+
+.nav .monetization {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  text-transform: none;
 }
 
 .nav a.active--exact:not(.landing--link) {
