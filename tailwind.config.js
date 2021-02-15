@@ -6,6 +6,9 @@ module.exports = {
                 'intense-violet': "#5D00D3",
                 'dark-violet': "#250B38",
                 'pink-beige': "#ECE9F0",
+            },
+            maxWidth: {
+                '150px': '150px',
             }
         }
     },
