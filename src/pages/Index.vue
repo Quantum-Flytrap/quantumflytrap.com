@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="bg-brand-violet">
-      <div class="container mx-auto px-4 flex-row py-20">
+      <div class="container mx-auto px-4 flex-row py-10 lg:py-20">
         <div
           class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 lg:space-x-20 items-stretch"
         >
@@ -29,7 +29,7 @@
               </video>
             </g-link>
           </div>
-          <div class="flex-1 prose text-white md:p-4 lg:py-16 max-w-full">
+          <div class="flex-1 prose text-white md:p-4 max-w-full self-center">
             <div>
               <h1 class="uppercase text-white">Your quantum lab</h1>
               <p>
