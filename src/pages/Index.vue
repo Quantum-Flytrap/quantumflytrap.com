@@ -12,7 +12,7 @@
                 autoplay
                 muted
                 loop
-                class="max-w-xl"
+                class="w-full max-w-xl"
               >
                 <source
                   type="video/webm"
