@@ -1,44 +1,40 @@
 ---
-slug: "invest"
-title: "Join the quantum revolution before your competition does."
+slug: "about"
+title: "About"
 description: "Testing it"
 date: 2019-05-23
 ---
 
-## Join the quantum revolution before your competition does!
+## About
 
-“_This is the decade that quantum computing gets real_”  
-Katie Pizzolato, director at IBM QStart
+At Quantum Flytrap we develop user interfaces for quantum computing and quantum cryptography, enabling easy use of quantum tech across disciplines and applications. 
+We aim to build the standard for interaction with quantum systems. We want to be the Android of quantum computing - to offer users a simple, well-designed graphical interface working with any hardware. 
 
-<!-- TODO This image should be text -->
+![QF](./QF-interfaces-about.png)
 
-![quantum](./q-numbers.png)
-Sources: [BCC Research](https://www.bccresearch.com/market-research/information-technology/quantum-computing-technologies-and-global-markets.html) [BCG](https://www.bcg.com/publications/2019/quantum-computers-create-value-when)
-
-<!-- ## 52.9%
-Quantum computing market
-annual growth rate, 2022-2027
-[BCC Research] (https://www.bccresearch.com/market-research/information-technology/quantum-computing-technologies-and-global-markets.html)
-
-## $25-50B
-Quantum technologies: estimated operating income in 10 years (including: materials, finance, pharm)
-[BCG] (https://www.bcg.com/publications/2019/quantum-computers-create-value-when) -->
+The company was founded in early 2020 by quantum physicist Piotr Migdał and designer Klem Jankiewicz who have previously worked together developing the Quantum Game at the Centre For Quantum Technologies at the University of Singapore. 
 
 ---
-
-Quantum physics not only sparks imagination but there also is a growing need for people from various fields to be able to harness its power.
-
-The interest in quantum is growing fast but there is **a shortage of simple and engaging interactive tools** for education and research.
-The current stage can be compared to using a pen & paper in computer science.
-
-![quantum ecosystem](./quantum-ecosystem.png)
-
-At Quantum Flytrap we make in-browser simulations & visualizations of quantum mechanics. We are building a go-to place for learning quantum before the quantum computing revolution takes off. With computing left to computers we offer ground-breaking tools for education and research.
-
-Our first product - “quantum LEGO bricks” - is a virtual lab and (soon) a puzzle game. It can be used to set the first steps in the quantum world, teach at any level, and prototype new experiments.
+## The Team
+![team](./team.png)
+Our first product, the Quantum Lab is being developed by Piotr Migdał, Klem Jankiewicz, Paweł Grabarz, among other contributors. The generative soundtrack was designed by Pawel Janicki. Our advisor is Prof. Artur Ekert from the University of Oxford.
 
 ---
 
 ## Contact
 
-Contact us at <piotr@quantumflytrap.com> for further details on the investment opportunity.
+Visit us on [Twitter](https://twitter.com/QuantumGameIO), [Facebook](https://www.facebook.com/quantumgameio), [GitHub](https://github.com/Quantum-Game), and [Medium](https://medium.com/quantum-photons). If you have any comments, join our [Discord channel](https://discord.gg/qBhqf33Vqv), @ us on Twitter, create a GitHub Issue, or simply email us! :)
+
+---
+## For Investors
+
+Interest in quantum is growing fast but it is hard to learn, use, and interact. To make quantum computing viable, we need to make it approachable for business.
+We need to do with quantum what TensorFlow, Keras & PyTorch did with deep learning: move it from academia to accessible & business-available technology.
+
+**If you’d like to know more about Quantum Flytrap or the investment opportunities, contact Piotr Migdał at <piotr@quantumflytrap.com>.**
+
+---
+## Quantum Landscape
+![quantum landscape](./landscape.png)
+
+---
