@@ -1,11 +1,13 @@
 ---
 slug: "press"
-title: "Press Kit"
+title: "Press"
 description: "Testing it"
 date: 2019-05-23
 ---
-## Press Kit
+## Press
 
-Contact us at <klem@quantumflytrap.com>.
+Contact Klem Jankiewicz at <klem@quantumflytrap.com> for more information.
 
-<!-- [The press kit is available here](https://drive.google.com/drive/folders/1WR8E-Ma6XpumzVFbeyWb0AE8XgyZhFb9?usp=sharing). -->
+[Press kit is available here](https://drive.google.com/drive/folders/1WR8E-Ma6XpumzVFbeyWb0AE8XgyZhFb9?usp=sharing).
+
+<!-- TODO: better press kit, examples of mentiones in press  -->
