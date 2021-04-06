@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Quantum logic gates for a single qubit, interactively</title>
+  
+  <meta property="description" itemprop="description" content="Drag and drop quantum gates to see how they act on a qubit."/>
+  
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-04-06"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-04-06"/>
+  <meta name="article:author" content="Claudia Zendejas-Morales"/>
+  <meta name="article:author" content="Piotr Migdał"/>
+  
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Quantum logic gates for a single qubit, interactively"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Drag and drop quantum gates to see how they act on a qubit."/>
+  <meta property="og:locale" content="en_US"/>
+  
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Quantum logic gates for a single qubit, interactively"/>
+  <meta property="twitter:description" content="Drag and drop quantum gates to see how they act on a qubit."/>
+  
+  <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Quantum Computation and Quantum Information;citation_publication_date=2000;citation_publisher=Cambridge University Press;citation_author=Michael A. Nielsen;citation_author=Isaac L. C. Chuang"/>
+  <meta name="citation_reference" content="citation_title=QuTiP example: Qubism visualizations;citation_publication_date=2014;citation_author=Piotr Migdał"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","creative_commons","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Quantum logic gates for a single qubit, interactively"]},{"type":"character","attributes":{},"value":["Drag and drop quantum gates to see how they act on a qubit.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Claudia Zendejas-Morales"]},{"type":"character","attributes":{},"value":["http://claudiazm.xyz"]},{"type":"character","attributes":{},"value":["Quantum Flytrap"]},{"type":"character","attributes":{},"value":["https://quantumflytrap.com"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Piotr Migdał"]},{"type":"character","attributes":{},"value":["https://p.migdal.pl"]},{"type":"character","attributes":{},"value":["Quantum Flytrap"]},{"type":"character","attributes":{},"value":["https://quantumflytrap.com"]}]}]},{"type":"character","attributes":{},"value":["2021-04-06"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["refs.bib"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/jquery-1.11.3/jquery.min.js","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","LICENSE","refs.bib","teleportation.png"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+  
+  <style type="text/css">
+  
+  body {
+    background-color: white;
+  }
+  
+  .pandoc-table {
+    width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+  
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+  
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+  
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+  
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+  
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+  
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+  
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+  
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+  
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+  
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .shaded-content {
+    background: white;
+  }
+  
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+  
+  d-appendix {
+    padding-top: 30px;
+  }
+  
+  d-article>p>img {
+    width: 100%;
+  }
+  
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+  
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+  
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+  
+  /* Tweak code blocks */
+  
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+  
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+  
+  d-article div.sourceCode {
+    background-color: white;
+  }
+  
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+  
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  d-article pre a {
+    border-bottom: none;
+  }
+  
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+  
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+  
+  @media(min-width: 768px) {
+  
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+  
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+  
+  d-article pre {
+    font-size: 14px;
+  }
+  
+  }
+  
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* CSS for d-contents */
+  
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+  
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+  
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  .d-contents li {
+    list-style-type: none
+  }
+  
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+  
+  .d-contents ul {
+    padding-left: 1em
+  }
+  
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+  
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+  
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+  
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+  
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+  
+  
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+  
+  
+  /* Figure */
+  
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+  
+  .figure img {
+    width: 100%;
+  }
+  
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  
+  /* Citations */
+  
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+  
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+  
+  /* Citation hover box */
+  
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+  
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+  
+  
+  /* Tweak 1000px media break to show more text */
+  
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+  
+    .grid {
+      grid-column-gap: 16px;
+    }
+  
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+  
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+  
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+  
+  
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+  
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Include appendix styles here so they can be overridden */
+  
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+  
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+  
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+  
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+  
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+  
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+  
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  d-appendix > * {
+    grid-column: text;
+  }
+  
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+  
+  /* Include footnote styles here so they can be overridden */
+  
+  d-footnote-list {
+    contain: layout style;
+  }
+  
+  d-footnote-list > * {
+    grid-column: text;
+  }
+  
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+  
+  
+  
+  /* Anchor.js */
+  
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  /* Social footer */
+  
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+  
+  .disqus-comments {
+    margin-right: 30px;
+  }
+  
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  #disqus_thread {
+    margin-top: 30px;
+  }
+  
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+  
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+  
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+  
+  
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+  
+  /* Styles for posts lists (not auto-injected) */
+  
+  
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+  
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+  
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+  
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+  
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+  
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+  
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+  
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+  
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+  
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+  
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+  
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+  
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .posts-list img {
+    opacity: 1;
+  }
+  
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+  
+  .posts-more {
+    clear: both;
+  }
+  
+  
+  .posts-sidebar {
+    font-size: 16px;
+  }
+  
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+  
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+  
+  .categories li>a {
+    border-bottom: none;
+  }
+  
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  
+  .categories .active {
+    font-weight: 600;
+  }
+  
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+  
+  
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+  
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+  
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+  
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+  
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+  
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+  
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+  
+  
+  
+  </style>
+  
+  <script type="application/javascript">
+  
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+  
+  // show body when load is complete
+  function on_load_complete() {
+  
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+  
+  
+    // set body to visible
+    document.body.style.visibility = 'visible';
+  
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+  
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+  
+  function init_distill() {
+  
+    init_common();
+  
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+  
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+  
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+  
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+  
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+  
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+  
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+  
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+  
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+  
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+  
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+  
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+  
+      // capture layout
+      var layout = $(this).attr('data-layout');
+  
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+  
+  
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+  
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+  
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+  
+    // load distill framework
+    load_distill_framework();
+  
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+  
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+  
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+  
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+  
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+  
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+  
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+  
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+  
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+  
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+  
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+  
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+  
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+  
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+  
+      // clear polling timer
+      clearInterval(tid);
+  
+      // show body now that everything is ready
+      on_load_complete();
+    }
+  
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+  
+  }
+  
+  function init_downlevel() {
+  
+    init_common();
+  
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+  
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+  
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+  
+    // remove toc
+    $('.d-contents').remove();
+  
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+  
+  
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+  
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+  
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+  
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+  
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+  
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+  
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+  
+    $('body').addClass('downlevel');
+  
+    on_load_complete();
+  }
+  
+  
+  function init_common() {
+  
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+  
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+  
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+  
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+  
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
+    });
+  
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+  
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+  
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+  
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+  
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+  
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+  
+  </script>
+  
+  <!--/radix_placeholder_distill-->
+  <script src="index_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="index_files/popper-2.6.0/popper.min.js"></script>
+  <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="index_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="index_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="index_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="index_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="index_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="index_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Quantum logic gates for a single qubit, interactively","description":"Drag and drop quantum gates to see how they act on a qubit.","authors":[{"author":"Claudia Zendejas-Morales","authorURL":"http://claudiazm.xyz","affiliation":"Quantum Flytrap","affiliationURL":"https://quantumflytrap.com","orcidID":""},{"author":"Piotr Migdał","authorURL":"https://p.migdal.pl","affiliation":"Quantum Flytrap","affiliationURL":"https://quantumflytrap.com","orcidID":""}],"publishedDate":"2021-04-06T00:00:00.000+00:00","citationText":"Zendejas-Morales & Migdał, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Quantum logic gates for a single qubit, interactively</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p>Drag and drop quantum gates to see how they act on a qubit.</p>
+</div>
+
+<div class="d-byline">
+  Claudia Zendejas-Morales <a href="http://claudiazm.xyz" class="uri">http://claudiazm.xyz</a> (Quantum Flytrap)<a href="https://quantumflytrap.com" class="uri">https://quantumflytrap.com</a>
+  
+,   Piotr Migdał <a href="https://p.migdal.pl" class="uri">https://p.migdal.pl</a> (Quantum Flytrap)<a href="https://quantumflytrap.com" class="uri">https://quantumflytrap.com</a>
+  
+<br/>2021-04-06
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#qubit">Qubit</a></li>
+<li><a href="#operations-on-a-qubit">Operations on a qubit</a><ul>
+<li><a href="#pick-a-state">1. Pick a state</a></li>
+<li><a href="#pick-a-gate">2. Pick a gate</a></li>
+<li><a href="#check-the-result">3. Check the result</a></li>
+</ul></li>
+<li><a href="#quantum-gates">Quantum gates</a></li>
+<li><a href="#quantum-circuits">Quantum circuits</a><ul>
+<li><a href="#pick-any-state-and-compose-a-circuit">Pick any state and compose a circuit</a></li>
+</ul></li>
+<li><a href="#remarks">Remarks</a></li>
+</ul>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<script src='https://cdn.jsdelivr.net/npm/vue@2.6.12'></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css'> <link rel='stylesheet' href='https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css'>
+<script src='https://unpkg.com/quantum-tensors@0.4.14/dist/quantum-tensors.min.js'></script>
+<script src='https://unpkg.com/bra-ket-vue@0.3.1/dist/bra-ket-vue.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.20.0/vuedraggable.umd.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vue-round-slider@1.0.1/dist/vue-roundslider.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/pretty-checkbox-vue@1.1/dist/pretty-checkbox-vue.min.js'></script>
+<script src='https://unpkg.com/vue-multiselect@2.1.0'></script>
+</div>
+<p>Quantum computers use quantum physics to perform computation. They use phenomena such as superposition and entanglement that make it possible to use more powerful algorithms than in classical computing <span class="citation" data-cites="Nielsen00">(Nielsen and Chuang <a href="#ref-Nielsen00">2000</a>)</span>. In classical computing, we use the electric signal as the carrier of information. In quantum, we use various implementations, including the polarization of light, the spin of ions, and the states of superconductors.</p>
+<h2 id="qubit">Qubit</h2>
+<p>In classical computing, the basic unit is a bit - 0 or 1. In quantum computing, the basic unit is a qubit. Instead of just two values, we have a vector with two components. In this article, we explore what a single qubit is, and what are the quantum computing operations:</p>
+<p><span class="math display">\[|0\rangle = \begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+\hspace{1cm}
+|1\rangle = \begin{bmatrix}
+0\\
+1
+\end{bmatrix}\]</span> In general, a qubit can be any <a href="https://quantumatlas.umd.edu/entry/superposition">superposition</a> of <span class="math inline">\(|0\rangle\)</span> and <span class="math inline">\(|1\rangle\)</span> - that is</p>
+<p><span class="math display">\[|\psi\rangle=\alpha|0\rangle +\beta|1\rangle\]</span></p>
+<p>where <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are <a href="https://www.3blue1brown.com/videos-blog/complex-number-fundamentals-lockdown-math-ep-3">complex numbers</a>, that is numbers <span class="math inline">\(z = x + i y\)</span>, were <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are real numbers and <span class="math inline">\(i\)</span> is an imaginary unit <span class="math inline">\(i^2=-1\)</span>. Here are a few common states:</p>
+<p><span class="math display">\[|+\rangle=\frac{|0\rangle+|1\rangle}{\sqrt{2}} \hspace{1cm} |-\rangle=\frac{|0\rangle-|1\rangle}{\sqrt{2}}\]</span></p>
+<p><span class="math display">\[|\!\circlearrowleft \rangle=\frac{|0\rangle+i|1\rangle}{\sqrt{2}} \hspace{1cm} |\!\circlearrowright\rangle=\frac{|0\rangle-i|1\rangle}{\sqrt{2}}\]</span></p>
+<p>If complex numbers are new to you - don’t worry. First, many interesting quantum states, operators, and phenomena can be described without complex numbers. Second, complex numbers are importnt and fun on their own.</p>
+<h2 id="operations-on-a-qubit">Operations on a qubit</h2>
+<p>Instead of <a href="https://en.wikipedia.org/wiki/Logic_gate">classic logic gates</a>, we use <a href="link%20to%20https://en.wikipedia.org/wiki/Quantum_logic_gate">quantum logic gates</a>. How do they work? Let us pick a state and a quantum gate!</p>
+<h3 id="pick-a-state">1. Pick a state</h3>
+<div id="states-basis">
+
+</div>
+<div id="ket-state-basis">
+
+</div>
+<h3 id="pick-a-gate">2. Pick a gate</h3>
+<div id="gate_combo">
+
+</div>
+<h3 id="check-the-result">3. Check the result</h3>
+<div id="ket-res-state-basis-gate">
+
+</div>
+<h2 id="quantum-gates">Quantum gates</h2>
+<p>Only identity (<span class="math inline">\(I\)</span>) and negation (<span class="math inline">\(X\)</span>) are the same in classical and quantum computing. All other gates are specific to quantum computing. For example, Hadamard gate (<span class="math inline">\(H\)</span>), while having only real numbers, is enough to show the difference between <span class="math inline">\(|+\rangle\)</span> and <span class="math inline">\(|-\rangle\)</span> states (check it!). Another interesting gate is the square root of negation (<span class="math inline">\(\sqrt{X}\)</span> or <span class="math inline">\(\sqrt{NOT}\)</span>). If we apply it twice, we get a negation. Don’t worry - later in this post, you will be able to compose gates. So, what are the most typical gates?</p>
+<table align='center' class='matrices'>
+<tr>
+<td align='center'>
+I (Id, 𝟙, identity)
+<div id="gate_I">
+
+</div>
+</td>
+<td align='center'>
+X (Pauli-X, NOT)
+<div id="gate_X">
+
+</div>
+</td>
+</tr>
+<tr>
+<td align='center'>
+Y (Pauli-Y)
+<div id="gate_Y">
+
+</div>
+</td>
+<td align='center'>
+Z (Pauli-Z, 1/2 phase shiift)
+<div id="gate_Z">
+
+</div>
+</td>
+</tr>
+<tr>
+<td align='center'>
+H (Hadamard gate)
+<div id="gate_H">
+
+</div>
+</td>
+<td align='center'>
+S (1/4 phase shift)
+<div id="gate_S">
+
+</div>
+</td>
+</tr>
+<tr>
+<td align='center'>
+T (1/8 phase shift)
+<div id="gate_T">
+
+</div>
+</td>
+<td align='center'>
+√X (square root of NOT)
+<div id="gate_sqrtX">
+
+</div>
+</td>
+</tr>
+</table>
+<h2 id="quantum-circuits">Quantum circuits</h2>
+<p>Quantum gates can be composed. In a conventional matrix notation, we read from right to left. That is, <span class="math inline">\(X \;H \; Z \; |0\rangle\)</span> means that we start with state <span class="math inline">\(|0\rangle\)</span>, then apply <span class="math inline">\(Z\)</span> gate, then <span class="math inline">\(H\)</span>, then <span class="math inline">\(X\)</span>. I It is a historic notation that is going to stay here. While in quantum circuits, we use a typical left to right notation, for the sake of this visualization, we use the matrix notation.</p>
+<p>You can interact with various sequences of gates in the section below. Drag the gate you want to apply to the selected gate area. To delete a gate from that area, drag it to the trash area. You can pick any input state from the gauges. It uses a general parametrization of:</p>
+<p><span class="math inline">\(|\psi\rangle = \cos\left(\tfrac{\theta}{2}\right) \; |0\rangle + e^{i\phi} \; \sin\left(\tfrac{\theta}{2}\right) \; |1\rangle\)</span>$</p>
+<p>If you want to avoid complex values, use <span class="math inline">\(\phi=0\)</span> (for positive values) or <span class="math inline">\(\phi=\pi\)</span> (for negative values_)</p>
+<p>Observe how the state changes according to the applied gates. In BraKetVue, we use <a href="https://en.wikipedia.org/wiki/Domain_coloring">colors to denote phase of complex numbers</a><span class="citation" data-cites="DomainColoring20 Migdal14">(Emilia <a href="#ref-DomainColoring20">2019</a>; Migdał <a href="#ref-Migdal14">2014</a><a href="#ref-Migdal14">b</a>)</span> and <span class="citation" data-cites="Qubism20">(Migdał <a href="#ref-Qubism20">2014</a><a href="#ref-Qubism20">a</a>)</span> for an implementation for <a href="http://qutip.org/">QuTiP</a>.</p>
+<h3 id="pick-any-state-and-compose-a-circuit">Pick any state and compose a circuit</h3>
+<div id='state'>
+
+<table align="center" style="border:none;">
+<tr>
+<td>
+<!-- Vue Round Slider -->
+<round-slider
+          class="theta"
+          v-model="thetaVal"
+          start-angle="0"
+          end-angle="180"
+          line-cap="round"
+          radius="80"
+          width="10"
+          animation="false"
+          handle-size="22"
+          handle-shape="round"
+          min="0"
+          max="1"
+          step="0.01"
+          range-color="#ff0055"
+          circle-shape="full"
+          v-bind:tooltip-format="formatTheta"
+          v-bind:value-change="changeAngles"> </round-slider> <!-- === -->
+</td>
+<td>
+<round-slider
+          class="phi"
+          v-model="phiVal"
+          start-angle="0"
+          end-angle="360"
+          line-cap="round"
+          radius="80"
+          width="10"
+          animation="false"
+          handle-size="22"
+          handle-shape="round"
+          min="0"
+          max="2"
+          step="0.01"
+          range-color="#5c00d3"
+          circle-shape="full"
+          v-bind:tooltip-format="formatPhi"
+          v-bind:value-change="changeAngles"> </round-slider>
+</td>
+</tr>
+</table>
+<p align="center">
+<span style="font-family: Asana Math; font-size:20px;"> |ψ⟩ = {{state_a}} |0⟩<!-- ⟩ --> + ( {{state_b}} ) |1⟩<!-- ⟩ --> </span>
+</p>
+</div>
+<div id="dnd">
+
+</div>
+<div id="ketlist6">
+
+</div>
+<h2 id="remarks">Remarks</h2>
+<p>This post is a part of the quantum computing series by <a href="https://quantumflytrap.com/">Quantum Flytrap</a>. It uses <a href="https://github.com/Quantum-Game/quantum-tensors">Quantum Tensors</a> library for computing quantum operations, and <a href="https://github.com/Quantum-Game/bra-ket-vue">BraKetVue</a> for quantum state and operator visualization. These libraries are open source (MIT), as well as this post (CC-BY). The s<a href="https://github.com/clausia/flytrap-examples">ource to this post is iere</a>. We believe in an open, contributive culture.</p>
+<p>Stay tuned for our next posts! The easiest way to do so is to <a href="https://twitter.com/quantumgameio">follow our Twitter account</a>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<script type="text/javascript">
+
+const { Circuit, Gates, Vector, Cx, Dimension, Operator } = QuantumTensors;
+const { KetViewer, KetListViewer, MatrixViewer } = BraKetVue;
+
+
+const circuitHistory = [];
+Circuit.qubits(1)
+  .saveTo(circuitHistory)
+  .X(0)
+  .saveTo(circuitHistory)
+
+Circuit.qubits(1)
+  .Y(0)
+  .saveTo(circuitHistory)
+
+Circuit.qubits(1)
+  .Z(0)
+  .saveTo(circuitHistory)
+
+Circuit.qubits(1)
+  .H(0)
+  .saveTo(circuitHistory)
+
+const circuitHistoryBig = [];
+Circuit.qubits(1)
+  .saveTo(circuitHistoryBig)
+  .Z(0)
+  .saveTo(circuitHistoryBig)
+  .H(0)
+  .saveTo(circuitHistoryBig)
+  .X(0)
+  .saveTo(circuitHistoryBig);
+
+
+function SqrtX() {
+  return Operator.fromSparseCoordNames(
+    [
+      ['0', '0', Cx(1, 1)],
+      ['1', '0', Cx(1, -1)],
+      ['0', '1', Cx(1, -1)],
+      ['1', '1', Cx(1, 1)],
+    ],
+    [Dimension.qubit()]
+  ).mulConstant(Cx(0.5));
+}
+
+
+function addKetList(name, gate, cirq) {
+
+  new Vue({
+    el: '#'+name+cirq,
+    template: "<ket-list-viewer :steps='stepsQuantumComputing' :dark-mode='false'/>",
+    components: {
+      KetListViewer,
+    },
+    data() {
+      return {
+        stepsQuantumComputing: [
+          { value: 'Initial state', vector: circuitHistory[0].vector },
+          { value: gate + ' gate', vector: circuitHistory[cirq].vector },
+        ],
+      }
+    }
+  })
+}
+
+function addGate(name, operator) {
+
+  new Vue({
+    el: '#'+name,
+    template: "<matrix-viewer :operator-raw='operator' :dark-mode='false'/>",
+    components: {
+      MatrixViewer,
+    },
+    data() {
+      return { operator }
+    }
+  })
+}
+
+
+new Vue({
+  el: '#gates1',
+  data: {
+          show: 1
+  }
+});
+
+
+addKetList('ketlist','X',1);
+addKetList('ketlist','Y',2);
+addKetList('ketlist','Z',3);
+addKetList('ketlist','H',4);
+
+
+addGate('gate_I', Gates.I());
+addGate('gate_X', Gates.X());
+addGate('gate_Y', Gates.Y());
+addGate('gate_Z', Gates.Z());
+addGate('gate_H', Gates.H());
+addGate('gate_S', Gates.S());
+addGate('gate_T', Gates.T());
+addGate('gate_sqrtX', SqrtX());
+
+
+new Vue({
+  el: '#ketlist5',
+  template: "<ket-list-viewer :steps='stepsQuantumComputing' :dark-mode='false'/>",
+  components: {
+    KetListViewer,
+  },
+  data() {
+      return {
+      stepsQuantumComputing: [
+        { value: 'Initial state', vector: circuitHistoryBig[0].vector },
+        { value: 'Z gate', vector: circuitHistoryBig[1].vector },
+        { value: 'H gate', vector: circuitHistoryBig[2].vector },
+        { value: 'X gate', vector: circuitHistoryBig[3].vector },
+      ],
+      }
+  }
+});
+
+updateGates = function() {}
+
+var dnd = new Vue({
+  el: '#dnd',
+  template: `
+  <div>
+  
+    <div>
+      <fieldset class="box-available">
+        <legend class="legend-text">Available gates</legend>
+        <draggable
+          class="row"
+          :list="availableGates"
+          :group="{ name: '1qGates', pull: 'clone', put: false }"
+          :sort="false"
+          chosen-class="chosen"
+        >
+          <div
+            v-for="gate in availableGates"
+            v-bind:class="gate.class"
+            :key="gate.name"
+          >
+          </div>
+        </draggable>
+      </fieldset>
+    </div>
+    
+    <table class=table-circuit>
+      <tr>
+        <td>
+          <div>
+            <fieldset class="box-selected">
+              <legend class="legend-text">Selected gates</legend>
+              <draggable
+                class="row dragArea"
+                :list="selectedGates"
+                group="1qGates"
+                @change="setGates"
+                chosen-class="chosen"
+                @choose="showTrashArea"
+                @end="hideTrash"
+                @update="hideTrash"
+              >
+                <div
+                  v-for="(gate,index) in selectedGates"
+                  v-bind:class="gate.class"
+                  :key="gate.name"
+                  @click="deleteItem(index)"
+                >
+                </div>
+              </draggable>
+            </fieldset>
+          </div>
+        </td>
+        <td width="40px">
+          <span style="font-family: MathJax_Main; font-size:30px;">|&#x03C8;&rangle;</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div v-show='showTrash'>
+            <div class="box-trash">
+              <fieldset class="box-selected">
+                <legend class="legend-text">Trash &#x1F5D1;</legend>
+                <draggable
+                  :list="deletedGates"
+                  group="1qGates"
+                  chosen-class="chosen"
+                  @add="hideTrash"
+                >
+                </draggable>
+              </fieldset>
+            </div>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+    
+  </div>
+  `,
+  data() {
+    return {
+      availableGates: [
+        { name: "I" , class: "gate-class i-class" },
+        { name: "X" , class: "gate-class x-class" },
+        { name: "Y" , class: "gate-class y-class" },
+        { name: "Z" , class: "gate-class z-class" },
+        { name: "H" , class: "gate-class h-class" },
+        { name: "S" , class: "gate-class s-class" },
+        { name: "T" , class: "gate-class t-class" },
+        { name: "sqrtX" , class: "gate-class sqrtx-class" }
+      ],
+      selectedGates: [
+        { name: "X" , class: "gate-class x-class" },
+        { name: "H" , class: "gate-class h-class" }
+      ],
+      deletedGates: [],
+      showTrash: 0,
+    };
+  },
+  methods: {
+    deleteItem(index) {
+      //this.selectedGates.splice(index, 1);
+      //this.setGates();
+      this.hideTrash();
+    },
+    setGates() {
+      this.hideTrash();
+      updateGates();
+    }, 
+    showTrashArea() {
+      this.showTrash = true;
+    },
+    hideTrash() {
+      this.showTrash = false;
+    }
+  }
+});
+
+var stateSlider = new Vue({
+  el: "#state",
+  data: {
+    thetaVal: 0.5,
+    phiVal: 1.0,
+    alpha: 0.707,
+    beta_r: -0.707,
+    beta_i: 0,
+  },
+  methods: {
+    formatTheta() {
+      return "<span class='round-slider-font'>&theta; = " + this.thetaVal + " &pi;</span>";
+    },
+    formatPhi() {
+      return "<span class='round-slider-font'>&phi; = " + this.phiVal + " &pi;</span>";
+    },
+    changeAngles() {
+      let cos_theta_2 = Math.cos(this.thetaVal*Math.PI / 2);
+      let sin_theta_2 = Math.sin(this.thetaVal*Math.PI / 2);
+      let cos_phi = Math.cos(this.phiVal*Math.PI);
+      let sin_phi = Math.sin(this.phiVal*Math.PI);
+      let b_r = cos_phi * sin_theta_2;
+      let b_i = sin_phi * sin_theta_2;
+      
+      this.alpha = cos_theta_2;
+      this.beta_r = b_r ;
+      this.beta_i = b_i;
+      
+      updateGates();
+      
+    },
+  },
+  computed: {
+    state_a() {
+      let a = Math.round(this.alpha * 1000) / 1000;
+        return a !== 0 ? a : '0';
+    },
+    state_b() {
+      let b_r = Math.round(this.beta_r * 1000) / 1000;
+      let b_i = Math.round(this.beta_i * 1000) / 1000;
+      if (b_r === 0 && b_i === 0) return '0';
+      let sgn = ' + '; 
+      if (b_i < 0) { 
+        sgn = ' - '; 
+        b_i = -b_i;
+      }
+        return (b_r !== 0 ? b_r : '') + (b_i !== 0 ? sgn + b_i + ' i' : '');
+    },
+  },
+});
+
+
+circ = new Circuit(
+  Vector.fromArray(
+    [Cx(stateSlider.$data.alpha, 0), Cx(stateSlider.$data.beta_r, stateSlider.$data.beta_i)], 
+    [Dimension.qubit()]
+  ),
+  1, 
+  [0]
+);
+
+var circuitHistoryBig2 = [];
+circ = circ.saveTo(circuitHistoryBig2)
+              .H(0).saveTo(circuitHistoryBig2)
+              .X(0).saveTo(circuitHistoryBig2);
+
+var klv = new Vue({
+  el: '#ketlist6',
+  template: "<ket-list-viewer :steps='stepsQuantumComputing' :dark-mode='false'/>",
+  components: {
+    KetListViewer,
+  },
+  data() {
+    return {
+      stepsQuantumComputing: [
+        { value: 'Initial state', vector: circuitHistoryBig2[0].vector },
+        { value: 'H gate', vector: circuitHistoryBig2[1].vector },
+        { value: 'X gate', vector: circuitHistoryBig2[2].vector },
+      ],
+    }
+  }
+});
+
+updateGates = function() {
+  
+  var gates = dnd.$data.selectedGates;
+  
+  var initialState = Vector.fromArray(
+    [Cx(stateSlider.$data.alpha, 0), Cx(stateSlider.$data.beta_r, stateSlider.$data.beta_i)], 
+    [Dimension.qubit()]
+  );
+  
+  circ = new Circuit(
+    initialState,
+    1, 
+    [0]
+  );
+  
+  circuitHistoryBig2 = [];
+  circ = circ.saveTo(circuitHistoryBig2);
+  
+  var i;
+  for (i = gates.length - 1; i >= 0; i--) {
+    switch(gates[i].name) {
+      case 'X':
+        circ.X(0).saveTo(circuitHistoryBig2);
+        break;
+      case 'Y':
+        circ.Y(0).saveTo(circuitHistoryBig2);
+        break;
+      case 'Z':
+        circ.Z(0).saveTo(circuitHistoryBig2);
+        break;
+      case 'H':
+        circ.H(0).saveTo(circuitHistoryBig2);
+        break;
+       case 'I':
+        circ.I(0).saveTo(circuitHistoryBig2);
+        break;
+      case 'S':
+        circ.S(0).saveTo(circuitHistoryBig2);
+        break;
+      case 'T':
+        circ.T(0).saveTo(circuitHistoryBig2);
+        break;
+      case 'sqrtX':
+        circ.applyGate(SqrtX(), [0]).saveTo(circuitHistoryBig2);
+        break;
+      default:
+        // default case
+    }
+  }
+  
+  
+  klv.$data.stepsQuantumComputing.splice(0, klv.$data.stepsQuantumComputing.length);
+  klv.$data.stepsQuantumComputing.push({ value: 'Initial state', vector: circuitHistoryBig2[0].vector });
+  
+  for(i = 1; i < circuitHistoryBig2.length; i++) {
+    var namegate = gates[gates.length - i]?.name;
+    klv.$data.stepsQuantumComputing.push({ 
+      value: namegate + ' gate ', 
+      vector: circuitHistoryBig2[i].vector });
+  }
+}
+
+
+Vue.use(PrettyCheckbox);
+
+var stateBasis = new Vue({
+  el: '#states-basis',
+  template: `
+    <div style='font-family: MathJax_Main; display: flex'>
+  
+      <p-radio class="p-switch p-fill state_0" name="switch1" color="success" value="st_0" v-model="picked" @change="changeRadio">|0&rangle;</p-radio>
+  
+      <p-radio class="p-switch p-fill state_1" name="switch1" color="success" value="st_1" v-model="picked" @change="changeRadio">|1&rangle;</p-radio>
+  
+      <p-radio class="p-switch p-fill state_p" name="switch1" color="success" value="st_p" v-model="picked" @change="changeRadio">|&plus;&rangle;</p-radio>
+  
+      <p-radio class="p-switch p-fill state_m" name="switch1" color="success" value="st_m" v-model="picked" @change="changeRadio">|&minus;&rangle;</p-radio>
+  
+      <p-radio class="p-switch p-fill state_r" name="switch1" color="success" value="st_r" v-model="picked" @change="changeRadio">|⟲&rangle;</p-radio>
+  
+      <p-radio class="p-switch p-fill state_l" name="switch1" color="success" value="st_l" v-model="picked" @change="changeRadio">|⟳&rangle;</p-radio>
+      
+    </div>
+  `,
+  data: {
+    picked: "st_0",
+  },
+  methods: {
+    changeRadio: function () {
+      updateOneStateAndGate();
+    },
+  }
+});
+
+var comboboxGate = new Vue({
+  el: '#gate_combo',
+  template: `
+    <table align='center' style='border: none; margin: none; padding: none;'>
+      <tr>
+      <td width='300px' style='min-width: 165px;'>
+      <multiselect 
+        v-model='value' 
+        placeholder='Choose a gate' 
+        label='gateDesc' 
+        track-by='gateName' 
+        :options='options' 
+        :option-height='50'
+        :show-labels='false'
+        @select='selectCombo'
+        @input='updateValue'>
+      <template 
+        slot='singleLabel' 
+        slot-scope='props'>
+        <div :class='props.option.gateVis'></div>
+        {{ props.option.gateDesc }}
+      </template>
+      <template 
+        slot='option'
+        slot-scope='props'>
+        <div :class='props.option.gateVis'></div>
+        {{ props.option.gateDesc }}
+      </template>
+      </multiselect>
+      </td>
+      <td width='30px'></td>
+      <td>
+        <div v-show='showMatrix == "I"'><div id='gate_I_0'></div></div>
+        <div v-show='showMatrix == "X"'><div id='gate_X_0'></div></div>
+        <div v-show='showMatrix == "Y"'><div id='gate_Y_0'></div></div>
+        <div v-show='showMatrix == "Z"'><div id='gate_Z_0'></div></div>
+        <div v-show='showMatrix == "H"'><div id='gate_H_0'></div></div>
+        <div v-show='showMatrix == "S"'><div id='gate_S_0'></div></div>
+        <div v-show='showMatrix == "T"'><div id='gate_T_0'></div></div>
+        <div v-show='showMatrix == "sqrtX"'><div id='gate_sqrtX_0'></div></div>
+      </td>
+      </tr>
+    </table>
+  `,
+  components: {
+    Multiselect: window.VueMultiselect.default
+    },
+  data: {
+    options: [
+      { gateDesc: "Identity", gateVis: "gate-class i-class", gateName: "I" },
+      { gateDesc: "Pauli X", gateVis: "gate-class x-class", gateName: "X" },
+      { gateDesc: "Pauli Y", gateVis: "gate-class y-class", gateName: "Y" },
+      { gateDesc: "Pauli Z", gateVis: "gate-class z-class", gateName: "Z" },
+      { gateDesc: "Hadamard", gateVis: "gate-class h-class", gateName: "H" },
+      { gateDesc: "Phase S", gateVis: "gate-class s-class", gateName: "S" },
+      { gateDesc: "Phase T", gateVis: "gate-class t-class", gateName: "T" },
+      { gateDesc: "Sqrt X", gateVis: "gate-class sqrtx-class", gateName: "sqrtX" },
+    ],
+    value: { gateDesc: "Identity", gateVis: "gate-class i-class", gateName: "I" },
+    showMatrix: "I",
+  },
+  methods: {
+    selectCombo(selectedOption) {
+      this.showMatrix = selectedOption.gateName;
+    },
+    updateValue() {
+      updateOneStateAndGate();
+    }
+  }
+})
+
+addGate('gate_I_0', Gates.I());
+addGate('gate_X_0', Gates.X());
+addGate('gate_Y_0', Gates.Y());
+addGate('gate_Z_0', Gates.Z());
+addGate('gate_H_0', Gates.H());
+addGate('gate_S_0', Gates.S());
+addGate('gate_T_0', Gates.T());
+addGate('gate_sqrtX_0', SqrtX());
+
+var circuitHis = [];
+Circuit.qubits(1).saveTo(circuitHis);
+
+var oneState = new Vue({
+  el: '#ket-state-basis',
+  template: "<ket-viewer :vector='vector' :dark-mode='false'/>",
+  components: {
+    KetViewer,
+  },
+  data() {
+    return { 
+      vector: circuitHis[0].vector,
+    }
+  }
+})
+
+var oneStateAndGate = new Vue({
+  el: '#ket-res-state-basis-gate',
+  template: "<ket-viewer :vector='vector' :dark-mode='false'/>",
+  components: {
+    KetViewer,
+  },
+  data() {
+    return { 
+      vector: circuitHis[0].vector,
+    }
+  }
+})
+
+updateOneStateAndGate = function() {
+  
+  var alpha;
+  var beta;
+  
+  switch(stateBasis.$data.picked) {
+    case 'st_0':
+      alpha = Cx(1, 0);
+      beta = Cx(0, 0);
+      break;
+    case 'st_1':
+      alpha = Cx(0, 0);
+      beta = Cx(1, 0);
+      break;
+    case 'st_p':
+      alpha = Cx(0.707107, 0);
+      beta = Cx(0.707107, 0);
+      break;
+    case 'st_m':
+      alpha = Cx(0.707107, 0);
+      beta = Cx(-0.707107, 0);
+      break;
+    case 'st_r':
+      alpha = Cx(0.707107, 0);
+      beta = Cx(0, 0.707107);
+      break;
+    case 'st_l':
+      alpha = Cx(0.707107, 0);
+      beta = Cx(0, -0.707107);
+      break;
+  }
+  
+  circuitHis = [];
+  circ = new Circuit(
+      Vector.fromArray(
+        [alpha, beta], 
+        [Dimension.qubit()],
+      ),
+      1, 
+      [0]
+    ).saveTo(circuitHis);
+  
+  switch(comboboxGate.$data.value.gateName) {
+    case 'X':
+      circ.X(0).saveTo(circuitHis);
+      break;
+    case 'Y':
+      circ.Y(0).saveTo(circuitHis);
+      break;
+    case 'Z':
+      circ.Z(0).saveTo(circuitHis);
+      break;
+    case 'H':
+      circ.H(0).saveTo(circuitHis);
+      break;
+    case 'I':
+      circ.I(0).saveTo(circuitHis);
+      break;
+    case 'S':
+      circ.S(0).saveTo(circuitHis);
+      break;
+    case 'T':
+      circ.T(0).saveTo(circuitHis);
+      break;
+    case 'sqrtX':
+      circ.applyGate(SqrtX(), [0]).saveTo(circuitHis);
+      break;
+    default:
+      // default case
+  }
+  
+  oneState.$data.vector = circuitHis[0].vector;
+  oneStateAndGate.$data.vector = circuitHis[1].vector;
+  
+}
+
+
+</script>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+.matrix-viewer {
+  margin: auto;
+}
+
+.gate_title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.matrices td {
+  border: 10px solid #ffffff;
+  background-color: rgba(0,0,0,0.03);
+  padding: 3px 3px 3px 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+div .gate-class {
+  display: inline-block;
+  margin: 3px 3px 3px 3px;
+  height: 50px;
+  width: 50px;
+  cursor: grab;
+  background-size: 50px 50px;
+  vertical-align: middle;
+}
+
+div .x-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Cpath d='M 342.313 299.152 L 307.503 299.152 L 285.353 266.012 L 263.523 299.152 L 229.003 299.152 L 267.943 245.092 L 230.683 192.262 L 264.743 192.262 L 286.123 223.102 L 307.193 192.262 L 339.873 192.262 L 302.613 243.872 L 342.313 299.152 Z' transform='matrix(0.9286789894104004, 0, 0, 0.9679050445556641, -165.3771514892578, -136.51661682128906)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div .y-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(127, 0, 255, 0.6);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(128, 255, 0, 0.6);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Cpath d='M 338.193 192.262 L 297.263 260.822 L 297.263 299.152 L 267.033 299.152 L 267.033 260.362 L 226.263 192.262 L 258.173 192.262 L 283.523 234.712 L 308.873 192.262 L 338.193 192.262 Z' transform='matrix(0.8812999725341797, 0, 0, 0.9684740304946899, -148.7193603515625, -136.82974243164062)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div .z-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(0, 255, 255, 0.6);'%3E%3C/rect%3E%3Cpath d='M 273.603 275.502 L 329.033 275.502 L 329.033 299.152 L 234.583 299.152 L 234.583 280.472 L 287.763 217.352 L 235.943 217.352 L 235.943 193.702 L 326.773 193.702 L 326.773 212.382 L 273.603 275.502 Z' transform='matrix(0.9775470495223999, 0, 0, 0.9815950393676758, -174.16375732421875, -140.6441650390625)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div .h-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(0, 255, 255, 0.6);'%3E%3C/rect%3E%3Cpath d='M 310.353 193.702 L 340.183 193.702 L 340.183 299.152 L 310.353 299.152 L 310.353 258.032 L 269.683 258.032 L 269.683 299.152 L 239.853 299.152 L 239.853 193.702 L 269.683 193.702 L 269.683 233.322 L 310.353 233.322 L 310.353 193.702 Z' transform='matrix(0.8235750198364258, 0, 0, 0.9815950393676758, -138.8560028076172, -140.6441650390625)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div .i-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);'%3E%3C/rect%3E%3Cpath d='M 239.853 299.152 L 239.853 193.702 L 269.683 193.702 L 269.683 299.152 L 239.853 299.152 Z' transform='matrix(0.9788930416107178, 0, 0, 0.9799250364303589, -149.47230529785156, -140.3878631591797)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div .s-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(128, 255, 0, 0.6);'%3E%3C/rect%3E%3Cpath d='M 276.913 301.262 C 268.38 301.262 260.096 300.209 252.063 298.102 C 244.03 295.989 237.5 293.175 232.473 289.662 L 242.263 267.672 C 246.983 270.785 252.456 273.295 258.683 275.202 C 264.91 277.109 271.036 278.062 277.063 278.062 C 288.516 278.062 294.243 275.199 294.243 269.472 C 294.243 266.459 292.61 264.225 289.343 262.772 C 286.076 261.319 280.83 259.789 273.603 258.182 C 265.67 256.475 259.04 254.642 253.713 252.682 C 248.393 250.722 243.826 247.582 240.013 243.262 C 236.193 238.949 234.283 233.125 234.283 225.792 C 234.283 219.365 236.04 213.565 239.553 208.392 C 243.073 203.219 248.323 199.125 255.303 196.112 C 262.276 193.099 270.836 191.592 280.983 191.592 C 287.91 191.592 294.74 192.372 301.473 193.932 C 308.2 195.485 314.123 197.769 319.243 200.782 L 310.053 222.932 C 300.013 217.505 290.273 214.792 280.833 214.792 C 274.906 214.792 270.586 215.672 267.873 217.432 C 265.166 219.185 263.813 221.469 263.813 224.282 C 263.813 227.095 265.42 229.205 268.633 230.612 C 271.846 232.019 277.016 233.475 284.143 234.982 C 292.176 236.689 298.83 238.522 304.103 240.482 C 309.376 242.435 313.946 245.549 317.813 249.822 C 321.68 254.089 323.613 259.885 323.613 267.212 C 323.613 273.539 321.856 279.265 318.343 284.392 C 314.83 289.512 309.556 293.602 302.523 296.662 C 295.496 299.729 286.96 301.262 276.913 301.262 Z' transform='matrix(1.0259699821472168, 0, 0, 0.9790090322494507, -185.2677459716797, -139.92605590820312)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div .t-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(255, 0, 0, 0.6);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(0, 0, 0, 0.1);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(255, 191, 0, 0.6);'%3E%3C/rect%3E%3Cpath d='M 262.303 299.152 L 262.303 217.352 L 229.913 217.352 L 229.913 193.702 L 324.363 193.702 L 324.363 217.352 L 292.133 217.352 L 292.133 299.152 L 262.303 299.152 Z' transform='matrix(1.036102056503296, 0, 0, 0.9793420433998108, -187.591064453125, -140.02294921875)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div .sqrtx-class {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Crect width='100' height='100' style='fill: rgba(255, 191, 0, 0.6);' data-bx-origin='0.5 0.5'%3E%3C/rect%3E%3Crect x='100' width='100' height='100' style='fill: rgba(255, 0, 191, 0.6);'%3E%3C/rect%3E%3Crect y='100' width='100' height='100' style='fill: rgba(255, 0, 191, 0.6);'%3E%3C/rect%3E%3Crect x='100' y='100' width='100' height='100' style='fill: rgba(255, 191, 0, 0.6);'%3E%3C/rect%3E%3Cg transform='matrix(1, 0, 0, 1, -4.054447, -10.607145)'%3E%3Cpath d='M 340.783 299.152 L 306.443 299.152 L 284.593 266.462 L 263.053 299.152 L 229.013 299.152 L 267.423 245.822 L 230.673 193.702 L 264.263 193.702 L 285.353 224.132 L 306.143 193.702 L 338.373 193.702 L 301.623 244.622 L 340.783 299.152 Z' transform='matrix(0.8669739365577698, 0, 0, 0.9812610149383545, -113.16642761230469, -120.74628448486328)' style='line-height: 222.692px; white-space: pre;'%3E%3C/path%3E%3Cpath d='M 303.759 124.613 L 307.029 124.613 L 295.479 158.303 L 291.909 158.303 L 285.219 140.123 L 280.499 140.123 L 280.499 137.283 L 287.769 137.283 L 293.679 153.843 L 303.759 124.613 Z' transform='matrix(2.5905051231384277, 0, 0, 3.988955020904541, -709.808349609375, -452.89447021484375)' style='white-space: pre;'%3E%3C/path%3E%3Crect x='77.598' y='43.578' width='110' height='7' style=''%3E%3C/rect%3E%3C/g%3E%3C/svg%3E");
+}
+
+div .chosen {
+  transform: scale(1.1) rotate(-5deg);
+  cursor: grabbing;
+}
+
+div .box-available {
+  border-radius: 0px;
+  border: none;
+  background-color: rgba(0,0,0,0.05);
+  padding: 15px 0px 0px 15px;
+  width: 464px;
+  height: 100px;
+}
+
+.legend-text {
+  width: 140px;
+  margin: 10px 0px 0px 10px;
+  font-size: 120%;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+div .box-selected {
+  border-radius: 0px;
+  border: none;
+  background-color: rgba(0,0,0,0.05);
+  padding: 15px 0px 0px 15px;
+  width: auto;
+  height: 100px;
+}
+
+div .box-trash {
+  z-index: 1;
+  position: absolute;
+  width: 464px;
+  background-color: rgb(255,255,255);
+}
+
+.table-circuit{
+  width: 100%;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+.theta .rs-handle {
+  background-color: #ff0055;
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+.phi .rs-handle {
+  background-color: #5c00d3;
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+.round-slider-font {
+  font-weight: 500;
+  font-family: Asana Math;
+}
+
+.pretty.p-switch {
+    margin-right: auto;
+}
+
+.multiselect__option--highlight {
+  background: rgba(0,0,0,0.03);
+  color: black;
+}
+
+.multiselect__option--selected.multiselect__option--highlight {
+  background: rgba(0,0,0,0.1);
+  color: black;
+}
+
+d-article .ket-list table th {
+  border-bottom: none;
+}
+
+d-article .ket-list table td {
+  border-bottom: 0px;
+}
+
+d-article .ket-list table {
+  border-collapse: collapse;
+  margin-bottom: 0rem;
+  border-bottom: none;
+}
+
+.quantum-state-viewer.ket .ket-component-bright {
+  border-width: 0px;
+  border-style: none;
+}
+</style>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references">
+<div id="ref-DomainColoring20">
+<p>Emilia, Petrisor. 2019. “Visualizing Complex-Valued Functions with Matplotlib and Mayavi: Domain Coloring Method.” 2019. <a href="https://nbviewer.jupyter.org/github/empet/Math/blob/master/DomainColoring.ipynb">https://nbviewer.jupyter.org/github/empet/Math/blob/master/DomainColoring.ipynb</a>.</p>
+</div>
+<div id="ref-Qubism20">
+<p>Migdał, Piotr. 2014a. “QuTiP Example: Qubism Visualizations.” 2014. <a href="https://nbviewer.jupyter.org/github/qutip/qutip-notebooks/blob/master/examples/qubism-and-schmidt-plots.ipynb">https://nbviewer.jupyter.org/github/qutip/qutip-notebooks/blob/master/examples/qubism-and-schmidt-plots.ipynb</a>.</p>
+</div>
+<div id="ref-Migdal14">
+<p>———. 2014b. “Symmetries and Self-Similarity of Many-Body Wavefunctions, Chapter 3.” PhD thesis, ICFO – The Institute of Photonic Sciences. <a href="https://arxiv.org/abs/1412.6796">https://arxiv.org/abs/1412.6796</a>.</p>
+</div>
+<div id="ref-Nielsen00">
+<p>Nielsen, Michael A., and Isaac L. C. Chuang. 2000. <em>Quantum Computation and Quantum Information</em>. Cambridge University Press.</p>
+</div>
+</div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
