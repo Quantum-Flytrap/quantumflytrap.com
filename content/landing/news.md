@@ -1,15 +1,17 @@
 ---
-title: "News"
+title: "Key features"
 order: 1
 ---
 
-_"The night is dark, with only a handful of photons."_
+With the Quantum Lab, you can:
 
-Tonight, we celebrate two things:
+- Drag & drop elements to create a quantum experiment.
+- Experience a real-time in-browser simulation.
+- Interact with up to 3 entangled photons.
+- Perform advanced quantum measurements (POVMs).
+- See how the entanglement evolves with a visualization.
+- Explore the multiverse tree of all possible outcomes.
+- Check the exact quantum state with a ket visualizer.
+- Use either physical elements or abstract qubit gates.
 
-- The Winter Solstice (if you live in the Northern Hemisphere).
-- The release of the Quantum Lab (alpha).
-
-After months of hard work, we have a smooth simulation of up to 3 entangled photons, a rigorous quantum measurement, and a multiverse tree explorer. See [a short tutorial on the new features](/lab-how-to).
-
-Psst - it is a long night. [Join our Discord channel](https://discord.com/invite/2gfUArFd) for educators and researchers. The link is open only for this night. For general questions, write to <piotr@quantumflytrap.com>.
+It is possible to create quantum computing algorithms ([Deutsch-Jozsa](https://lab.quantumflytrap.com/lab/deutsch-jozsa)), quantum cryptography protocols ([BB84](https://lab.quantumflytrap.com/lab/bb84) and [Ekert](https://lab.quantumflytrap.com/lab/ekert-bell)), advanced quantum measurements ([nonorthogonal state discrimination](https://lab.quantumflytrap.com/lab/nonorthogonal-state-discrimination)), historical interferometers ([Mach-Zehnder](https://lab.quantumflytrap.com/lab/mach-zehnder) and [Michaelson-Morley](https://lab.quantumflytrap.com/lab/michelson-morley)), classical optics ([three polarizers](https://lab.quantumflytrap.com/lab/three-polarizer-paradox) and [an optical diode](https://lab.quantumflytrap.com/lab/optical-diode)), and much more!
