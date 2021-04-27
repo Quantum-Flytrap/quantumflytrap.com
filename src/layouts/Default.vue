@@ -24,7 +24,6 @@
             :class="{ hidden: !menuOpen }"
           >
             <a href="https://lab.quantumflytrap.com">Virtual Lab</a>
-            <g-link to="/course/">Quantum Course</g-link>
             <g-link to="/scientists/">For Scientists</g-link>
             <g-link to="/about/">About</g-link>
             <g-link to="/press/">Press</g-link>
