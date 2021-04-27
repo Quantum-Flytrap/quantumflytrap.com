@@ -3,7 +3,7 @@ title: "Key features"
 order: 1
 ---
 
-With the Quantum Lab, you can:
+With the Quantum Lab (previously known as Quantum Game with Photons), you can:
 
 - Drag & drop elements to create a quantum experiment.
 - Experience a real-time in-browser simulation.
