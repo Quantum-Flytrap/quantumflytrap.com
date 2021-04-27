@@ -95,7 +95,7 @@ export default {
     Testimonials,
   },
   metaInfo: {
-    title: "Welcome to the",
+    title: "Home",
   },
   methods: {
     sectionClass(index) {
