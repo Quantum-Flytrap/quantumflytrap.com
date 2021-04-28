@@ -9,9 +9,19 @@
   </Layout>
 </template>
 
+<script>
+export default {
+  name: "PageA",
+  metaInfo() {
+    return { title: this.$page.pageA.title };
+  },
+};
+</script>
+
 <page-query>
 query PageA ($path: String!) {
    pageA (path: $path) {
+    title,
     content
   }
 }

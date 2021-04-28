@@ -6,6 +6,7 @@ order: 11
 See recent updates on Twitter [@QuantumGameIO](https://twitter.com/quantumgameio).
 Some of our previous blog posts:
 
+- [Quantum logic gates for a single qubit, interactively](https://quantumflytrap.com/blog/2021/qubit-interactively/) - an explorable explanation
 - [Quantum mechanics for high-school students](https://p.migdal.pl/2016/08/15/quantum-mechanics-for-high-school-students.html) - problems, materials, and course outlines
 - [Interface inspirations from games](https://medium.com/quantum-photons/to-make-a-cool-game-you-first-have-to-play-other-cool-games-a1a1d45e169b) - standing on the shoulders of UI/UX giants
 - [How I Learned to Stop Worrying and Love the Types & Tests](https://p.migdal.pl/2020/03/02/types-tests-typescript.html) - good software engineering practices for scientists

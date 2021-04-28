@@ -10,7 +10,7 @@ export default function(Vue, { router, head, isClient }) {
   const title = "Quantum Flytrap";
   const url = "https://quantumflytrap.com";
   const description =
-    '"Quantum simulation LEGO bricks." An in-browser simulation & visualization of quantum mechanics. The go-to place for learning quantum before the quantum computing revolution takes off.';
+    "Intuitive user interfaces for quantum computing - make it an accessible & business-available technology. We aim to build the standard for interaction with quantum systems.";
   const twitter = "QuantumGameIO";
   const image = require("~/imgs/mach-zehnder2.gif");
 

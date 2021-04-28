@@ -31,11 +31,13 @@
           </div>
           <div class="flex-1 prose text-white md:p-4 max-w-full self-center">
             <div>
-              <h1 class="uppercase text-white">Your quantum lab</h1>
+              <h1 class="uppercase text-white">Quantum user interfaces</h1>
               <p>
-                Quantum "LEGO Bricks". An in-browser simulation &amp;
-                visualization of quantum mechanics. The go-to place for learning
-                quantum before the quantum computing revolution takes off.
+                Quantum computing gets real!<br />
+                At Quantum Flytrap we develop intuitive user interfaces for
+                quantum computing to make it an accessible &amp;
+                business-available technology. We aim to build the standard for
+                interaction with quantum systems.
               </p>
             </div>
 
@@ -93,7 +95,7 @@ export default {
     Testimonials,
   },
   metaInfo: {
-    title: "Welcome to the",
+    title: "Home",
   },
   methods: {
     sectionClass(index) {
