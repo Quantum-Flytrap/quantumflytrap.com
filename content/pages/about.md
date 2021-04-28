@@ -23,9 +23,9 @@ Our first product, the Quantum Lab is being developed by Piotr Migdał, Klem Jan
 
 ---
 
-## Contact
+## Connect with us
 
-Visit us on [Twitter](https://twitter.com/QuantumGameIO), [Facebook](https://www.facebook.com/quantumgameio), [GitHub](https://github.com/Quantum-Game), and [Medium](https://medium.com/quantum-photons). If you have any comments, join our [Discord channel](https://discord.gg/qBhqf33Vqv), @ us on Twitter, create a GitHub Issue, or simply email us! :)
+Follow us on [Twitter](https://twitter.com/QuantumGameIO), check our [GitHub](https://github.com/Quantum-Game), or contact us directly at <contact@quantumflytrap.com>. If you have any comments, join our [Discord channel](https://discord.gg/BJMbjUVXmY), @ us on Twitter, create a GitHub Issue, or email us!
 
 ---
 
