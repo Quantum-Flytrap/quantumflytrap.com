@@ -4444,6 +4444,11 @@ gridsome-plugin-monetization@^1.0.1:
   resolved "https://registry.yarnpkg.com/gridsome-plugin-monetization/-/gridsome-plugin-monetization-1.0.1.tgz#efaf8e8ce8319e3b2cffadc4968dc249756acb15"
   integrity sha512-gkiY3CBjM8nTBIfH3g+ith8kZrJi50kxFP9GHJU3PZpW3QzxKBgBr4+kOhS0NIx74tCdIv0Fw4KTfe9MKycH+A==
 
+gridsome-plugin-plausible-analytics@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-plausible-analytics/-/gridsome-plugin-plausible-analytics-1.0.0.tgz#251d21334d6ac12df8967724fc55a079ffec9395"
+  integrity sha512-KMEQzxy3jefHH8ZDPbKttsrrEt4uSebn+saHtRkZx9pXR7DJmge0uE6+ImzsBXdpNuOvMTa6XGZVrwm00VC/QQ==
+
 gridsome-plugin-tailwindcss@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/gridsome-plugin-tailwindcss/-/gridsome-plugin-tailwindcss-4.1.1.tgz#fd167f6f4ffec6c2400b5a3011200761b72f4ec4"
