@@ -47,6 +47,13 @@ module.exports = {
         global: true, // add monetization to every page; default: true
       },
     },
+    {
+      use: 'gridsome-plugin-plausible-analytics',
+      options: {
+        dataDomain: 'quantumflytrap.com',
+        outboundLinkTracking: false
+      }
+    }
   ],
   templates: {
     BlogPost: "/blog/:slug",
