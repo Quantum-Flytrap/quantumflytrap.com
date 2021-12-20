@@ -8,18 +8,16 @@ date: 2019-05-23
 ## About
 
 At Quantum Flytrap, we develop user interfaces for quantum computing and quantum cryptography, enabling easy use of quantum tech across disciplines and applications.
-We aim to build the standard for interaction with quantum systems. We want to be the Android of quantum computing - to offer users a simple, well-designed graphical interface working with any hardware.
+We aim to build the standard for interaction with quantum systems. 
 
-![QF](./QF-interfaces-about.png)
-
-The company was founded in early 2020 by quantum physicist Piotr Migdał and designer Klem Jankiewicz, who have previously worked together developing the Quantum Game at the Centre For Quantum Technologies at the University of Singapore.
+The company was founded in early 2020 by quantum physicist Piotr Migdał and designer Klem Jankiewicz, who have previously worked together at the Centre For Quantum Technologies at the University of Singapore.
 
 ---
 
 ## The Team
 
 ![team](./team.png)
-Our first product, the Quantum Lab is being developed by Piotr Migdał, Klem Jankiewicz, Paweł Grabarz, among other contributors. The generative soundtrack was designed by Pawel Janicki. Our advisor is Prof. Artur Ekert from the University of Oxford.
+The Virtual Lab and other solutions by Quantum Flytrap are being developed by Piotr Migdał, Klem Jankiewicz, Paweł Grabarz, among other contributors. Our advisor is Prof. Artur Ekert from the University of Oxford.
 
 ---
 
@@ -31,15 +29,9 @@ Follow us on [Twitter](https://twitter.com/QuantumGameIO), check our [GitHub](ht
 
 ## For Investors
 
-Interest in quantum is growing fast, but it is hard to learn, use, and interact. To make quantum computing viable, we need to make it approachable for business.
+Interest in quantum is growing fast, but it is hard to learn, use, and interact. To make quantum computing viable, we need to make it approachable for users and business.
 We need to do with quantum what TensorFlow, Keras & PyTorch did with deep learning: move it from academia to accessible & business-available technology.
 
-**If you would like to know more about Quantum Flytrap or the investment opportunities, contact Piotr Migdał at <piotr@quantumflytrap.com>.**
-
----
-
-## Quantum Landscape
-
-![quantum landscape](./landscape.png)
+**We are starting a seed round in Q1 2022. If you would like to know more about Quantum Flytrap or the investment opportunity, contact Piotr Migdał at <piotr@quantumflytrap.com>.**
 
 ---
