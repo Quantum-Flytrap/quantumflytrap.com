@@ -17,7 +17,7 @@ The company was founded in early 2020 by quantum physicist Piotr Migdał and des
 ## The Team
 
 ![team](./team.png)
-The Virtual Lab and other solutions by Quantum Flytrap are being developed by Piotr Migdał, Klem Jankiewicz, Paweł Grabarz, among other contributors. Our advisor is Prof. Artur Ekert from the University of Oxford.
+The [Virtual Lab](https://lab.quantumflytrap.com/lab/) and other solutions by Quantum Flytrap are being developed by Piotr Migdał, Klem Jankiewicz, Paweł Grabarz, among other contributors. Our advisor is Prof. Artur Ekert from the University of Oxford.
 
 ---
 
