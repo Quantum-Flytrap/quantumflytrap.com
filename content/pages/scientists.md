@@ -5,9 +5,9 @@ description: "Testing it"
 date: 2019-05-23
 ---
 
-## Quantum Lab for scientists
+## Virtual Lab for scientists
 
-Quantum Lab is a virtual optical table. With a drag and drop interface, you can show phenomena, recreate existing experiments, and prototype new.
+Virtual Lab is a virtual optical table. With a drag and drop interface, you can show phenomena, recreate existing experiments, and prototype new ones.
 
 Within this environment it is possible to recreate interference, quantum cryptography protocols, to show entanglement, Bell test, quantum teleportation, and the many-worlds interpretation.
 
@@ -15,22 +15,18 @@ Within this environment it is possible to recreate interference, quantum cryptog
 
 Interactive: <https://lab.quantumflytrap.com/lab/mach-zehnder>
 
-## Why we made it?
 
-The idea was born out of need - while teaching quantum mechanics Piotr saw that numerics overshadowed key conceptual aspects, and created an interactive way to create quantum setups, which left computing to computers. Only later, he created a game out of it - to reach a wider audience, and provide concrete motivation for solving quantum puzzles. Now it is a Lab again, back to its roots, with UX lessons from the unforgiving world of games.
-
-It is an ongoing process. If you want to include your experiment, or are interested about additional functionality - I would love to talk: <piotr@quantumflytrap.com>.
 
 ## Key features
 
 - Create arbitrary setup in a virtual optical lab
-- Display of quantum state (so you can lookup what happens, step by step)
+- Display of quantum state (so you can look up what happens, step by step)
 - Dynamic change of basis
 - Up to 3 entangled photons
-- Measurement tree to show all possible outcomes at the same time
+- Many-worlds tree to show all possible outcomes at the same time
 - Display of quantum operators, with their tensor structure
 
-![measurement tree](./measurement_tree.gif)
+![many-worlds tree](./measurement_tree.gif)
 
 Interactive: <https://lab.quantumflytrap.com/lab/feed-us-everett>
 
@@ -38,7 +34,7 @@ Interactive: <https://lab.quantumflytrap.com/lab/feed-us-everett>
 
 If you teach classical optics (polarization, optical activity, interference), quantum physics (superposition, entanglement), quantum information & cryptography (Bell inequality, BB84, Ekert protocol). From a simple level of a beamsplitter, to more advanced e.g. unambiguous discrimination of non-orthogonal states.
 
-We prepared a few classical setups, but you are free to modify them, or make your own from the scratch.
+We prepared a few [classical setups](https://lab.quantumflytrap.com/experiments). You are free to modify them, or make your own from the scratch.
 
 ![BB84 quantum key distribution protocol](./bb84_manual.gif)
 
@@ -63,6 +59,7 @@ It works for any discrete states, also defined by you.
 Supported by the [Unitary Fund](https://unitary.fund/).
 Examples:
 
+- [Quantum logic gates for a single qubit, interactively](https://quantumflytrap.com/blog/2021/qubit-interactively/)
 - Quantum Game element encyclopedia (e.g. [Faraday rotator](https://quantumgame.io/info/faraday-rotator)).
 - Presentation with Reveal.js (RISE in Jupyter Notebook): <https://p.migdal.pl/piterpy-matrix/#/17>
 - Presentation with R Markdown Raveal.js <http://p.migdal.pl/nyc-qc-braketvue/#/>
@@ -84,6 +81,8 @@ For example, see [quantum computing example](https://jsfiddle.net/stared/wusev5a
 
 Quantum Lab and its direct predecessor Quantum Game with Photons, were cited in papers by multiple research groups:
 
+- B. R. La Cour, M. Maynard, P. Shroff, G. Ko, E. Ellis, 2021., [The Virtual Quantum Optics Laboratory](https://arxiv.org/pdf/2105.07300.pdf) 
+- C. Foti, D. Anttila, S. Maniscalco, M. L. Chiofalo, 2021., [Quantum Physics Literacy Aimed at K12 and the General Public](https://www.mdpi.com/2218-1997/7/4/86)
 - Stephen Ornes, [Quantum games aim to demystify heady science](https://doi.org/10.1073/pnas.1800744115), PNAS February 20, 2018 115 (8) 1667-1669, [PDF](https://www.pnas.org/content/pnas/115/8/1667.full.pdf)
 - Matthew S. Leifer, [Gamifying Quantum Theory
   ](https://digitalcommons.chapman.edu/scs_articles/541/), The Quantum Times (2017), [PDF](https://digitalcommons.chapman.edu/cgi/viewcontent.cgi?article=1541&context=scs_articles)
@@ -96,11 +95,11 @@ More as [a Google Scholar search](https://scholar.google.com/scholar?hl=en&as_sd
 
 ## Collaboration
 
-We would be delighted to collaborate! We would like to help:
+We would be delighted to collaborate!
 
 - Animations and interactive visualization showcasing your research.
-- Creating tools for you for prototyping your experimental setups.
-- Collaborating on research on visualizing quantum mechanics (education, the geometry of quantum state).
+- Creating tools for prototyping your experimental setups.
+- Collaborating on research on visualizing quantum mechanics (interfaces, education, the geometry of quantum state).
 - Mentoring and support with writing interactive blog posts.
 
-Interested? Mail us at <piotr@quantumflytrap.com>!
+Interested? Mail Piotr Migdał at <piotr@quantumflytrap.com>!
