@@ -1,11 +1,11 @@
 <template>
   <Layout>
     <div class="container max-w-xl mx-auto py-4">
-      <div class="post-title prose max-w-full">
-        <h1>
-          JOB OPENING: {{ $page.pageJob.title }} <br />({{
-            $page.pageJob.description
-          }})
+      <div class="post-title prose max-w-full pb-4">
+        <h1 class="job-opening">
+          JOB OPENING:<br />
+          {{ $page.pageJob.title }}<br />
+          {{ $page.pageJob.description }}
         </h1>
       </div>
       <div
@@ -36,6 +36,10 @@ query PageJob ($path: String!) {
 </page-query>
 
 <style>
+h1.job-opening {
+  font-size: 1.75em;
+}
+
 .link {
   font-size: 0.8rem;
   color: rgba(37, 11, 56, 0.5);
