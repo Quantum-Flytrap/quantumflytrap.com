@@ -1,13 +1,53 @@
 ---
-slug: "Science Writer"
-title: "Science Writer - quantum physics & iunteractive media"
+slug: "science-writer"
+title: "Quantum Science Writer for interactive media - remote, full- or part-time"
 description: "remote, software project in quantum computing"
-date: 2022-01-21
+date: 2022-02-01
 ---
 
-# cience Writer - quantum physics & iunteractive media
+Quantum Flytrap keeps growing! 
+We open a quantum science writer position. If you are passionate about making quantum approachable and are interested in a creative, fast-paced environment - here you go!
 
-Quantum Flytrap is a startup on a mission to make quantum computing accessible technology. We develop a browser-based no-code IDE for quantum technologies. We are starting a project from a leading quantum device manufacturer - and we look to expand our team with a Frontend Developer!
+Your key responsibilities will be:
 
-The company was founded in 2020 by quantum physicist [Piotr Migdał](https://p.migdal.pl) and designer [Klem Jankiewicz](https://jankiewiczstudio.com/). Our tech demo, Virtual Lab, is already being used worldwide by Stanford and Oxford universities among others. Our team is distributed over Warsaw, Tel-Aviv, Wrocław, and Kraków. We have a small office in Warsaw - you can work from there if you like. For more details about us check out our website https://quantumflytrap.com/. 
+- Creating explanations for interactive materials
+- Designing practical curricula introducing to quantum computing
+- Incorporating feedback from the users
+- Writing tutorial & short blog posts  
 
+
+You will be collaborating directly with us, founders - [Piotr Migdał](https://p.migdal.pl)  (on physics) and [Klem Jankiewicz](https://jankiewiczstudio.com/) (on UX). Since the team is still small (five people so far), your work will directly impact the shape of the company. For more details about us check out our website <https://quantumflytrap.com/>. 
+
+We are a remote team - with founders in Warsaw, Tel Aviv. We do the bulk of our work asynchronously.
+
+## Key requirements:
+
+- Quantum physics background
+- Willingness and interest in making quantum easy
+- Clear, readable & enjoyable English
+- Good communication
+
+## It would be a plus if you had experience with:
+
+- Designing educational or outreach activities
+- Public writings (e.g. blog, editing Wikipedia)
+- Video tutorials
+- Explorable Explanations and other interactive media
+- Creating tutorials, introductions, or documentation for software
+
+## What can we offer?
+
+- A competitive salary
+- Work in a small, focused team
+- Flexible work hours - asynchronous communication on Basecamp
+- Working in a rapidly growing, international quantum computing environment
+
+To apply, please send an email to Alicja Głuszek, <alicja@quantumflytrap.com>.
+
+Apply via (form); make sure to include:
+
+- Your Resume
+- A few examples of your text on physics (e.g. outreach articles, journal publications, slides) - a link (or attachment) with a one-sentence description
+- Your LinkedIn profile link (if you have one)
+- Your availability
+- What got you interested in the project?
