@@ -1,7 +1,7 @@
 ---
 slug: "science-writer"
-title: "Quantum Science Writer for interactive media - remote, full- or part-time"
-description: "remote, software project in quantum computing"
+title: "Quantum Science Writer"
+description: "for interactive media - remote"
 date: 2022-02-01
 ---
 
@@ -37,7 +37,7 @@ We are a remote team - with founders in Warsaw, Tel Aviv. We do the bulk of our 
 
 ## What can we offer?
 
-- A competitive salary
+- A competitive salary (part-time or full-time)
 - Work in a small, focused team
 - Flexible work hours - asynchronous communication on Basecamp
 - Working in a rapidly growing, international quantum computing environment

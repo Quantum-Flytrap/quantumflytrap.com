@@ -1,7 +1,7 @@
 ---
 slug: "js-frontend-developer"
-title: "JavaScript Frontend Developer - remote, Vue or React"
-description: "remote, software project in quantum computing"
+title: "JavaScript Frontend Developer"
+description: "remote, Vue or React"
 nofluffjobs: https://nofluffjobs.com/pl/job/frontend-developer-for-quantum-startup-quantum-flytrap-remote-ke8bldvj
 date: 2022-01-21
 ---
