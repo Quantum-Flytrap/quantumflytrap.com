@@ -27,7 +27,7 @@
             <g-link to="/scientists/">For Scientists</g-link>
             <g-link to="/about/">About</g-link>
             <g-link to="/press/">Press</g-link>
-            <g-link to="https://discord.gg/BJMbjUVXmY">Join Discord</g-link>
+            <g-link to="/jobs/">Careers</g-link>
           </div>
           <div flex />
           <div

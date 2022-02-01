@@ -1,7 +1,8 @@
 ---
 slug: "js-frontend-developer"
 title: "JavaScript Frontend Developer"
-description: "remote, Vue or React"
+description: "Vue or React (remote)"
+open: true
 nofluffjobs: https://nofluffjobs.com/pl/job/frontend-developer-for-quantum-startup-quantum-flytrap-remote-ke8bldvj
 date: 2022-01-21
 ---

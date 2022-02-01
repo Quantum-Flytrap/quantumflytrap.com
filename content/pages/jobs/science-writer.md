@@ -1,7 +1,8 @@
 ---
 slug: "science-writer"
 title: "Quantum Science Writer"
-description: "for interactive media - remote"
+description: "for interactive media (remote)"
+open: true
 date: 2022-02-01
 ---
 
