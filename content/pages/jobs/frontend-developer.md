@@ -40,7 +40,7 @@ We don’t expect you to know quantum mechanics :).
 
 To apply, please send an email to Alicja Gluszek, <alicja@quantumflytrap.com>.
 
-Make sure to attach:
+## Make sure to attach:
 
 - Your Resume
 - Your GitHub profile link (if you have one)

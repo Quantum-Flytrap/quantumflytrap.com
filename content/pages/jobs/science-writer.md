@@ -42,9 +42,9 @@ We are a remote team - with founders in Warsaw, Tel Aviv. We do the bulk of our 
 - Flexible work hours - asynchronous communication on Basecamp
 - Working in a rapidly growing, international quantum computing environment
 
-To apply, please send an email to Alicja Głuszek, <alicja@quantumflytrap.com>.
+To apply, please send an email to Alicja Gluszek, <alicja@quantumflytrap.com>.
 
-Apply via (form); make sure to include:
+## Make sure to attach:
 
 - Your Resume
 - A few examples of your text on physics (e.g. outreach articles, journal publications, slides) - a link (or attachment) with a one-sentence description
