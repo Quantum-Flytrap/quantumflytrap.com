@@ -7,7 +7,8 @@
 module.exports = {
   siteName: "Quantum Flytrap",
   siteDescription:
-    '"Quantum simulation LEGO bricks." An in-browser simulation & visualization of quantum mechanics. The go-to place for learning quantum before the quantum computing revolution takes off.',
+    "Quantum Flytrap is a startup developing the no-code IDE for quantum computing. Check our real-time in-browser tech demo, Virtual Lab.",
+  titleTemplate: "%s - Quantum Flytrap",
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",
