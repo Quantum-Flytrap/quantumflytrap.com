@@ -56,13 +56,6 @@ module.exports = {
       },
     },
     {
-      use: "gridsome-plugin-monetization",
-      options: {
-        paymentPointer: "$ilp.uphold.com/Gnn7yq7XUiwj", // your payment pointer
-        global: true, // add monetization to every page; default: true
-      },
-    },
-    {
       use: 'gridsome-plugin-plausible-analytics',
       options: {
         dataDomain: 'quantumflytrap.com',
