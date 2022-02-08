@@ -24,7 +24,7 @@
             </div>
 
             <div class="flex flex-row space-x-4 max-w-full">
-              <a href="https://lab.quantumflytrap.com/">
+              <a href="/contact">
                 <button class="button-primary uppercase">
                   contact us
                 </button>

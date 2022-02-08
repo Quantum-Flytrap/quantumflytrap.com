@@ -28,7 +28,6 @@
             <g-link to="/about/">About</g-link>
             <a href="/tech-demo">Virtual Lab</a>
             <g-link to="/jobs/">Careers</g-link>
-            <g-link to="/press/">Press</g-link>
             <g-link to="/scientists/">For Scientists</g-link>
           </div>
           <div
