@@ -5,59 +5,46 @@
         <div
           class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 lg:space-x-20 items-stretch"
         >
-          <div class="flex items-center">
+          <div class="flex items-center flex-1 xl:flex-initial">
             <g-link to="https://lab.quantumflytrap.com/lab/mach-zehnder">
-              <video
-                :poster="require('~/../content/pages/mach-zehnder-poster.png')"
-                autoplay
-                muted
-                loop
-                class="w-full max-w-xl"
-              >
-                <source
-                  type="video/webm"
-                  :src="
-                    require('~/../content/pages/interference_mach_zehnder.webm')
-                  "
-                />
-                <source
-                  type="video/mp4"
-                  :src="
-                    require('~/../content/pages/interference_mach_zehnder.mp4')
-                  "
-                />
-              </video>
+              <g-image src="~/../content/pages/hero.svg" />
             </g-link>
           </div>
           <div class="flex-1 prose text-white md:p-4 max-w-full self-center">
             <div>
-              <h1 class="uppercase text-white">Quantum user interfaces</h1>
+              <h1 class="text-white">No-code IDE for<br />Quantum Computing</h1>
               <p>
-                Quantum computing gets real!<br />
-                At Quantum Flytrap we develop intuitive user interfaces for
-                quantum computing to make it an accessible &amp;
-                business-available technology. We aim to build the standard for
-                interaction with quantum systems.
+                Building a bridge between the end-users and quantum computing
+                with visual, easy-to-use software development tools.
+              </p>
+              <p>
+                For faster value creation and more efficient use of quantum
+                devices.
               </p>
             </div>
 
-            <div
-              class="flex flex-row space-x-4 md:flex-col md:space-x-0 md:space-y-4 xl:flex-row xl:space-x-4 xl:space-y-0 max-w-full"
-            >
+            <div class="flex flex-row space-x-4 max-w-full">
               <a href="https://lab.quantumflytrap.com/">
-                <button
-                  class="bg-intense-violet text-white flex-auto px-5 py-0.5"
-                >
-                  VIRTUAL LAB
+                <button class="button-primary uppercase">
+                  contact us
                 </button>
               </a>
-              <a href="https://lab.quantumflytrap.com/lab/mach-zehnder">
-                <button
-                  class="border border-white text-white flex-auto px-5 py-0.5"
-                >
-                  Go to this experiment
+              <a href="/tech-demo">
+                <button class="button-secondary uppercase">
+                  tech demo
                 </button>
               </a>
+            </div>
+            <div class="flex flex-row items-center space-x-5">
+              <g-link to="https://twitter.com/QuantumFlytrap/">
+                <g-image src="~/../content/pages/social-twitter.svg" />
+              </g-link>
+              <g-link to="https://www.linkedin.com/company/quantum-flytrap">
+                <g-image src="~/../content/pages/social-linkedin.svg" />
+              </g-link>
+              <g-link to="https://github.com/Quantum-flytrap/">
+                <g-image src="~/../content/pages/social-github.svg" />
+              </g-link>
             </div>
           </div>
         </div>
@@ -65,22 +52,35 @@
     </section>
 
     <div class="landing-sections">
-      <section class="bg-pink-beige">
-        <div class="container mx-auto">
-          <Testimonials
-            class="testimonials"
-            :testimonials="$page.allTestimonial.edges.map((e) => e.node)"
-          />
-        </div>
-      </section>
-
-      <section
-        v-for="(edge, index) in $page.allLandingSection.edges"
-        :key="index"
-        :class="sectionClass(index)"
-      >
-        <div class="container mx-auto py-6">
-          <div class="section prose max-w-4xl" v-html="edge.node.content" />
+      <section class="bg-section-violet">
+        <div class="container mx-auto px-4 flex-row py-10 lg:py-20">
+          <div
+            class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 lg:space-x-20 items-stretch"
+          >
+            <div class="flex-1 prose text-white md:p-4 max-w-full self-center">
+              <p>
+                Our solution enables users to program a quantum computer in
+                order to solve business-specific tasks, with or without
+                immediate access to the quantum device.
+              </p>
+              <p>
+                It allows real-time interaction with the actual machine as well
+                as simulation of the device on a regular PC thanks to
+                proprietary engine developed by Quantum Flytrap.
+              </p>
+              <p>
+                This way users on a broad spectrum of technical skills can
+                resolve given business problem and later analyze the result in
+                order to optimize their products or services without necessarily
+                relying on understanding of physics nor coding.
+              </p>
+            </div>
+            <div class="flex-1 flex items-center">
+              <g-link to="https://lab.quantumflytrap.com/lab/mach-zehnder">
+                <g-image src="~/../content/pages/section1.svg" />
+              </g-link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -104,36 +104,6 @@ export default {
   },
 };
 </script>
-
-<page-query>
-query {
-  allLandingSection(sortBy: "order", order: ASC) {
-    edges {
-      node {
-        id
-        title
-        order
-        content
-      }
-    }
-  }
-
-  allTestimonial {
-    edges {
-      node {
-        title
-        institute
-        photo
-        link {
-          text
-          url
-        }
-        content
-      }
-    }
-  }
-}
-</page-query>
 
 <style>
 .bg-dark-violet.text-white .section.prose {

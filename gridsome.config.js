@@ -37,7 +37,14 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         path: "content/pages/*.md",
-        typeName: "PageA",
+        typeName: "PageProse"
+      },
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/pages/raw/*.md",
+        typeName: "PageRaw",
       },
     },
     {
@@ -64,7 +71,7 @@ module.exports = {
   ],
   templates: {
     BlogPost: "/blog/:slug",
-    PageA: "/:slug",
+    PageProse: "/:slug",
     PageJob: "/jobs/:slug",
   },
 };

@@ -3,21 +3,15 @@ slug: "about"
 title: "About"
 description: "Testing it"
 date: 2019-05-23
+class: 'brand'
 ---
 
-## About
+# About
 
 At Quantum Flytrap, we develop user interfaces for quantum computing and quantum cryptography, enabling easy use of quantum tech across disciplines and applications.
 We aim to build the standard for interaction with quantum systems. 
 
 The company was founded in early 2020 by quantum physicist Piotr Migdał and designer Klem Jankiewicz, who have previously worked together at the Centre For Quantum Technologies at the University of Singapore.
-
----
-
-## The Team
-
-![team](./team.png)
-The [Virtual Lab](https://lab.quantumflytrap.com/lab/) and other solutions by Quantum Flytrap are being developed by Piotr Migdał, Klem Jankiewicz, Paweł Grabarz, among other contributors. Our advisor is Prof. Artur Ekert from the University of Oxford.
 
 ---
 
