@@ -71,4 +71,18 @@ export default function(Vue, { router, head, isClient }) {
     property: "og:image",
     content: image,
   });
+
+  head.link.push({
+    rel: 'preconnect',
+    href: 'https://fonts.googleapis.com',
+  })
+  head.link.push({
+    rel: 'preconnect',
+    href: 'https://fonts.gstatic.com',
+    crossorigin: true,
+  })
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Lora&display=swap',
+  })
 }
