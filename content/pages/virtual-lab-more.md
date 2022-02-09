@@ -1,5 +1,5 @@
 ---
-slug: "virtual-lab"
+slug: "virtual-lab-more"
 title: "Virtual Lab"
 description: "Testing it"
 date: 2021-01-20

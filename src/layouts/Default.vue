@@ -26,9 +26,9 @@
             :class="{ hidden: !menuOpen }"
           >
             <g-link to="/about/">About</g-link>
-            <a href="/tech-demo">Virtual Lab</a>
+            <g-link to="/virtual-lab/">Virtual Lab</g-link>
             <g-link to="/jobs/">Careers</g-link>
-            <g-link to="/scientists/">For Scientists</g-link>
+            <g-link to="/contact/">Contact</g-link>
           </div>
         </nav>
       </div>
