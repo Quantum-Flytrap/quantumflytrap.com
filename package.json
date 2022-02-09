@@ -10,7 +10,6 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.0",
-    "gridsome-plugin-monetization": "^1.0.1",
     "gridsome-plugin-plausible-analytics": "^1.0.0"
   },
   "devDependencies": {

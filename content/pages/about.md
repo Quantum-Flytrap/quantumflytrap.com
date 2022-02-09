@@ -8,24 +8,25 @@ class: 'brand'
 
 # About
 
-At Quantum Flytrap, we develop user interfaces for quantum computing and quantum cryptography, enabling easy use of quantum tech across disciplines and applications.
-We aim to build the standard for interaction with quantum systems. 
+Quantum Flytrap is a startup on its mission to connect business with quantum computing power by building a no-code IDE for quantum technologies.
 
-The company was founded in early 2020 by quantum physicist Piotr Migdał and designer Klem Jankiewicz, who have previously worked together at the Centre For Quantum Technologies at the University of Singapore.
+The company was founded in early 2020 by quantum physicist [Piotr Migdał](https://www.linkedin.com/in/piotrmigdal/) and designer [Klem Jankiewicz](https://www.linkedin.com/in/klem-jankiewicz/), after their project at the [Centre for Quantum Technologies](https://www.quantumlah.org/) at the National University of Singapore.
 
----
+## Team
 
-## Connect with us
+The team is fully remote, with founders based in Warsaw and Tel-Aviv.
 
-Follow us on [Twitter](https://twitter.com/QuantumGameIO), check our [GitHub](https://github.com/Quantum-Game), or contact us directly at <contact@quantumflytrap.com>. If you have any comments, join our [Discord channel](https://discord.gg/BJMbjUVXmY), @ us on Twitter, create a GitHub Issue, or email us!
+* Piotr Migdał, Ph.D. (quantum physicist, founder)
+* Klem Jankiewicz (designer, founder)
+* Paweł Grabarz (software engineer)
+* Agata Rakowiecka (managing director)
+* Kamila Stępniowska (business development)
+* Alicja Głuszek (project manager)
 
----
+Advisor: [Prof. Artur Ekert FRS](https://en.wikipedia.org/wiki/Artur_Ekert), University of Oxford - co-founder of quantum cryptography.
 
-## For Investors
+## For investors
 
-Interest in quantum is growing fast, but it is hard to learn, use, and interact. To make quantum computing viable, we need to make it approachable for users and business.
-We need to do with quantum what TensorFlow, Keras & PyTorch did with deep learning: move it from academia to accessible & business-available technology.
+In the **Pre-Seed Round**, we raised $260,000 from [SMOK Ventures](https://smok.vc/).
 
-**We are starting a seed round in Q1 2022. If you would like to know more about Quantum Flytrap or the investment opportunity, contact Piotr Migdał at <piotr@quantumflytrap.com>.**
-
----
+We just (Feb 2022) opened our **Seed Round**. Details upon request - <contact@quantumflytrap.com>.

@@ -7,13 +7,15 @@ nofluffjobs: https://nofluffjobs.com/pl/job/frontend-developer-for-quantum-start
 date: 2022-01-21
 ---
 
-Quantum Flytrap is a startup on a mission to make quantum computing accessible. We develop a browser-based no-code IDE for quantum technologies. We are starting a project for a leading quantum computing manufacturer - and we look to expand our team with a Frontend Developer!
+At Quantum Flytrap we are hiring a remote JavaScript Frontend Developer (Vue or React). We look for curious software engineers, excited to join our startup!
+
+We develop an **in-browser no-code IDE for quantum computing** & right now we are starting a project for a leading quantum device manufacturer.
 
 The company was founded in 2020 by quantum physicist [Piotr Migdał](https://p.migdal.pl) and designer [Klem Jankiewicz](https://jankiewiczstudio.com/).  Our tech demo, Virtual Lab, is already being used worldwide by Stanford and Oxford universities. Our team is distributed over Warsaw, Tel-Aviv, Wrocław, and Kraków. We have a small office in Warsaw - you can work from there if you like. For more details about us, check out our website <https://quantumflytrap.com/>. 
 
-Our current front-end stack is TypeScript, Vue.js, GitHub CI. For numeric, we use Rust + WASM. As a Frontend Developer, you will work closely with Paweł Grabarz, our Senior Software Engineer.
+Our current front-end stack is TypeScript, Vue.js, GitHub CI. For numerics, we use Rust + WASM. As a Frontend Developer, you will work closely with Paweł Grabarz, our Senior Software Engineer.
 
-## Who are we looking for?
+## Whom are we looking for?
 
 - Proficiency with JavaScript environment
 - Experience with Vue, React, or another frontend framework (including reactive sites)

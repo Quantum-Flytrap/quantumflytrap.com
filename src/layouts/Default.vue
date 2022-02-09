@@ -26,15 +26,9 @@
             :class="{ hidden: !menuOpen }"
           >
             <g-link to="/about/">About</g-link>
-            <a href="/tech-demo">Virtual Lab</a>
+            <g-link to="/virtual-lab/">Virtual Lab</g-link>
             <g-link to="/jobs/">Careers</g-link>
-            <g-link to="/scientists/">For Scientists</g-link>
-          </div>
-          <div
-            class="monetization hidden xl:block"
-            v-if="monetizationState === 'started'"
-          >
-            Thank you for supporting us with&nbsp;web&nbsp;monetization!&nbsp;❤️
+            <g-link to="/contact/">Contact</g-link>
           </div>
         </nav>
       </div>
@@ -50,18 +44,8 @@
 export default {
   data: () => {
     return {
-      monetizationState: "",
       menuOpen: false,
     };
-  },
-  mounted() {
-    if (!this.$monetization.isEnabled()) {
-      this.$monetization.enable();
-    }
-    this.monetizationState = this.$monetization.getState();
-    this.$monetization.onStateChange((event) => {
-      this.monetizationState = this.$monetization.getEventStateString(event);
-    });
   },
   methods: {
     toggleMenu() {
@@ -110,13 +94,6 @@ button.button-primary {
   display: flex;
   align-items: center;
   padding: 5px 0;
-}
-
-.nav .monetization {
-  align-items: center;
-  padding: 5px 0;
-  text-transform: none;
-  align-self: center;
 }
 
 .nav a.active--exact:not(.landing--link) {
