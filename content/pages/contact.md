@@ -5,7 +5,7 @@ class: 'brand'
 ---
 # Contact
 
-Contact Klem Jankiewicz at <klem@quantumflytrap.com> or Piotr Migdał at <klem@quantumflytrap.com>.
+Contact us directly at <contact@quantumflytrap.com>.
 
 <div class="flex flex-row items-center space-x-5">
 
