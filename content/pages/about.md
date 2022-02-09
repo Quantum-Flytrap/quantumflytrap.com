@@ -16,7 +16,14 @@ The company was founded in early 2020 by quantum physicist [Piotr Migdał](https
 
 The team is fully remote, with founders based in Warsaw and Tel-Aviv.
 
-Advisor: [Prof. Artur Ekert FRS](https://en.wikipedia.org/wiki/Artur_Ekert), University of Oxford.
+* Piotr Migdał, Ph.D. (quantum physicist, founder)
+* Klem Jankiewicz (designer, founder)
+* Paweł Grabarz (software engineer)
+* Agata Rakowiecka (managing director)
+* Kamila Stępniowska (business development)
+* Alicja Głuszek (project manager)
+
+Advisor: [Prof. Artur Ekert FRS](https://en.wikipedia.org/wiki/Artur_Ekert), University of Oxford - co-founder of quantum cryptography.
 
 ## For investors
 
