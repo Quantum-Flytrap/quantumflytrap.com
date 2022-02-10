@@ -29,7 +29,7 @@
                   contact us
                 </button>
               </a>
-              <a href="/tech-demo">
+              <a href="/virtual-lab">
                 <button class="button-secondary uppercase">
                   tech demo
                 </button>
