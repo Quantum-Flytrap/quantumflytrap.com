@@ -2,7 +2,7 @@
 slug: "js-frontend-developer"
 title: "JavaScript Frontend Developer"
 description: "Vue or React (remote)"
-open: true
+open: false
 nofluffjobs: https://nofluffjobs.com/pl/job/frontend-developer-for-quantum-startup-quantum-flytrap-remote-ke8bldvj
 date: 2022-01-21
 ---
@@ -11,7 +11,7 @@ At Quantum Flytrap we are hiring a remote JavaScript Frontend Developer (Vue or 
 
 We develop an **in-browser no-code IDE for quantum computing** & right now we are starting a project for a leading quantum device manufacturer.
 
-The company was founded in 2020 by quantum physicist [Piotr Migdał](https://p.migdal.pl) and designer [Klem Jankiewicz](https://jankiewiczstudio.com/).  Our tech demo, Virtual Lab, is already being used worldwide by Stanford and Oxford universities. Our team is distributed over Warsaw, Tel-Aviv, Wrocław, and Kraków. We have a small office in Warsaw - you can work from there if you like. For more details about us, check out our website <https://quantumflytrap.com/>. 
+The company was founded in 2020 by quantum physicist [Piotr Migdał](https://p.migdal.pl) and designer [Klem Jankiewicz](https://jankiewiczstudio.com/). Our tech demo, Virtual Lab, is already being used worldwide by Stanford and Oxford universities. Our team is distributed over Warsaw, Tel-Aviv, Wrocław, and Kraków. We have a small office in Warsaw - you can work from there if you like. For more details about us, check out our website <https://quantumflytrap.com/>.
 
 Our current front-end stack is TypeScript, Vue.js, GitHub CI. For numerics, we use Rust + WASM. As a Frontend Developer, you will work closely with Paweł Grabarz, our Senior Software Engineer.
 
@@ -24,7 +24,6 @@ Our current front-end stack is TypeScript, Vue.js, GitHub CI. For numerics, we u
 - Strong team-working skills (you'll be part of a team of scientists, designers, and writers)
 
 We don’t expect you to know quantum mechanics :).
-
 
 ## It would be a plus if you had:
 
