@@ -19,7 +19,7 @@ The team is fully remote, with founders based in Warsaw and Tel-Aviv.
 - Piotr Migdał, Ph.D. (quantum physicist, founder)
 - Klem Jankiewicz (designer, founder)
 - Paweł Grabarz (software engineer)
-- Agata Rakowiecka (managing director)
+- Agata Rakowiecka (operations manager)
 - Kamila Stępniowska (business development)
 - Alicja Głuszek (project manager)
 
@@ -27,6 +27,6 @@ Advisor: [Prof. Artur Ekert FRS](https://en.wikipedia.org/wiki/Artur_Ekert), Uni
 
 ## For investors
 
-In the **Pre-Seed Round**, we raised \$260,000 from [SMOK Ventures](https://smok.vc/).
+In the **Pre-Seed Round**, we raised $260,000 from [SMOK Ventures](https://smok.vc/).
 
 We just (Mar 2022) opened our **Seed Round**. Details upon request - <contact@quantumflytrap.com>.
