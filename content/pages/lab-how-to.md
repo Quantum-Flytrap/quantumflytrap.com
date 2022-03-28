@@ -7,7 +7,9 @@ date: 2019-05-23
 
 ## What is Virtual Lab and how to use it
 
-Virtual Lab <https://lab.quantumflytrap.com/> is a simulation and visualization of quantum information and computing by [Quantum Flytrap](./).
+**Virtual Lab by Quantum Flytrap** <https://lab.quantumflytrap.com/> is a simulation and visualization of quantum information and computing by [Quantum Flytrap](./).
+
+More details in our recent preprint [P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap", arXiv:2203.13300](https://arxiv.org/abs/2203.13300).
 
 Drag & drop elements to the board to build setups.
 

@@ -2,15 +2,13 @@
   <div class="min-h-screen flex flex-col">
     <header class="bg-brand-violet text-white">
       <div class="container mx-auto px-4 flex-row">
-        <nav
-          class="nav flex flex-col md:flex-row md:space-x-6 py-4 justify-between"
-        >
+        <nav class="nav flex flex-col md:flex-row md:space-x-6 py-4 justify-between">
           <div class="flex flex-row space-x-6">
             <button id="hamburger-button" class="md:hidden" @click="toggleMenu">
               <svg viewBox="0 0 100 70" width="40" height="40" fill="white">
-                <rect width="100" height="10"></rect>
-                <rect y="30" width="100" height="10"></rect>
-                <rect y="60" width="100" height="10"></rect>
+                <rect width="100" height="10" />
+                <rect y="30" width="100" height="10" />
+                <rect y="60" width="100" height="10" />
               </svg>
             </button>
             <g-link class="flex landing--link w-full" to="/">
@@ -19,7 +17,8 @@
                 width="708"
                 :alt="$static.metadata.siteName"
                 class="md:max-w-150px mx-auto"
-            /></g-link>
+              />
+            </g-link>
           </div>
           <div
             class="flex md:flex flex-col md:flex-row md:space-x-6 menu-items"

@@ -1,3 +1,6 @@
 {
-    "restructuredtext.pythonRecommendation.disabled": true
+  "restructuredtext.pythonRecommendation.disabled": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 160
 }

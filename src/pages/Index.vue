@@ -12,7 +12,10 @@
           </div>
           <div class="flex-1 prose text-white md:p-4 max-w-full self-center">
             <div>
-              <h1 class="text-white">No-code IDE for<br />Quantum Computing</h1>
+              <h1 class="text-white">
+                No-code IDE for
+                <br />Quantum Computing
+              </h1>
               <p>
                 Building a bridge between the end-users and quantum computing
                 with visual, easy-to-use software development tools.
@@ -25,14 +28,10 @@
 
             <div class="flex flex-row space-x-4 max-w-full">
               <a href="/contact">
-                <button class="button-primary uppercase">
-                  contact us
-                </button>
+                <button class="button-primary uppercase">contact us</button>
               </a>
               <a href="/virtual-lab">
-                <button class="button-secondary uppercase">
-                  tech demo
-                </button>
+                <button class="button-secondary uppercase">tech demo</button>
               </a>
             </div>
             <div class="flex flex-row items-center space-x-5">

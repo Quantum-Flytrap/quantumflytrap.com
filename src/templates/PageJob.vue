@@ -3,15 +3,14 @@
     <div class="container max-w-xl mx-auto py-4">
       <div class="post-title prose max-w-full pb-4">
         <h1 class="job-opening">
-          JOB OPENING:<br />
-          {{ $page.pageJob.title }}<br />
+          JOB OPENING:
+          <br />
+          {{ $page.pageJob.title }}
+          <br />
           {{ $page.pageJob.description }}
         </h1>
       </div>
-      <div
-        class="post-content prose max-w-full"
-        v-html="$page.pageJob.content"
-      ></div>
+      <div class="post-content prose max-w-full" v-html="$page.pageJob.content"></div>
     </div>
   </Layout>
 </template>

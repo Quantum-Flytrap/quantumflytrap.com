@@ -15,7 +15,7 @@ Within this environment it is possible to recreate interference, quantum cryptog
 
 Interactive: <https://lab.quantumflytrap.com/lab/mach-zehnder>
 
-
+More details in our recent preprint [P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap", arXiv:2203.13300](https://arxiv.org/abs/2203.13300).
 
 ## Key features
 
@@ -81,7 +81,7 @@ For example, see [quantum computing example](https://jsfiddle.net/stared/wusev5a
 
 Quantum Lab and its direct predecessor Quantum Game with Photons, were cited in papers by multiple research groups:
 
-- B. R. La Cour, M. Maynard, P. Shroff, G. Ko, E. Ellis, 2021., [The Virtual Quantum Optics Laboratory](https://arxiv.org/pdf/2105.07300.pdf) 
+- B. R. La Cour, M. Maynard, P. Shroff, G. Ko, E. Ellis, 2021., [The Virtual Quantum Optics Laboratory](https://arxiv.org/pdf/2105.07300.pdf)
 - C. Foti, D. Anttila, S. Maniscalco, M. L. Chiofalo, 2021., [Quantum Physics Literacy Aimed at K12 and the General Public](https://www.mdpi.com/2218-1997/7/4/86)
 - Stephen Ornes, [Quantum games aim to demystify heady science](https://doi.org/10.1073/pnas.1800744115), PNAS February 20, 2018 115 (8) 1667-1669, [PDF](https://www.pnas.org/content/pnas/115/8/1667.full.pdf)
 - Matthew S. Leifer, [Gamifying Quantum Theory

@@ -2,10 +2,7 @@
   <Layout>
     <div :class="$page.pageProse.class || ''">
       <div class="container max-w-xl mx-auto py-4">
-        <div
-          class="post-content prose max-w-full"
-          v-html="$page.pageProse.content"
-        ></div>
+        <div class="post-content prose max-w-full" v-html="$page.pageProse.content"></div>
       </div>
     </div>
   </Layout>
