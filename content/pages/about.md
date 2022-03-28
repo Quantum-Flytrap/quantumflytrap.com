@@ -29,4 +29,4 @@ Advisor: [Prof. Artur Ekert FRS](https://en.wikipedia.org/wiki/Artur_Ekert), Uni
 
 In the **Pre-Seed Round**, we raised \$260,000 from [SMOK Ventures](https://smok.vc/).
 
-We just (Feb 2022) opened our **Seed Round**. Details upon request - <contact@quantumflytrap.com>.
+We just (Mar 2022) opened our **Seed Round**. Details upon request - <contact@quantumflytrap.com>.
