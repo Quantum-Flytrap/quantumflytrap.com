@@ -9,6 +9,6 @@ It is the first post.
 
 A short list:
 
-* aa
-* bb
-* cc
+- aa
+- bb
+- cc

@@ -21,18 +21,14 @@
 
             <div class="flex flex-row space-x-4 max-w-full">
               <a href="https://lab.quantumflytrap.com/">
-                <button class="button-primary uppercase">
-                  virtual lab
-                </button>
+                <button class="button-primary uppercase">virtual lab</button>
               </a>
               <a href="https://lab.quantumflytrap.com/lab/mach-zehnder">
-                <button class="button-secondary uppercase">
-                  go to this experiment
-                </button>
+                <button class="button-secondary uppercase">go to this experiment</button>
               </a>
             </div>
           </div>
-          <div class="flex items-center flex-1 ">
+          <div class="flex items-center flex-1">
             <g-link to="https://lab.quantumflytrap.com/lab/mach-zehnder">
               <g-image src="~/../content/pages/lab-preview.png" />
             </g-link>

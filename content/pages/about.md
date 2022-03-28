@@ -3,7 +3,7 @@ slug: "about"
 title: "About"
 description: "Testing it"
 date: 2019-05-23
-class: 'brand'
+class: "brand"
 ---
 
 # About
@@ -16,17 +16,17 @@ The company was founded in early 2020 by quantum physicist [Piotr Migdał](https
 
 The team is fully remote, with founders based in Warsaw and Tel-Aviv.
 
-* Piotr Migdał, Ph.D. (quantum physicist, founder)
-* Klem Jankiewicz (designer, founder)
-* Paweł Grabarz (software engineer)
-* Agata Rakowiecka (managing director)
-* Kamila Stępniowska (business development)
-* Alicja Głuszek (project manager)
+- Piotr Migdał, Ph.D. (quantum physicist, founder)
+- Klem Jankiewicz (designer, founder)
+- Paweł Grabarz (software engineer)
+- Agata Rakowiecka (managing director)
+- Kamila Stępniowska (business development)
+- Alicja Głuszek (project manager)
 
 Advisor: [Prof. Artur Ekert FRS](https://en.wikipedia.org/wiki/Artur_Ekert), University of Oxford - co-founder of quantum cryptography.
 
 ## For investors
 
-In the **Pre-Seed Round**, we raised $260,000 from [SMOK Ventures](https://smok.vc/).
+In the **Pre-Seed Round**, we raised \$260,000 from [SMOK Ventures](https://smok.vc/).
 
 We just (Feb 2022) opened our **Seed Round**. Details upon request - <contact@quantumflytrap.com>.

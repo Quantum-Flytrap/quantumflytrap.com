@@ -16,8 +16,7 @@
             :href="t.link.url"
             _target="blank"
             class="testimonial-link"
-            >{{ t.link.text }}</a
-          >
+          >{{ t.link.text }}</a>
         </div>
       </div>
     </div>
@@ -78,11 +77,12 @@ a.testimonial-link:hover {
 }
 
 .testimonial-text:after {
-  content: '”';
+  content: "”";
   align-self: flex-end;
 }
 
-.testimonial-text:before, .testimonial-text:after {
+.testimonial-text:before,
+.testimonial-text:after {
   font-size: 5em;
   margin-top: -0.3em;
   margin-bottom: -0.7em;

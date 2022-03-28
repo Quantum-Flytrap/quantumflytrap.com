@@ -1,8 +1,9 @@
 ---
 slug: "contact"
 title: "Contact"
-class: 'brand'
+class: "brand"
 ---
+
 # Contact
 
 Contact us directly at <contact@quantumflytrap.com>.
