@@ -8,14 +8,13 @@
           <div class="flex-1 prose text-white lg:p-4 max-w-full self-center">
             <div>
               <h1 class="text-white">Virtual Lab</h1>
+              <p>Virtual Lab by Quantum Flytrap is a no-code online laboratory with a real-time simulation of an optical table, supporting up to three entangled particles. A drag-and-drop graphical interface gives an easy way to create advanced quantum experiments.</p>
+              <p>Virtual Lab is a tech demo of our proprietary quantum simulation numeric engine: installation-free, supporting a billion dimensions, performing computations in less than 100µs.</p>
               <p>
-                Virtual Lab is a tech demo by Quantum Flytrap. It explores novel
-                ways to represent quantum phenomena in an interactive and
-                intuitive way. It is a no-code online laboratory with a
-                real-time simulation of an optical table, supporting up to 3
-                entangled particles. Users can place typical optical elements
-                (such as beam splitters, polarizers, Faraday rotators, and
-                detectors) with a drag & drop graphical interface.
+                More details in our recent preprint,
+                <a
+                  href="https://arxiv.org/abs/2203.13300"
+                >P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap", arXiv:2203.13300</a>.
               </p>
             </div>
 
@@ -40,13 +39,22 @@
       <div class="container mx-auto px-4 py-10 lg:py-20">
         <div class="prose text-white md:p-4 max-w-full self-center">
           <p>
-            Virtual Lab provides a way to explore exact quantum states,
-            entanglement, and the probabilistic nature of quantum physics. Users
-            can simulate quantum computing (e.g. Deutsch-Jozsa algorithm), use
-            quantum cryptography (e.g. Ekert protocol), explore counterintuitive
-            quantum phenomena (e.g. quantum teleportation & Bell inequality
-            violation), and recreate historical experiments (e.g.
-            Michelson-Morley interferometer).
+            Virtual Lab makes it possible to explore the nature of quantum physics (state evolution, entanglement, and measurement), to simulate quantum computing (e.g. the
+            <a
+              href="https://lab.quantumflytrap.com/lab/deutsch-jozsa"
+            >Deutsch-Jozsa algorithm</a>), to use quantum cryptography (e.g. the
+            <a
+              href="https://lab.quantumflytrap.com/lab/ekert-protocol?mode=waves"
+            >Ekert protocol</a>), to explore counterintuitive quantum phenomena (e.g.
+            <a
+              href="https://lab.quantumflytrap.com/lab/quantum-teleportation?mode=waves"
+            >quantum teleportation</a> & the
+            <a
+              href="https://lab.quantumflytrap.com/lab/bell-inequality?mode=waves"
+            >Bell inequality violation)</a>, and to recreate historical experiments (e.g. the
+            <a
+              href="https://lab.quantumflytrap.com/lab/mach-zehnder?mode=laser"
+            >Mach-Zehnder interferometer</a>).
           </p>
         </div>
       </div>
@@ -79,7 +87,8 @@ export default {
 .bg-dark-violet.text-white .section.prose a {
   color: #e5e7eb;
 }
-.prose .text-white {
+.prose .text-white,
+.prose a {
   color: white;
 }
 </style>
