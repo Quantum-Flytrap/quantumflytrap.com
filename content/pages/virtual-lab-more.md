@@ -11,6 +11,8 @@ The sandbox mode ([Virtual Lab by Quantum Flytrap](https://lab.quantumflytrap.co
 
 It is possible to create quantum computing algorithms ([Deutsch-Jozsa](https://lab.quantumflytrap.com/lab/deutsch-jozsa)), quantum cryptography protocols ([BB84](https://lab.quantumflytrap.com/lab/bb84) and [Ekert](https://lab.quantumflytrap.com/lab/ekert-bell)), advanced quantum measurements ([Elitzur–Vaidman bomb tester](https://lab.quantumflytrap.com/lab/elitzur%E2%80%93vaidman-bomb) and [nonorthogonal state discrimination](https://lab.quantumflytrap.com/lab/nonorthogonal-state-discrimination)), historical interferometers ([Mach-Zehnder](https://lab.quantumflytrap.com/lab/mach-zehnder) and [Michaelson-Morley](https://lab.quantumflytrap.com/lab/michelson-morley)), classical optics ([three polarizers](https://lab.quantumflytrap.com/lab/three-polarizer-paradox) and [an optical diode](https://lab.quantumflytrap.com/lab/optical-diode)), and much more: [here are some user-created ones](https://lab.quantumflytrap.com/u/)!
 
+More details in our recent preprint [P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap", arXiv:2203.13300](https://arxiv.org/abs/2203.13300).
+
 ## Key features
 
 Underneath there is s real simulator of quantum mechanics - a discrete variant describing polarization and discrete position. You may be not aware of unitary and projective operators, tensor products or complex number - but JavaScript & Rust is doing all the dark magic for you!

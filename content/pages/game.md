@@ -9,7 +9,9 @@ date: 2021-01-20
 
 Visit <https://quantumgame.io>.
 
-Our [Virtual Lab](/virtual-lab) has a Game mode!
+Our [Virtual Lab](/virtual-lab) has a game mode!
+
+More details in our recent preprint [P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap", arXiv:2203.13300](https://arxiv.org/abs/2203.13300).
 
 ## Authors
 

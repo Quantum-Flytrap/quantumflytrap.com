@@ -15,6 +15,8 @@ Within this environment it is possible to recreate interference, quantum cryptog
 
 Interactive: <https://lab.quantumflytrap.com/lab/mach-zehnder>
 
+More details in our recent preprint [P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap", arXiv:2203.13300](https://arxiv.org/abs/2203.13300).
+
 ## Key features
 
 - Create arbitrary setup in a virtual optical lab
