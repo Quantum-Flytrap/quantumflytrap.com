@@ -16,6 +16,14 @@
   </Layout>
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    title: "Jobs",
+  },
+};
+</script>
+
 <page-query>
 query {
   allPageJob(filter: { open: { eq: true }}) {

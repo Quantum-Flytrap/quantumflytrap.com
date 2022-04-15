@@ -70,7 +70,7 @@ export default {
     Testimonials,
   },
   metaInfo: {
-    title: "Home",
+    title: "Virtual Lab",
   },
   methods: {
     sectionClass(index) {
