@@ -20,7 +20,7 @@ The team is fully remote, with founders based in Warsaw and Tel-Aviv.
 - Klem Jankiewicz (designer, founder)
 - Paweł Grabarz (software engineer)
 - Agata Rakowiecka (operations manager)
-- Chiara Decaroli (quantum physicist, outreach)
+- Chiara Decaroli, Ph.D. (quantum physicist, outreach)
 - Kamila Stępniowska (business development)
 - Alicja Głuszek (project manager)
 
