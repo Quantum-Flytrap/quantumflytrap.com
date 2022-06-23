@@ -13,8 +13,8 @@
               <p>
                 More details in our recent preprint,
                 <a
-                  href="https://arxiv.org/abs/2203.13300"
-                >P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap", arXiv:2203.13300</a>.
+                  href="https://doi.org/10.1117/1.OE.61.8.081808"
+                >P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap" Optical Engineering 61(8), 081808 (2022)</a>.
               </p>
             </div>
 
