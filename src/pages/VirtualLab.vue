@@ -12,9 +12,8 @@
               <p>Virtual Lab is a tech demo of our proprietary quantum simulation numeric engine: installation-free, supporting a billion dimensions, performing computations in less than 100µs.</p>
               <p>
                 More details in our recent publication,
-                <a
-                  href="https://doi.org/10.1117/1.OE.61.8.081808"
-                >P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap" Optical Engineering 61(8), 081808 (2022)</a>.
+                <a href="https://doi.org/10.1117/1.OE.61.8.081808">Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap</a>,
+                Optical Engineering 61(8), 081808 (2022).
               </p>
             </div>
 
