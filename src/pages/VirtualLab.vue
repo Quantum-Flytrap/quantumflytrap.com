@@ -11,7 +11,7 @@
               <p>Virtual Lab by Quantum Flytrap is a no-code online laboratory with a real-time simulation of an optical table, supporting up to three entangled particles. A drag-and-drop graphical interface gives an easy way to create advanced quantum experiments.</p>
               <p>Virtual Lab is a tech demo of our proprietary quantum simulation numeric engine: installation-free, supporting a billion dimensions, performing computations in less than 100µs.</p>
               <p>
-                More details in our recent preprint,
+                More details in our recent publication,
                 <a
                   href="https://doi.org/10.1117/1.OE.61.8.081808"
                 >P. Migdał, K. Jankiewicz, P. Grabarz, et al. "Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap" Optical Engineering 61(8), 081808 (2022)</a>.
