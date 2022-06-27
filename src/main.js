@@ -12,7 +12,7 @@ export default function(Vue, { router, head, isClient }) {
   const description =
     "Intuitive user interfaces for quantum computing - make it an accessible & business-available technology. We aim to build the standard for interaction with quantum systems.";
   const twitter = "QuantumGameIO";
-  const image = require("~/imgs/mach-zehnder2.gif");
+  const image = require("~/imgs/QF_logo_for_thumbnail.jpg");
 
   // general
   head.meta.push({
