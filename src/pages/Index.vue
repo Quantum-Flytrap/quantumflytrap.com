@@ -21,8 +21,7 @@
                 with visual, easy-to-use software development tools.
               </p>
               <p>
-                For faster value creation and more efficient use of quantum
-                devices.
+                We closed Quantum Flytrap in Oct 2022.
               </p>
             </div>
 
