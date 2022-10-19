@@ -21,7 +21,7 @@
                 with visual, easy-to-use software development tools.
               </p>
               <p>
-                We closed Quantum Flytrap in Oct 2022.
+                We closed Quantum Flytrap in Oct 2022, see <a class="text-link" href="/blog/closing-quantum-flytrap">our post</a>.
               </p>
             </div>
 
@@ -113,4 +113,9 @@ export default {
 .prose .text-white {
   color: white;
 }
+
+a.text-link {
+  color: white;
+}
+
 </style>

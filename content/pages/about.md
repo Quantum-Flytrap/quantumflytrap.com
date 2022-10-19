@@ -12,7 +12,7 @@ Quantum Flytrap was a startup on its mission to connect business with quantum co
 
 The company was founded in early 2020 by a quantum physicist [Piotr Migdał](https://www.linkedin.com/in/piotrmigdal/) and a designer [Klem Jankiewicz](https://www.linkedin.com/in/klem-jankiewicz/), after their project at the [Centre for Quantum Technologies](https://www.quantumlah.org/), National University of Singapore.
 
-In Oct 2022 we decided to close Quantum Flytrap.
+In Oct 2022 we decided to close Quantum Flytrap, [see our post](/blog/closing-quantum-flytrap).
 
 ## Team
 
