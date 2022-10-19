@@ -41,6 +41,8 @@ Moreover - this year the Nobel Prize in Physics was awarded to Alain Aspect, Joh
 
 As you may already know, we published a paper, [Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap](https://doi.org/10.1117/1.OE.61.8.081808), Optical Engineering 61(8), 081808 (2022).
 
+While [we are closing Quantum Flytrap as a company](/blog/closing-quantum-flytrap), we are committed to keeping Virtual Lab free, up and running. We love it as much as you do! :)
+
 [Enjoy!](https://lab.quantumflytrap.com/)
 
 Piotr & Klem
