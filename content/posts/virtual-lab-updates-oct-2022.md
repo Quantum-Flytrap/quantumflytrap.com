@@ -1,13 +1,13 @@
 ---
-slug: "lab-whats-new-oct-2022"
+slug: "virtual-lab-updates-oct-2022"
 title: "What's new in Virtual Lab - Oct 2022"
-description: "Testing it"
+description: "A lot! An interface redesign, indistinguishable particles, creation operators, element descriptions, and transition matrices. Enjoy!"
 date: 2022-10-19
 ---
 
-Here is a new update for Virtual Lab by Quantum Flytrap, which involves major user interface changes and new features.
+Here is a new update for [Virtual Lab by Quantum Flytrap](https://lab.quantumflytrap.com/), which involves major user interface changes and new features.
 
----
+![Virtual Lab by Quantum Flytrap - interface redesign screenshot](./virtual-lab-updates-oct-2022/virtual-lab-interface-redesign.png)
 
 We redesigned the main view - from the overall layout to quite a few improvements. Now the sidebars are collapsible - giving you control over what you want to focus on in a given experiment. Now you can:
 
@@ -21,7 +21,7 @@ We redesigned the main view - from the overall layout to quite a few improvement
 
 From the physics part, we expanded photon sources. For each one you can select a wavelength, which makes it possible to have both indistinguishable particles (if their wavelengths are the same) and distinguishable (by their wavelengths differ).
 
----
+![Virtual Lab by Quantum Flytrap - photon sources screenshot](./virtual-lab-updates-oct-2022/virtual-lab-sources.png)
 
 Finally, we can use the bosonic properties of photons! In particular, now it is possible to simulate a landmark experiment - the Hong-Ou-Mandel two-photon interference. We added as well the bosonic creation operator, a fundamental element of quantum optics and quantum field theory. Additionally, we can switch lasers depending on measurements.
 
@@ -32,13 +32,15 @@ We changed how element descriptions work. Instead of a separate page, it is now 
 - Get a starting point for learning more about its physics with hand-picked links (from Wikipedia pages, through educational videos, to academic publications)
 - Explore its transition matrix, which specifies how it changes the photon state
 
----
+![Virtual Lab by Quantum Flytrap - element description screenshot](./virtual-lab-updates-oct-2022/virtual-lab-element-description.png)
 
 Moreover - this year the Nobel Prize in Physics was awarded to Alain Aspect, John F. Clauser, and Anton Zeilinger - for "experiments with entangled photons, establishing the violation of Bell inequalities, and pioneering quantum information science". Within Virtual Lab, you can:
 
-- Violate the Bell inequality using the Clauser-Horne-Shimony-Holt setup.
-- Experiment with intrinsic three-photon entanglement of the Greenberger-Horne-Zeilinger (GHZ) state.
+- [Violate the Bell inequality using the Clauser-Horne-Shimony-Holt setup](https://lab.quantumflytrap.com/lab/bell-inequality)
+- Experiment with intrinsic three-photon entanglement of the Greenberger-Horne-Zeilinger (GHZ) state
 
-As you may already know, we published a paper, Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap Optical Engineering 61(8), 081808 (2022).
+As you may already know, we published a paper, [Visualizing quantum mechanics in an interactive simulation - Virtual Lab by Quantum Flytrap](https://doi.org/10.1117/1.OE.61.8.081808), Optical Engineering 61(8), 081808 (2022).
 
-Enjoy!
+[Enjoy!](https://lab.quantumflytrap.com/)
+
+Piotr & Klem
