@@ -26,7 +26,6 @@
           >
             <g-link to="/about/">About</g-link>
             <g-link to="/virtual-lab/">Virtual Lab</g-link>
-            <g-link to="/jobs/">Careers</g-link>
             <g-link to="/contact/">Contact</g-link>
           </div>
         </nav>

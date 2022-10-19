@@ -21,8 +21,7 @@
                 with visual, easy-to-use software development tools.
               </p>
               <p>
-                For faster value creation and more efficient use of quantum
-                devices.
+                We closed Quantum Flytrap in Oct 2022, see <a class="text-link" href="/blog/closing-quantum-flytrap">our post</a>.
               </p>
             </div>
 
@@ -64,7 +63,7 @@
               </p>
               <p>
                 It allows real-time interaction with the actual machine as well
-                as simulation of the device on a regular PC thanks to
+                as simulation of the device on a regular descktop computer thanks to
                 proprietary engine developed by Quantum Flytrap.
               </p>
               <p>
@@ -114,4 +113,9 @@ export default {
 .prose .text-white {
   color: white;
 }
+
+a.text-link {
+  color: white;
+}
+
 </style>
