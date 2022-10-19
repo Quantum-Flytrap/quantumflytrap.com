@@ -63,7 +63,7 @@
               </p>
               <p>
                 It allows real-time interaction with the actual machine as well
-                as simulation of the device on a regular PC thanks to
+                as simulation of the device on a regular descktop computer thanks to
                 proprietary engine developed by Quantum Flytrap.
               </p>
               <p>
