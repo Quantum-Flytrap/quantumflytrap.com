@@ -10,11 +10,30 @@
   </Layout>
 </template>
 
+<script>
+export default {
+  name: "BlogPost",
+  metaInfo() {
+    return {
+      title: this.$page.blogPost.title,
+      meta: [
+        { name: "og:title", content: this.$page.blogPost.title },
+        { name: "twitter:title", content: this.$page.blogPost.title },
+        { name: "description", content: this.$page.blogPost.description },
+        { name: "og:description", content: this.$page.blogPost.description },
+        { name: "twitter:description", content: this.$page.blogPost.description },
+      ],
+    };
+  },
+};
+</script>
+
 <page-query>
 query BlogPost ($path: String!) {
    blogPost (path: $path) {
     id
     title
+    description
     content
     date (format: "D MMMM YYYY")
     timeToRead
