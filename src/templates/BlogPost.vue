@@ -10,14 +10,40 @@
   </Layout>
 </template>
 
+<script>
+export default {
+  name: "BlogPost",
+  metaInfo() {
+    const title = this.$page.blogPost.title;
+    const description = this.$page.blogPost.description;
+    const url = `https://quantumflytrap.com/blog/${this.$page.blogPost.slug}`;
+    return {
+      title: title,
+      meta: [
+        { name: "og:title", content: title },
+        { name: "twitter:title", content: title },
+        { name: "description", content: description },
+        { name: "og:description", content: description },
+        { name: "twitter:description", content: description },
+        { name: "url", content: url },
+        { name: "og:url", content: url },
+        { name: "twitter:url", content: url },
+      ],
+    };
+  },
+};
+</script>
+
 <page-query>
 query BlogPost ($path: String!) {
    blogPost (path: $path) {
     id
     title
+    description
     content
     date (format: "D MMMM YYYY")
     timeToRead
+    slug
   }
 }
 </page-query>
