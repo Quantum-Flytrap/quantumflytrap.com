@@ -106,6 +106,9 @@ export default {
         { name: "description", content: description },
         { name: "og:description", content: description },
         { name: "twitter:description", content: description },
+        { name: "url", content: url },
+        { name: "og:url", content: url },
+        { name: "twitter:url", content: url },
       ],
     };
   },

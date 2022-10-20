@@ -11,20 +11,10 @@ export default function(Vue, { router, head, isClient }) {
   const twitter = "QuantumFlytrap";
   const image = url + require("~/imgs/QF_logo_for_thumbnail.jpg");
 
-  // general
-  head.meta.push({
-    name: "url",
-    content: url,
-  });
-
   // Twitter
   head.meta.push({
     name: "twitter:card",
     content: "summary_large_image",
-  });
-  head.meta.push({
-    name: "twitter:url",
-    content: url,
   });
   head.meta.push({
     name: "twitter:image",
@@ -39,10 +29,6 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     property: "og:type",
     content: "website",
-  });
-  head.meta.push({
-    property: "og:url",
-    content: url,
   });
   head.meta.push({
     property: "og:image",

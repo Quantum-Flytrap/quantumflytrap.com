@@ -16,6 +16,7 @@ export default {
   metaInfo() {
     const title = this.$page.blogPost.title;
     const description = this.$page.blogPost.description;
+    const url = `https://quantumflytrap.com/blog/${this.$page.blogPost.slug}`;
     return {
       title: title,
       meta: [
@@ -24,6 +25,9 @@ export default {
         { name: "description", content: description },
         { name: "og:description", content: description },
         { name: "twitter:description", content: description },
+        { name: "url", content: url },
+        { name: "og:url", content: url },
+        { name: "twitter:url", content: url },
       ],
     };
   },
@@ -39,6 +43,7 @@ query BlogPost ($path: String!) {
     content
     date (format: "D MMMM YYYY")
     timeToRead
+    slug
   }
 }
 </page-query>
