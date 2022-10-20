@@ -31,7 +31,7 @@ p.post-date {
   margin-bottom: 1em;
 }
 
-.prose.post-content p a {
+.prose.post-content a {
   color: #111827;
 }
 </style>
