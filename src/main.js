@@ -7,10 +7,7 @@ export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
 
-  const title = "Quantum Flytrap";
   const url = "https://quantumflytrap.com";
-  const description =
-    "Intuitive user interfaces for quantum computing - make it an accessible & business-available technology. We aim to build the standard for interaction with quantum systems.";
   const twitter = "QuantumFlytrap";
   const image = url + require("~/imgs/QF_logo_for_thumbnail.jpg");
 
@@ -18,10 +15,6 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     name: "url",
     content: url,
-  });
-  head.meta.push({
-    name: "description",
-    content: description,
   });
 
   // Twitter
@@ -32,14 +25,6 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     name: "twitter:url",
     content: url,
-  });
-  head.meta.push({
-    name: "twitter:title",
-    content: title,
-  });
-  head.meta.push({
-    name: "twitter:description",
-    content: description,
   });
   head.meta.push({
     name: "twitter:image",
@@ -54,14 +39,6 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     property: "og:type",
     content: "website",
-  });
-  head.meta.push({
-    property: "og:title",
-    content: title,
-  });
-  head.meta.push({
-    property: "og:description",
-    content: description,
   });
   head.meta.push({
     property: "og:url",

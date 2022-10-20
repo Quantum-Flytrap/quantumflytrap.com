@@ -86,14 +86,28 @@
 </template>
 
 <script>
+  const title = "Quantum Flytrap";
+  const url = "https://quantumflytrap.com";
+  const description =
+    "Intuitive user interfaces for quantum computing - make it an accessible & business-available technology. We aim to build the standard for interaction with quantum systems.";
+
 import Testimonials from "~/components/Testimonials.vue";
 export default {
   name: "Index",
   components: {
     Testimonials,
   },
-  metaInfo: {
-    title: "Home",
+  metaInfo() {
+    return {
+      title: title,
+      meta: [
+        { name: "og:title", content: title },
+        { name: "twitter:title", content: title },
+        { name: "description", content: description },
+        { name: "og:description", content: description },
+        { name: "twitter:description", content: description },
+      ],
+    };
   },
   methods: {
     sectionClass(index) {

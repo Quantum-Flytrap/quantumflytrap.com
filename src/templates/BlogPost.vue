@@ -14,14 +14,16 @@
 export default {
   name: "BlogPost",
   metaInfo() {
+    const title = this.$page.blogPost.title;
+    const description = this.$page.blogPost.description;
     return {
-      title: this.$page.blogPost.title,
+      title: title,
       meta: [
-        { name: "og:title", content: this.$page.blogPost.title },
-        { name: "twitter:title", content: this.$page.blogPost.title },
-        { name: "description", content: this.$page.blogPost.description },
-        { name: "og:description", content: this.$page.blogPost.description },
-        { name: "twitter:description", content: this.$page.blogPost.description },
+        { name: "og:title", content: title },
+        { name: "twitter:title", content: title },
+        { name: "description", content: description },
+        { name: "og:description", content: description },
+        { name: "twitter:description", content: description },
       ],
     };
   },
