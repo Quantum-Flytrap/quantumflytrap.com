@@ -19,7 +19,7 @@ While the startup ended, it was well beyond a learning lesson. Among other thing
 We wouldn’t have achieved that without our talented, remote-first team. We worked from Warsaw, Tel-Aviv, Singapore, San Francisco, Wrocław, Haifa, Kraków, and Kathmandu. First and foremost - we are grateful to [Paweł Grabarz](https://www.linkedin.com/in/pawe%C5%82-grabarz-942922a2/), our lead software engineer, a Rust magician, and numerics specialist. We would like to thank other team members, including Agata, Bijaya, Kamila, Natalia Helena, Alicja, Chiara, and Philippe - we could never do this without you!
 And especially to [Artur Ekert](https://en.wikipedia.org/wiki/Artur_Ekert), who set the spark by inviting us to the Center for Quantum Technologies, National University of Singapore, and later joined our advisory board.
 
-We want to thank all those who supported us and gave us advice and feedback. Special thanks to Borys Musielak, Diana Koziarska and the [SMOK Ventures](http://www.smok.vc/), Tomek Kolinko, Christophe Jurczak, Witold Kowalczyk, Dominik Andrzejczuk, Piotr Kulczakowicz, Piotr Byrski, among many others.
+We want to thank all those who supported us and gave us advice and feedback. Special thanks to Borys Musielak, Diana Koziarska and the [SMOK Ventures](http://www.smok.vc/), Tomek Kolinko, Christophe Jurczak, Witold Kowalczyk, Dominik Andrzejczuk, Piotr Kulczakowicz, Przemek Kowalczyk, Piotr Byrski, among many others.
 
 And last but not least, we would like to thank you, the quantum community.
 
