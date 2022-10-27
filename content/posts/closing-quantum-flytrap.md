@@ -7,7 +7,7 @@ date: 2022-10-19
 
 Our journey with **Quantum Flytrap** comes to an end. It has been an intense 3-year ride, a rollercoaster with ups and downs.
 
-The company was founded by [Klem Jankiewicz](https://www.linkedin.com/in/klem-jankiewicz/), a designer, and [Piotr Migdał](https://www.linkedin.com/in/piotrmigdal/), a quantum physicist and AI specialist, with the goal of making quantum easy. And we still firmly believe that no matter the state of quantum hardware, quantum computing won’t be usable at a scale without user-centered accessible interfaces.
+The company was founded by [Klem Jankiewicz](https://www.linkedin.com/in/klem-jankiewicz/), a designer, and [Piotr Migdał](https://www.linkedin.com/in/piotrmigdal/), a quantum physicist and AI specialist, with [the goal of making quantum easy](https://www.future-of-computing.com/quantum-flytrap-shaping-the-future-of-quantum-devtools/). And we still firmly believe that no matter the state of quantum hardware, quantum computing won’t be usable at a scale without user-centered accessible interfaces.
 
 While the startup ended, it was well beyond a learning lesson. Among other things, we created the following:
 
