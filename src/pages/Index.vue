@@ -87,9 +87,10 @@
 
 <script>
   const title = "Quantum Flytrap";
-  const url = "https://quantumflytrap.com";
   const description =
     "Intuitive user interfaces for quantum computing - make it an accessible & business-available technology. We aim to build the standard for interaction with quantum systems.";
+  const url = "https://quantumflytrap.com";
+  const image = url + require("~/imgs/QF_logo_for_thumbnail.jpg");
 
 import Testimonials from "~/components/Testimonials.vue";
 export default {
@@ -109,6 +110,8 @@ export default {
         { name: "url", content: url },
         { name: "og:url", content: url },
         { name: "twitter:url", content: url },
+        { name: "og:image", content: image },
+        { name: "twitter:image", content: image },
       ],
     };
   },

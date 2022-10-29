@@ -16,7 +16,12 @@ export default {
   metaInfo() {
     const title = this.$page.blogPost.title;
     const description = this.$page.blogPost.description;
-    const url = `https://quantumflytrap.com/blog/${this.$page.blogPost.slug}`;
+    const baseUrl = "https://quantumflytrap.com"
+    const url = `${baseUrl}/blog/${this.$page.blogPost.slug}`;
+
+    // quick and dirty
+    const image = (this.$page.blogPost.slug === "virtual-lab-updates-oct-2022") ? baseUrl + require("/content/posts/virtual-lab-updates-oct-2022/virtual-lab-interface-redesign.png") :  baseUrl + require("~/imgs/QF_logo_for_thumbnail.jpg");
+
     return {
       title: title,
       meta: [
@@ -28,6 +33,8 @@ export default {
         { name: "url", content: url },
         { name: "og:url", content: url },
         { name: "twitter:url", content: url },
+        { name: "og:image", content: image },
+        { name: "twitter:image", content: image },
       ],
     };
   },

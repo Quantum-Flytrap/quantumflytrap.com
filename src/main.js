@@ -17,10 +17,6 @@ export default function(Vue, { router, head, isClient }) {
     content: "summary_large_image",
   });
   head.meta.push({
-    name: "twitter:image",
-    content: image,
-  });
-  head.meta.push({
     name: "twitter:site",
     content: twitter,
   });
@@ -29,10 +25,6 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     property: "og:type",
     content: "website",
-  });
-  head.meta.push({
-    property: "og:image",
-    content: image,
   });
 
   head.link.push({
