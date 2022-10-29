@@ -1,8 +1,8 @@
 ---
 slug: "virtual-lab-updates-oct-2022"
 title: "What's new in Virtual Lab - Oct 2022"
-description: "A lot! An interface redesign, indistinguishable particles, creation operators, element descriptions, and transition matrices. Enjoy!"
-date: 2022-10-19
+description: "We changed a lot! An interface redesign, indistinguishable particles, creation operators, element descriptions, and transition matrices. Enjoy!"
+date: 2022-10-29
 ---
 
 Here is a new update for [Virtual Lab by Quantum Flytrap](https://lab.quantumflytrap.com/), which involves major user interface changes and new features.
@@ -45,4 +45,4 @@ While [we are closing Quantum Flytrap as a company](/blog/closing-quantum-flytra
 
 [Enjoy!](https://lab.quantumflytrap.com/)
 
-Piotr & Klem
+[Piotr](https://p.migdal.pl/) & [Klem](https://www.linkedin.com/in/klem-jankiewicz/)
