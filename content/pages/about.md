@@ -20,10 +20,10 @@ The team is fully remote, with founders based in Warsaw and Tel-Aviv.
 
 - Piotr Migdał, Ph.D. (quantum physicist, founder)
 - Klem Jankiewicz (designer, founder)
-- Paweł Grabarz (software engineer)
+- Paweł Grabarz (lead software engineer)
 - Agata Rakowiecka (operations manager)
-- Chiara Decaroli, Ph.D. (quantum physicist, outreach)
-- Kamila Stępniowska (business development)
-- Alicja Głuszek (project manager)
+- Bijaya Dangol (frontend software engineer)
+
+Collaborators: Chiara Decaroli, Ph.D. (quantum physicist, outreach), Kamila Stępniowska (business development), Alicja Głuszek (project manager).
 
 Advisor: [Prof. Artur Ekert FRS](https://en.wikipedia.org/wiki/Artur_Ekert), University of Oxford - co-founder of quantum cryptography.
