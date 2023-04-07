@@ -27,11 +27,11 @@
               <g-image src="~/imgs/webby_awards_bar.png" />
             </a>
             <div class="flex flex-row space-x-4 max-w-full">
-              <a href="/contact">
-                <button class="button-primary uppercase">contact us</button>
-              </a>
               <a href="/virtual-lab">
-                <button class="button-secondary uppercase">virtual lab</button>
+                <button class="button-primary uppercase">virtual lab</button>
+              </a>
+              <a href="/contact">
+                <button class="button-secondary uppercase">contact us</button>
               </a>
             </div>
             <div class="flex flex-row items-center space-x-5">
