@@ -20,17 +20,18 @@
                 Building a bridge between the end-users and quantum computing
                 with visual, easy-to-use software development tools.
               </p>
-              <p>
-                We closed Quantum Flytrap in Oct 2022, see <a class="text-link" href="/blog/closing-quantum-flytrap">our post</a>.
-              </p>
             </div>
-
+            <a
+              href="https://vote.webbyawards.com/PublicVoting#/2023/websites-and-mobile-sites/general-websites-and-mobile-sites/science"
+            >
+              <g-image src="~/imgs/webby_awards_bar.png" />
+            </a>
             <div class="flex flex-row space-x-4 max-w-full">
-              <a href="/contact">
-                <button class="button-primary uppercase">contact us</button>
-              </a>
               <a href="/virtual-lab">
-                <button class="button-secondary uppercase">tech demo</button>
+                <button class="button-primary uppercase">virtual lab</button>
+              </a>
+              <a href="/contact">
+                <button class="button-secondary uppercase">contact us</button>
               </a>
             </div>
             <div class="flex flex-row items-center space-x-5">
@@ -63,8 +64,8 @@
               </p>
               <p>
                 It allows real-time interaction with the actual machine as well
-                as simulation of the device on a regular descktop computer thanks to
-                proprietary engine developed by Quantum Flytrap.
+                as simulation of the device on a regular desktop computer thanks
+                to proprietary engine developed by Quantum Flytrap.
               </p>
               <p>
                 This way users on a broad spectrum of technical skills can
@@ -86,11 +87,11 @@
 </template>
 
 <script>
-  const title = "Quantum Flytrap";
-  const description =
-    "Intuitive user interfaces for quantum computing - make it an accessible & business-available technology. We aim to build the standard for interaction with quantum systems.";
-  const url = "https://quantumflytrap.com";
-  const image = url + require("~/imgs/QF_logo_for_thumbnail.jpg");
+const title = "Quantum Flytrap";
+const description =
+  "Intuitive user interfaces for quantum computing - make it an accessible & business-available technology. We aim to build the standard for interaction with quantum systems.";
+const url = "https://quantumflytrap.com";
+const image = url + require("~/imgs/QF_logo_for_thumbnail.jpg");
 
 import Testimonials from "~/components/Testimonials.vue";
 export default {
@@ -137,5 +138,4 @@ export default {
 a.text-link {
   color: white;
 }
-
 </style>
