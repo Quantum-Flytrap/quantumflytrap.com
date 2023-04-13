@@ -58,20 +58,38 @@
           >
             <div class="flex-1 prose text-white md:p-4 max-w-full self-center">
               <p>
-                Our solution enables users to program a quantum computer in
-                order to solve business-specific tasks, with or without
-                immediate access to the quantum device.
+                Virtual Lab by Quantum Flytrap has been
+                <a href="https://bit.ly/vote-quantum"
+                  >nominated for the 27th Webby Awards</a
+                >, so-called
+                <a href="https://en.wikipedia.org/wiki/Webby_Awards"
+                  >"the Oscars of the Internet"</a
+                >. In the science websites category, along with NASA and OpenAI.
+                More in
+                <a
+                  href="https://quantumzeitgeist.com/quantum-flytraps-virtual-quantum-lab-receives-webby-award-nomination-quantum-game-gets-worldwide-recognition/"
+                  >Quantum Zeitgeist</a
+                >
+                and
+                <a
+                  href="https://www.insidequantumtechnology.com/news-archive/quantum-flytraps-virtual-quantum-lab-is-nominated-for-a-webby-award/"
+                  >Inside Quantum Technology</a
+                >.
               </p>
               <p>
-                It allows real-time interaction with the actual machine as well
-                as simulation of the device on a regular desktop computer thanks
-                to proprietary engine developed by Quantum Flytrap.
+                We designed and developed
+                <a href="https://www.pasqal.com/services/pulser-studio"
+                  >Pulser Studio</a
+                >
+                for Pasqal, a no-code neutral atom quantum programming platform.
               </p>
               <p>
-                This way users on a broad spectrum of technical skills can
-                resolve given business problem and later analyze the result in
-                order to optimize their products or services without necessarily
-                relying on understanding of physics nor coding.
+                Our publication
+                <a href="https://doi.org/10.1117/1.OE.61.8.081808"
+                  >Visualizing quantum mechanics in an interactive simulation -
+                  Virtual Lab by Quantum Flytrap</a
+                >
+                has been downloaded over 11,000 times.
               </p>
             </div>
             <div class="flex-1 flex items-center">
@@ -132,6 +150,9 @@ export default {
   color: #e5e7eb;
 }
 .prose .text-white {
+  color: white;
+}
+.prose a {
   color: white;
 }
 
