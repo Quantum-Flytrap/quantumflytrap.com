@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <div class="bg-pink-beige text-dark-violet text-center py-3 px-4 text-sm md:text-base">
-      <a href="#" class="underline hover:text-intense-violet">The Quantum Flytrap startup is closed</a>, but the <g-link to="/virtual-lab/" class="underline font-bold hover:text-intense-violet">Virtual Lab</g-link> is alive and will stay online indefinitely.
+      The Quantum Flytrap <a href="#" class="underline hover:text-intense-violet">startup is closed</a>, but the <g-link to="/virtual-lab/" class="underline font-bold hover:text-intense-violet">Virtual Lab</g-link> is alive and will stay online indefinitely.
     </div>
     <header class="bg-brand-violet text-white">
       <div class="container mx-auto px-4 flex-row">
