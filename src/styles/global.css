@@ -93,7 +93,7 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 }
 .plain-image img { width: 100%; }
 .hero-experiment {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 8 / 5;
   background: transparent;
 }
 .hero-experiment img {
