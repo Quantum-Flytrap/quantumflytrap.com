@@ -1,0 +1,38 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+<SiteLayout title="Virtual Lab" description="A free, supported, browser-based laboratory for quantum optics and quantum information.">
+  <header class="page-hero">
+    <p class="eyebrow">Virtual Lab</p>
+    <h1>A working optical table, without the hardware.</h1>
+    <p class="lead">Place optical elements, run the simulation, and inspect quantum states and measurement outcomes in real time.</p>
+    <div class="actions">
+      <a class="button button--bright" href="https://lab.quantumflytrap.com/lab/">Open the Lab</a>
+      <a class="button button--ghost" href="https://lab.quantumflytrap.com/game/">Start with the game</a>
+    </div>
+  </header>
+  <article class="prose">
+    <h2>What it simulates</h2>
+    <p>Virtual Lab models discrete position and photon polarization. It supports state evolution, interference, entanglement, measurement, quantum gates, and multi-photon experiments.</p>
+    <ul>
+      <li>Drag-and-drop optical elements and sources</li>
+      <li>Real-time, in-browser simulation</li>
+      <li>Up to four entangled photons</li>
+      <li>Quantum state, operator, and entanglement views</li>
+      <li>Measurement tables and branching outcomes</li>
+      <li>Shareable experiment links</li>
+    </ul>
+
+    <img src="/assets/virtual-lab-preview.png" alt="Virtual Lab interface showing an optical setup and quantum-state tools" />
+
+    <h2 id="teaching">Teaching and reuse</h2>
+    <p>Virtual Lab is free to use in lectures, classes, workshops, and independent learning. Screenshots from experiments may be used under a CC BY license in slides, textbooks, publications, and other materials.</p>
+    <p>It has been used in quantum information courses at the University of Oxford and Stanford University, as well as online courses and educational events.</p>
+
+    <h2>Stewardship</h2>
+    <p>The Quantum Flytrap startup closed in 2022. Virtual Lab is owned and supported by its creators, Piotr Migdał and Klem Jankiewicz, and will remain online indefinitely.</p>
+
+    <h2>Technical background</h2>
+    <p>The design and simulation are described in <a href="https://doi.org/10.1117/1.OE.61.8.081808"><cite>Visualizing quantum mechanics in an interactive simulation—Virtual Lab by Quantum Flytrap</cite></a>, Optical Engineering 61(8), 081808 (2022).</p>
+  </article>
+</SiteLayout>

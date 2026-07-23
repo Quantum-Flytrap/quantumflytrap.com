@@ -1,0 +1,111 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const experiments = [
+  ["Mach–Zehnder interferometer", "See single-photon interference emerge.", "mach-zehnder"],
+  ["Bell inequality", "Measure correlations between entangled photons.", "bell-inequality"],
+  ["Quantum teleportation", "Transfer a quantum state using entanglement.", "quantum-teleportation"],
+  ["Ekert protocol", "Build a quantum key-distribution experiment.", "ekert-protocol?mode=waves"],
+];
+---
+
+<SiteLayout>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Interactive quantum optics</p>
+      <h1>Build quantum experiments in your browser.</h1>
+      <p class="lead">Virtual Lab is a free, no-code optical table for exploring interference, entanglement, measurement, and quantum information.</p>
+      <div class="actions">
+        <a class="button button--bright" href="https://lab.quantumflytrap.com/lab/">Open Virtual Lab</a>
+        <a class="button button--ghost" href="https://lab.quantumflytrap.com/game/">Play Quantum Game</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Virtual Lab interface">
+      <div class="lab-frame">
+        <div class="lab-frame-bar"><i></i><i></i><i></i></div>
+        <img src="/assets/virtual-lab-preview.png" alt="An optical experiment open in Virtual Lab" />
+      </div>
+    </div>
+  </section>
+
+  <aside class="status" aria-label="Project status">
+    <strong>Active and supported</strong>
+    <p>The Quantum Flytrap startup closed in 2022. Virtual Lab is owned and supported by Piotr Migdał and Klem Jankiewicz, and will remain online indefinitely.</p>
+  </aside>
+
+  <section class="section section--paper">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Ways to use it</p>
+        <h2>Play. Experiment. Teach.</h2>
+      </div>
+      <p class="lead">Start with guided puzzles, assemble an open-ended experiment, or use a setup in class. Nothing to install.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <p class="card-index">01</p>
+        <h3>Quantum Game</h3>
+        <p>A guided introduction to optical elements and quantum behavior.</p>
+        <a class="text-link" href="https://lab.quantumflytrap.com/game/">Start playing</a>
+      </article>
+      <article class="card">
+        <p class="card-index">02</p>
+        <h3>Virtual Lab</h3>
+        <p>Drag sources, beam splitters, detectors, and gates onto a live optical table.</p>
+        <a class="text-link" href="https://lab.quantumflytrap.com/lab/">Build an experiment</a>
+      </article>
+      <article class="card">
+        <p class="card-index">03</p>
+        <h3>For educators</h3>
+        <p>Use the Lab and its screenshots in lectures, classes, publications, and course materials.</p>
+        <a class="text-link" href="/virtual-lab/#teaching">Teaching details</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Open these setups</p>
+        <h2>Experiments, not demos.</h2>
+      </div>
+      <p class="lead">Each setup can be inspected, changed, saved, and shared.</p>
+    </div>
+    <div class="experiments">
+      {experiments.map(([name, description, slug]) => (
+        <a class="experiment" href={`https://lab.quantumflytrap.com/lab/${slug}`}>
+          <h3>{name}</h3><span>{description}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">In use</p>
+        <h2>Built for quantum education.</h2>
+      </div>
+      <p>Virtual Lab has been used in university courses, online teaching, workshops, and public quantum events.</p>
+    </div>
+    <div class="evidence">
+      <article><strong>Oxford</strong><p>Used in quantum information teaching at the University of Oxford.</p><a class="source" href="https://arxiv.org/abs/2202.07756">Source: education review</a></article>
+      <article><strong>Stanford</strong><p>Used in quantum information teaching at Stanford University.</p><a class="source" href="https://arxiv.org/abs/2202.07756">Source: education review</a></article>
+      <article><strong>8</strong><p>Interface languages, including English and seven experimental translations.</p><a class="source" href="https://lab.quantumflytrap.com/about">Source: Virtual Lab</a></article>
+      <article><strong>2023</strong><p>Webby Awards nominee in the Science category.</p><a class="source" href="https://winners.webbyawards.com/2023/websites-and-mobile-sites/general-websites-and-mobile-sites/science/246873/virtual-lab-by-quantum-flytrap">Source: Webby Awards</a></article>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="section-heading">
+      <div><p class="eyebrow">The wider project</p><h2>Research and open tools.</h2></div>
+      <p>Virtual Lab is supported by a game, reusable visualizations, and a browser-based quantum engine.</p>
+    </div>
+    <div class="project-list">
+      <a class="project-row" href="/projects/#quantum-game"><h3>Quantum Game</h3><p>Guided puzzles using real quantum mechanics.</p><span>↗</span></a>
+      <a class="project-row" href="/projects/#braketvue"><h3>BraKetVue</h3><p>Interactive views of states and operators.</p><span>↗</span></a>
+      <a class="project-row" href="/projects/#quantum-tensors"><h3>Quantum Tensors</h3><p>TypeScript numerics for browser-based quantum systems.</p><span>↗</span></a>
+      <a class="project-row" href="/research/"><h3>Publications</h3><p>Peer-reviewed work on interfaces, games, and visualizing quantum mechanics.</p><span>↗</span></a>
+    </div>
+  </section>
+</SiteLayout>

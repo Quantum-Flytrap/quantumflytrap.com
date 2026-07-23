@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Quantum Flytrap",
+  description = "Virtual Lab is a free, browser-based optical table for learning and teaching quantum physics.",
+} = Astro.props;
+const pageTitle = title === "Quantum Flytrap" ? title : `${title} · Quantum Flytrap`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#190044" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL("/assets/virtual-lab-preview.png", Astro.site)} />
+    <script is:inline defer data-domain="quantumflytrap.com" src="https://plausible.io/js/script.js"></script>
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Quantum Flytrap home">
+        <img src="/assets/quantum-flytrap-logo.png" alt="" />
+        <span>Quantum Flytrap</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/virtual-lab/">Virtual Lab</a>
+        <a href="/projects/">Projects</a>
+        <a href="/research/">Research</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main id="content">
+      <slot />
+    </main>
+    <footer>
+      <div>
+        <a class="brand brand--footer" href="/">
+          <img src="/assets/quantum-flytrap-logo.png" alt="" />
+          <span>Quantum Flytrap</span>
+        </a>
+        <p>Virtual Lab is owned and supported by Piotr Migdał and Klem Jankiewicz.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://lab.quantumflytrap.com/">Open Virtual Lab</a>
+        <a href="/blog/">Archive</a>
+        <a href="mailto:contact@quantumflytrap.com">Contact</a>
+        <a href="https://github.com/Quantum-Game">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>
