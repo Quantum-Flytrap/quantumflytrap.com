@@ -46,9 +46,16 @@ p { max-width: 68ch; }
 .brand {
   display: inline-flex;
   align-items: center;
+  width: 120px;
+  height: 34px;
+  overflow: hidden;
   text-decoration: none;
 }
-.brand img { width: 120px; height: 62px; object-fit: contain; }
+.brand img {
+  width: 120px;
+  height: auto;
+  align-self: flex-start;
+}
 nav { display: flex; gap: clamp(1rem, 2.5vw, 2rem); }
 nav a { font-size: .9rem; text-decoration: none; }
 nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
