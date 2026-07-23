@@ -1,5 +1,4 @@
 ---
-import { getCollection } from "astro:content";
 import SiteLayout from "../layouts/SiteLayout.astro";
 
 const experiments = [
@@ -29,7 +28,6 @@ const experiments = [
   },
 ];
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <SiteLayout>
@@ -62,7 +60,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf()
           </button>
         ))}
       </div>
-      <a id="featured-experiment-name" class="image-link" href={experiments[0].url}>{experiments[0].name} →</a>
+      <a id="featured-experiment-name" class="image-link" href={experiments[0].url}>Go to this experiment →</a>
     </div>
   </section>
 
@@ -117,7 +115,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf()
     </div>
   </section>
 
-  <section class="content-section content-section--tinted">
+  <section id="publications" class="content-section content-section--tinted">
     <div class="section-title">
       <h2>Publications</h2>
     </div>
@@ -142,16 +140,14 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf()
   </section>
 
   <section class="content-section">
-    <h2>Posts</h2>
-    <div class="post-list">
-      {posts.map((post) => (
-        <a href={`/blog/${post.data.slug}/`}>
-          <time datetime={post.data.date.toISOString()}>
-            {post.data.date.toLocaleDateString("en-GB", { month: "long", year: "numeric" })}
-          </time>
-          <span>{post.data.title}</span>
-        </a>
-      ))}
+    <h2>About Quantum Flytrap</h2>
+    <div class="about-summary">
+      <p>Quantum Flytrap was a startup founded in 2019 by Piotr Migdał and Klem Jankiewicz to build accessible interfaces for quantum technologies. The startup closed in October 2022; Virtual Lab remains active and supported.</p>
+      <ul>
+        <li><a href="/blog/closing-quantum-flytrap/">Closing Quantum Flytrap <span>— the startup</span></a></li>
+        <li><a href="/blog/virtual-lab-updates-oct-2022/">What's new in Virtual Lab — October 2022</a></li>
+        <li><a href="https://p.migdal.pl/blog/2025/04/vibe-translating-quantum-flytrap/">Vibe translating Quantum Flytrap <span>— 2025 retrospective</span></a></li>
+      </ul>
     </div>
   </section>
 
@@ -168,7 +164,6 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf()
       image.alt = alt;
       imageLink.href = url;
       nameLink.href = url;
-      nameLink.textContent = `${name} →`;
       controls.forEach((item) => {
         const active = item === control;
         item.classList.toggle("is-active", active);

@@ -50,7 +50,7 @@ p { max-width: 68ch; }
   font-weight: 700;
   text-decoration: none;
 }
-.brand img { width: 48px; height: 32px; object-fit: contain; }
+.brand img { width: 88px; height: 50px; object-fit: contain; }
 nav { display: flex; gap: clamp(1rem, 2.5vw, 2rem); }
 nav a { font-size: .9rem; text-decoration: none; }
 nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
@@ -206,18 +206,17 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 .publication-links strong { white-space: nowrap; font-weight: 400; }
 .source-note { margin-top: 1rem; color: var(--muted); font-size: .78rem; }
 
-.post-list { border-top: 1px solid var(--line); }
-.post-list a {
-  padding: .7rem 0;
+.about-summary {
   display: grid;
-  grid-template-columns: 8rem 1fr;
-  gap: 1rem;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+  gap: 3rem;
 }
-.post-list a:hover span { text-decoration: underline; text-underline-offset: .25rem; }
-.post-list a { font-size: .9rem; }
-.post-list time { color: var(--muted); }
+.about-summary p { margin: 0; }
+.about-summary ul { margin: 0; padding: 0; list-style: none; }
+.about-summary li { padding: .45rem 0; border-bottom: 1px solid var(--line); }
+.about-summary li:first-child { padding-top: 0; }
+.about-summary a { font-size: .9rem; }
+.about-summary span { color: var(--muted); }
 
 .page-hero {
   padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 9vw, 10rem);
@@ -262,6 +261,7 @@ footer p { margin: 1rem 0 0; color: #d7cce5; font-size: .8rem; }
   .hero-simple { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .publication-grid { grid-template-columns: 1fr; }
+  .about-summary { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 @media (max-width: 600px) {
@@ -273,7 +273,6 @@ footer p { margin: 1rem 0 0; color: #d7cce5; font-size: .8rem; }
   .project-grid { grid-template-columns: 1fr; }
   .section-title { display: block; }
   .section-title > a { display: inline-block; margin: -1rem 0 2rem; }
-  .post-list a { grid-template-columns: 1fr; gap: .2rem; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }
   footer { flex-direction: column; }
