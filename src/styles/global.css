@@ -212,11 +212,8 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
   gap: 3rem;
 }
 .about-summary p { margin: 0; }
-.about-summary ul { margin: 0; padding: 0; list-style: none; }
-.about-summary li { padding: .45rem 0; border-bottom: 1px solid var(--line); }
-.about-summary li:first-child { padding-top: 0; }
-.about-summary a { font-size: .9rem; }
-.about-summary span { color: var(--muted); }
+.about-summary ul { margin: 0; padding-left: 1.2rem; }
+.about-summary li { margin-bottom: .4rem; font-size: .9rem; }
 
 .page-hero {
   padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 9vw, 10rem);
