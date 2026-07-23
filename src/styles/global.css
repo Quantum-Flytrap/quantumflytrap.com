@@ -46,11 +46,9 @@ p { max-width: 68ch; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: .7rem;
-  font-weight: 700;
   text-decoration: none;
 }
-.brand img { width: 88px; height: 50px; object-fit: contain; }
+.brand img { width: 120px; height: 62px; object-fit: contain; }
 nav { display: flex; gap: clamp(1rem, 2.5vw, 2rem); }
 nav a { font-size: .9rem; text-decoration: none; }
 nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
@@ -212,6 +210,9 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
   gap: 3rem;
 }
 .about-summary p { margin: 0; }
+.about-summary p + p { margin-top: .75rem; }
+.about-summary h3 { margin-top: 1.25rem; }
+.about-summary h3:first-child { margin-top: 0; }
 .about-summary ul { margin: 0; padding-left: 1.2rem; }
 .about-summary li { margin-bottom: .4rem; font-size: .9rem; }
 
@@ -242,18 +243,6 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 .project-row h3, .project-row p { margin: 0; }
 .project-row p { color: var(--muted); }
 
-footer {
-  padding: 2.5rem clamp(1.25rem, 6vw, 6rem);
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  background: var(--violet);
-  color: white;
-}
-.brand--footer img { filter: brightness(4); }
-footer p { margin: 1rem 0 0; color: #d7cce5; font-size: .8rem; }
-.footer-links { display: grid; grid-template-columns: repeat(2, auto); gap: .5rem 2rem; font-size: .82rem; }
-
 @media (max-width: 850px) {
   .hero-simple { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -263,7 +252,6 @@ footer p { margin: 1rem 0 0; color: #d7cce5; font-size: .8rem; }
 
 @media (max-width: 600px) {
   .site-header { align-items: flex-start; }
-  .brand span { display: none; }
   nav { display: grid; grid-template-columns: repeat(2, auto); gap: .3rem 1rem; }
   .hero-simple { padding-top: 2rem; gap: 2rem; }
   .hero-simple h1 { font-size: 2.5rem; }
@@ -272,5 +260,4 @@ footer p { margin: 1rem 0 0; color: #d7cce5; font-size: .8rem; }
   .section-title > a { display: inline-block; margin: -1rem 0 2rem; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }
-  footer { flex-direction: column; }
 }

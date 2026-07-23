@@ -35,31 +35,17 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="/" aria-label="Quantum Flytrap home">
-        <img src="/assets/quantum-flytrap-logo.png" alt="" />
-        <span>Quantum Flytrap</span>
+        <img src="/assets/quantum-flytrap-logo.png" alt="Quantum Flytrap" />
       </a>
       <nav aria-label="Main navigation">
         <a href="https://lab.quantumflytrap.com/">Virtual Lab</a>
         <a href="https://quantumgame.io/">Quantum Game</a>
         <a href="/#publications">Publications</a>
+        <a href="/#contact">Contact</a>
       </nav>
     </header>
     <main id="content">
       <slot />
     </main>
-    <footer>
-      <div>
-        <a class="brand brand--footer" href="/">
-          <img src="/assets/quantum-flytrap-logo.png" alt="" />
-          <span>Quantum Flytrap</span>
-        </a>
-      </div>
-      <div class="footer-links">
-        <a href="https://lab.quantumflytrap.com/">Open Virtual Lab</a>
-        <a href="https://quantumgame.io/">Quantum Game</a>
-        <a href="mailto:contact@quantumflytrap.com">Contact</a>
-        <a href="https://github.com/Quantum-Flytrap">GitHub</a>
-      </div>
-    </footer>
   </body>
 </html>
