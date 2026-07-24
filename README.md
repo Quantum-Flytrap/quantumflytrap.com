@@ -1,21 +1,11 @@
-# Quantum Flytrap landing page
+# Quantum Flytrap website
 
-It uses [Gridsome](https://gridsome.org/).
+The static site is built with Astro 7 and pnpm.
 
-## Install & run locally
-
-Install Gridsome CLI globally: `yarn global add @gridsome/cli` (or `npm install --global @gridsome/cli`).
-
-Then to clone and install dependencies:
-
-```{bash}
-git clone git@github.com:Quantum-Game/quantumflytrap.com.git
-cd quantumflytrap.com
-yarn
+```bash
+pnpm install
+pnpm dev
 ```
 
-To run it `gridsome develop` to start a local dev server at `http://localhost:8080`
-
-## Deployment
-
-Right now it is automatically deployed (automatically from the `master` branch) to Netlify.
+Create a production build with `pnpm build`. The site is deployed from the
+`master` branch on Netlify.

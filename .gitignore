@@ -4,5 +4,7 @@
 src/.temp
 node_modules
 dist
+.astro
+.pnpm-store
 .env
 .env.*

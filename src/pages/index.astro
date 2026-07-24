@@ -1,0 +1,202 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const experiments = [
+  {
+    name: "Mach–Zehnder",
+    url: "https://lab.quantumflytrap.com/lab/mach-zehnder",
+    image: "/assets/experiment-mach-zehnder.png",
+    alt: "Mach–Zehnder interferometer in Virtual Lab",
+  },
+  {
+    name: "Bell inequality",
+    url: "https://lab.quantumflytrap.com/lab/bell-inequality",
+    image: "/assets/experiment-bell.png",
+    alt: "Bell inequality experiment in Virtual Lab",
+  },
+  {
+    name: "Quantum teleportation",
+    url: "https://lab.quantumflytrap.com/lab/quantum-teleportation?mode=waves",
+    image: "/assets/experiment-teleportation.png",
+    alt: "Quantum teleportation experiment in Virtual Lab",
+  },
+  {
+    name: "Deutsch–Jozsa",
+    url: "https://lab.quantumflytrap.com/lab/deutsch-jozsa",
+    image: "/assets/experiment-deutsch-jozsa.png",
+    alt: "Deutsch–Jozsa algorithm experiment in Virtual Lab",
+  },
+];
+
+---
+
+<SiteLayout>
+  <section class="hero-simple">
+    <div>
+      <p class="eyebrow">Quantum Flytrap</p>
+      <h1>Virtual Lab</h1>
+      <p class="lead">A free, browser-based optical table for exploring quantum mechanics. Build experiments, run the simulation, and inspect quantum states and measurements.</p>
+      <div class="actions">
+        <a class="button button--primary" href="https://lab.quantumflytrap.com/lab/">Open Virtual Lab</a>
+      </div>
+    </div>
+    <div class="experiment-carousel">
+      <a id="featured-experiment-link" class="plain-image hero-experiment" href={experiments[0].url}>
+        <img id="featured-experiment-image" src={experiments[0].image} alt={experiments[0].alt} />
+      </a>
+      <div class="carousel-controls" aria-label="Featured Virtual Lab experiment">
+        {experiments.map((experiment, index) => (
+          <button
+            class:list={{ "carousel-control": true, "is-active": index === 0 }}
+            type="button"
+            data-index={index}
+            data-name={experiment.name}
+            data-url={experiment.url}
+            data-image={experiment.image}
+            data-alt={experiment.alt}
+            aria-pressed={index === 0 ? "true" : "false"}
+          >
+            {experiment.name}
+          </button>
+        ))}
+      </div>
+      <a id="featured-experiment-name" class="image-link" href={experiments[0].url}>Go to this experiment →</a>
+    </div>
+  </section>
+
+  <p class="project-status"><strong>Virtual Lab is active and supported.</strong> The Quantum Flytrap startup closed in 2022. The Lab is owned and supported by Piotr Migdał and Klem Jankiewicz and will remain online indefinitely.</p>
+
+  <section class="content-section">
+    <h2>Other work</h2>
+    <div class="project-grid">
+      <article class="project-card">
+        <a class="plain-image" href="https://quantumgame.io/">
+          <img src="/assets/quantum-game.svg" alt="Quantum Game artwork" />
+        </a>
+        <div>
+          <h3>Quantum Game</h3>
+          <p>Guided puzzles introducing photons, superposition, interference, polarization, and measurement.</p>
+          <a class="text-link" href="https://quantumgame.io/">Quantum Game →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="plain-image crop-top" href="https://github.com/Quantum-Flytrap/bra-ket-vue">
+          <img src="/assets/cnot-gate.png" alt="A CNOT operator visualized with BraKetVue" />
+        </a>
+        <div>
+          <h3>BraKetVue</h3>
+          <p>Open-source components for visualizing quantum states and operators.</p>
+          <a class="text-link" href="https://github.com/Quantum-Flytrap/bra-ket-vue">BraKetVue on GitHub →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="plain-image" href="https://github.com/Quantum-Flytrap/quantum-tensors">
+          <img src="/assets/quantum-tensors-logo.jpg" alt="Quantum Tensors" />
+        </a>
+        <div>
+          <h3>Quantum Tensors</h3>
+          <p>TypeScript numerics for multipartite quantum systems in the browser.</p>
+          <a class="text-link" href="https://github.com/Quantum-Flytrap/quantum-tensors">Quantum Tensors on GitHub →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="plain-image" href="https://pulserstudio.pasqal.cloud/">
+          <img src="/assets/pulser-studio.png" alt="Pulser Studio interface" />
+        </a>
+        <div>
+          <h3>Pulser Studio</h3>
+          <p>A visual editor for neutral-atom pulse sequences, developed by Quantum Flytrap for Pasqal.</p>
+          <a class="text-link" href="https://pulserstudio.pasqal.cloud/">Open Pulser Studio →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="publications" class="content-section content-section--tinted">
+    <div class="section-title">
+      <h2>Publications</h2>
+    </div>
+    <div class="publication-grid">
+      <article class="publication-card">
+        <h3>Visualizing quantum mechanics in an interactive simulation—Virtual Lab by Quantum Flytrap</h3>
+        <p>P. Migdał, K. Jankiewicz, P. Grabarz, C. Decaroli, P. Cochin · Optical Engineering · 2022</p>
+        <div class="publication-links">
+          <span><a href="https://doi.org/10.1117/1.OE.61.8.081808">DOI</a> · <a href="https://arxiv.org/abs/2203.13300">arXiv</a></span>
+          <strong>33 citations</strong>
+        </div>
+      </article>
+      <article class="publication-card">
+        <h3>Quantum games and interactive tools for quantum technologies outreach and education</h3>
+        <p>Z. C. Seskir, P. Migdał, C. Weidner, et al. · Optical Engineering · 2022</p>
+        <div class="publication-links">
+          <span><a href="https://doi.org/10.1117/1.OE.61.8.081809">DOI</a> · <a href="https://arxiv.org/abs/2202.07756">arXiv</a></span>
+          <strong>83 citations</strong>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>About Virtual Lab by Quantum Flytrap</h2>
+    <div class="about-summary">
+      <div>
+        <p>Virtual Lab is an online, no-code environment for exploring quantum phenomena. It simulates up to four entangled photons in real time, including state evolution, entanglement, measurement, the Deutsch–Jozsa algorithm, and the Ekert quantum cryptography protocol.</p>
+        <p>Its drag-and-drop optical table includes photon sources, beam splitters, gates, and detectors. It is designed for use by learners, educators, and researchers.</p>
+
+        <h3>Team and use</h3>
+        <p>The project is led by <a href="https://jankiewiczstudio.com/">Klem Jankiewicz</a> (design), <a href="https://p.migdal.pl/">Piotr Migdał</a> (quantum physics), and <a href="https://github.com/frizi">Paweł Grabarz</a> (software development). Contributors include Agata Rakowiecka, Bijaya Dangol, Chiara Decaroli, Kamila Stępniowska, and Alicja Głuszek. Artur Ekert served as an advisor.</p>
+        <p>Virtual Lab has been used in quantum information courses at the University of Oxford and Stanford University, as well as educational events and hackathons. Earlier development was funded by the Centre for Quantum Technologies at the National University of Singapore and the Unitary Fund.</p>
+      </div>
+      <div>
+        <h3>Usage rights and languages</h3>
+        <p>Virtual Lab is free to use in lectures and classes and will remain so. Experiment screenshots may be reused under the CC BY license in slides, textbooks, publications, and other materials.</p>
+        <p>It is available in English, Spanish, Polish, Portuguese, French, German, Ukrainian, and Chinese.</p>
+
+        <h3 id="contact">Contact</h3>
+        <p>Email <a href="mailto:contact@quantumflytrap.com">contact@quantumflytrap.com</a>, or contact <a href="mailto:piotr@quantumflytrap.com">Piotr</a> or <a href="mailto:klem@quantumflytrap.com">Klem</a> directly.</p>
+
+        <h3>More</h3>
+        <ul>
+          <li>April 2025 · <a href="https://p.migdal.pl/blog/2025/04/vibe-translating-quantum-flytrap/">Making Quantum Flytrap a polyglot with AI vibe translating</a></li>
+          <li>April 2023 · <a href="https://vote.webbyawards.com/PublicVoting#/2023/websites-and-mobile-sites/general-websites-and-mobile-sites/science">27th Webby Awards science nomination</a></li>
+          <li>October 2022 · <a href="/blog/virtual-lab-updates-oct-2022/">Major update notes</a></li>
+          <li>October 2022 · <a href="/blog/closing-quantum-flytrap/">Closing Quantum Flytrap</a></li>
+          <li><a href="https://discord.gg/vV8yGMEeSy">Discord community support</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const controls = [...document.querySelectorAll<HTMLButtonElement>(".carousel-control")];
+    const image = document.querySelector<HTMLImageElement>("#featured-experiment-image");
+    const imageLink = document.querySelector<HTMLAnchorElement>("#featured-experiment-link");
+    const nameLink = document.querySelector<HTMLAnchorElement>("#featured-experiment-name");
+
+    const showExperiment = (control: HTMLButtonElement) => {
+      const { name, url, image: imageUrl, alt } = control.dataset;
+      if (!name || !url || !imageUrl || !alt || !image || !imageLink || !nameLink) return;
+      image.src = imageUrl;
+      image.alt = alt;
+      imageLink.href = url;
+      nameLink.href = url;
+      controls.forEach((item) => {
+        const active = item === control;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+    };
+
+    controls.forEach((control) => control.addEventListener("click", () => showExperiment(control)));
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.setInterval(() => {
+        const current = controls.findIndex((control) => control.classList.contains("is-active"));
+        showExperiment(controls[(current + 1) % controls.length]);
+      }, 6000);
+    }
+  </script>
+</SiteLayout>
