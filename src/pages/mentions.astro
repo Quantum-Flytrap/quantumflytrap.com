@@ -12,19 +12,19 @@ const quotes = mentionGroups
 const listedGroups = mentionGroups
   .map((group) => ({ ...group, items: group.id === "research" ? group.items : group.items.filter((item) => !item.quote) }))
   .filter((group) => group.items.length > 0);
-const sections = [{ id: "quotes", title: "What people say", count: quotes.length }, ...listedGroups.map((group) => ({ id: group.id, title: group.title, count: group.items.length }))];
+const sections = [{ id: "quotes", title: "What people say" }, ...listedGroups.map((group) => ({ id: group.id, title: group.title }))];
 const mailBody = ["Where you use Virtual Lab (course, paper, workshop, or event, with a link if there is one):", "", "How you use it:", "", "May we quote you here, and under what name?", ""].join("\n");
 const mailto = `mailto:contact@quantumflytrap.com?subject=${encodeURIComponent("How I use Virtual Lab")}&body=${encodeURIComponent(mailBody)}`;
 ---
 
-<SiteLayout title="Mentions" description="Courses, research papers, and press that use or discuss Virtual Lab by Quantum Flytrap.">
+<SiteLayout title="How others use Virtual Lab" description="Courses, research papers, and press that use or discuss Virtual Lab by Quantum Flytrap.">
   <div class="mentions-page">
     <section class="content-section mentions-intro">
       <div>
         <h1>How others use Virtual Lab</h1>
         <nav class="section-links" aria-label="On this page">
           {sections.map((section) => (
-            <a href={`#${section.id}`}>{section.title} <span>{section.count}</span></a>
+            <a href={`#${section.id}`}>{section.title}</a>
           ))}
         </nav>
         <div class="mentions-prompt"><a class="button button--primary" href={mailto}>Tell us how you use it</a><p>Teaching or researching with Virtual Lab? Write a few lines and we will add it here.</p></div>
@@ -34,11 +34,10 @@ const mailto = `mailto:contact@quantumflytrap.com?subject=${encodeURIComponent("
     <section id="quotes" class="content-section">
       <h2>What people say</h2>
       <div class="quote-grid">
-        {quotes.map((item, index) => (
-          <figure class="quote" tabindex={item.excerpt ? "0" : undefined} aria-describedby={item.excerpt ? `quote-${index}` : undefined}>
+        {quotes.map((item) => (
+          <figure class="quote">
             <blockquote>“{item.quote}”</blockquote>
             <figcaption><Attribution item={item} /></figcaption>
-            <Excerpt item={item} id={`quote-${index}`} />
           </figure>
         ))}
       </div>
@@ -79,8 +78,8 @@ const mailto = `mailto:contact@quantumflytrap.com?subject=${encodeURIComponent("
     ))}
 
     <section class="content-section">
-      <h2>Missing something?</h2>
-      <p>If Virtual Lab is part of your course, paper, workshop, or event, <a href={mailto}>send us a few lines</a> and a link, and we will add it to this page.</p>
+      <h2>Add your course, paper, or event</h2>
+      <p>If you use Quantum Game or Virtual Lab by Quantum Flytrap in a course, paper, workshop, or event, <a href={mailto}>send us a few lines</a> and a link, and we will add it to this page.</p>
     </section>
   </div>
 </SiteLayout>

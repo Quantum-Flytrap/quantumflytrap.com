@@ -93,25 +93,30 @@ const experiments = [
         <a class="button button--primary" href="mailto:contact@quantumflytrap.com">Tell us how you use it</a>
         <a class="button" href="/mentions/#teaching">How others use it</a>
       </div>
-      <div class="educator-quotes">
-        <div class="testimonial-carousel">
-          {featuredMentions.map((mention, index) => (
-            <figure class:list={{ testimonial: true, "is-active": index === 0 }} aria-hidden={index === 0 ? undefined : "true"}>
-              <blockquote>“{mention.quote}”</blockquote>
-              <figcaption><Attribution item={mention} focusable={index === 0} /></figcaption>
-            </figure>
-          ))}
-        </div>
-        <div class="carousel-controls testimonial-controls" style={`--count: ${featuredMentions.length}`} aria-label="Quotes about Virtual Lab">
-          {featuredMentions.map((mention, index) => (
-            <button
-              class:list={{ "testimonial-control": true, "is-active": index === 0 }}
-              type="button"
-              aria-pressed={index === 0 ? "true" : "false"}
-            >{speaker(mention)}</button>
-          ))}
-        </div>
-      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="content-section testimonials">
+    <div class="section-title">
+      <h2>Testimonials</h2>
+      <a class="text-link" href="/mentions/#quotes">More testimonials →</a>
+    </div>
+    <div class="carousel-controls testimonial-controls" style={`--count: ${featuredMentions.length}`} aria-label="Quotes about Virtual Lab">
+      {featuredMentions.map((mention, index) => (
+        <button
+          class:list={{ "testimonial-control": true, "is-active": index === 0 }}
+          type="button"
+          aria-pressed={index === 0 ? "true" : "false"}
+        >{speaker(mention)}</button>
+      ))}
+    </div>
+    <div class="testimonial-carousel">
+      {featuredMentions.map((mention, index) => (
+        <figure class:list={{ testimonial: true, "is-active": index === 0 }} aria-hidden={index === 0 ? undefined : "true"}>
+          <blockquote>“{mention.quote}”</blockquote>
+          <figcaption><Attribution item={mention} focusable={index === 0} /></figcaption>
+        </figure>
+      ))}
     </div>
   </section>
 
@@ -186,6 +191,7 @@ const experiments = [
         </div>
       </article>
     </div>
+    <a class="text-link section-more" href="/mentions/#research">How these papers are cited and used →</a>
   </section>
 
   <section class="content-section">
@@ -249,12 +255,7 @@ const experiments = [
     });
 
     const quotes = [...document.querySelectorAll<HTMLElement>(".testimonial")];
-    const quoteBox = document.querySelector<HTMLElement>(".testimonial-carousel");
-    const quoteArea = document.querySelector<HTMLElement>(".educator-quotes");
-    const fitQuote = () => {
-      const active = quotes.find((quote) => quote.classList.contains("is-active"));
-      if (quoteBox && active) quoteBox.style.height = `${active.offsetHeight}px`;
-    };
+    const quoteArea = document.querySelector<HTMLElement>(".testimonials");
     const quoteControls = [...document.querySelectorAll<HTMLButtonElement>(".testimonial-control")];
 
     const showQuote = (index: number) => {
@@ -270,12 +271,9 @@ const experiments = [
         control.classList.toggle("is-active", i === index);
         control.setAttribute("aria-pressed", String(i === index));
       });
-      fitQuote();
     };
 
-    window.addEventListener("resize", fitQuote);
-    fitQuote();
-    // Rotate only while the quotes are on screen, so the changing height never moves what a reader is looking at.
+    // Rotate only while the quotes are on screen.
     if (quoteArea) {
       new IntersectionObserver(([entry]) => quoteArea.classList.toggle("is-offscreen", !entry.isIntersecting)).observe(quoteArea);
     }
