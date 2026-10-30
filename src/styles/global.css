@@ -278,6 +278,8 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
   font-size: .85rem;
   line-height: 1.45;
 }
+.mention-excerpt.has-figure { width: min(32rem, 100%); }
+.mention-excerpt img { width: 100%; margin-bottom: .5rem; border: 1px solid var(--line); }
 .mention-list li:hover .mention-excerpt,
 .mention-list li:focus-within .mention-excerpt { display: block; }
 .mention-by { color: var(--muted); }

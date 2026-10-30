@@ -7,6 +7,7 @@ export interface Mention {
   quote?: string;
   note?: string;
   excerpt?: string;
+  figure?: string;
   featured?: number;
 }
 
@@ -108,6 +109,7 @@ export const mentionGroups: MentionGroup[] = [
         quote: "Everybody enjoyed working with the Quantum Flytrap […] at the same time very engaging, entertaining and also very effective.",
         featured: 4,
         excerpt: "Figure 14: Quantum seeing in the dark (student solution).",
+        figure: "/mentions/german-2026-pathways.png",
       },
       {
         title: "Jumpstarting Quantum Computing in the Middle and High-School Classroom: A Guide for Teachers and Learners",
@@ -118,6 +120,7 @@ export const mentionGroups: MentionGroup[] = [
         quote: "We hereby strongly encourage its use in the classroom and labs.",
         featured: 6,
         excerpt: "Figure 14. Experimental proof in Quantum Flytrap (via a Mach-Zehnder Interferometer) that stacking two PETE boxes leaves the input unchanged.",
+        figure: "/mentions/german-2025-inroads.png",
       },
       {
         title: "Interference of interference effects",
@@ -128,6 +131,7 @@ export const mentionGroups: MentionGroup[] = [
         quote: "The Virtual Lab is an excellent resource for simulating photonic interference.",
         featured: 2,
         excerpt: "FIG. 7. Screenshot of our setup in QF’s VL after 100 experimental trials have been completed. We see that P2,3 ≠ 0 as 1/100 = 1% of the trials have resulted in a D2 D3 coincidence (shown using VL’s AND logic gate and output “stat counter”).",
+        figure: "/mentions/randles-2025-interference.png",
       },
       {
         title: "Defining quantum games",
@@ -138,6 +142,7 @@ export const mentionGroups: MentionGroup[] = [
         quote: "The player can test the behaviour of laser beams using tools that resemble actual quantum optics lab equipment, and these actions are depicted in a scientifically accurate manner.",
         featured: 7,
         excerpt: "Figure 4 Screenshots from the educational games (a) Quantum TiqTaqToe (2019) and (b) Quantum Game by Quantum Flytrap (2020). […] In Quantum Game the player solves puzzles introducing the basic actions and logic of quantum optics equipment",
+        figure: "/mentions/piispanen-2025-quantum-games.png",
       },
       {
         title: "From staging to insight: an educational path to understanding Bell’s inequalities",
@@ -165,6 +170,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "EJMSTE",
         year: "2026",
         excerpt: "Figure 3. Tablet-based hands-on station thematizing superposition and basic quantum gates using Quantum FlyTrap (Migdał et al., 2022) (the authors’ own photograph)",
+        figure: "/mentions/toth-2026-workshop.png",
       },
       {
         title: "An analysis of demonstration materials in quantum physics education",
@@ -173,6 +179,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "EPJ Quantum Technology",
         year: "2026",
         excerpt: "Figure 11 Examples of DM for single quanta interference. From LRTB: Computer simulation MZI Experiment [117], single photon interference analogy with attenuated laser [119], Mach–Zehnder interferometer in Quantum Game [42], “Build a Mach-Zehnder Interferometer” simulation [118]",
+        figure: "/mentions/folkers-2026-demonstration.png",
       },
       {
         title: "Investigating the use of multiple representations in university courses on quantum technologies",
@@ -181,6 +188,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "EPJ Quantum Technology",
         year: "2025",
         excerpt: "Fig. 1: Selection of known graphical representations of single-qubit states provided for consideration with examples. c) from ”Visualizing quantum mechanics in an interactive simulation – Virtual Lab by Quantum Flytrap” by Migdal, P., Jankiewicz, K., Grabarz, P., Decaroli, C., and Cochin, P., 2022, Optical Engineering, 61(08), 81808 […]. Copyright 2022 by the authors.",
+        figure: "/mentions/rexigel-2025-representations.png",
       },
       {
         title: "Exploring and designing interactive physical-digital tools for quantum physics education",
@@ -189,6 +197,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "PhD thesis",
         year: "2025",
         excerpt: "Figure 2.9. Two virtual labs dedicated to quantum optics. a) an experiment on Virtual Quantum Optics Laboratory. b) an experiment on Virtual Lab by Quantum Flytrap.",
+        figure: "/mentions/casamayou-2025-thesis.png",
       },
       {
         title: "Introducing quantum physics concepts and Dirac notation at the secondary school level: Insights into student reasoning from an acceptance survey",
@@ -197,6 +206,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "Phys. Rev. Phys. Educ. Res.",
         year: "2024",
         excerpt: "FIG. 10. Michelson interferometer as it is displayed on the Quantum Flytrap website [62]. The program visualizes the superposition state of a single photon by splitting it into two fainter parts, which subsequently follow a straight line up to the mirrors.",
+        figure: "/mentions/hennig-2024-dirac.png",
       },
       {
         title: "Aplicando Gamificação para Interpretação do Algoritmo de Deutsch-Jozsa via Plataforma Quantum FlyTrap",
@@ -205,6 +215,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "WEIT",
         year: "2023",
         excerpt: "Figura 10. Simulação do Algoritmo de Deutsch-Jozsa com dois resultados: Balanceada e Constante.",
+        figure: "/mentions/rosa-2023-deutsch-jozsa.png",
       },
       {
         title: "Quantum Physics Literacy Aimed at K12 and the General Public",
@@ -349,12 +360,6 @@ export const mentionGroups: MentionGroup[] = [
         year: "2022",
         excerpt: "Quantum Flytrap has created a virtual lab for playing games with photons to make undergraduate physics experiments more enjoyable and interactive. With a drag and drop interface, it helps learners to visualize quantum phenomena, recreate existing, and prototype new experiments.⁹⁴",
       },
-    ],
-  },
-  {
-    id: "cited",
-    title: "Also cited in",
-    items: [
       {
         title: "Mapping a Decade of Research on Gamification and Computational Thinking: A Bibliometric and Thematic Analysis (2015–2025)",
         url: "https://doi.org/10.1007/s10780-026-09562-9",

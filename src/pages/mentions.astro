@@ -39,7 +39,12 @@ const quotes = mentionGroups
             return (
               <li>
                 <a href={item.url} aria-describedby={excerptId}>{item.title}</a>{details && <span class="mention-by">. {details}</span>}
-                {item.excerpt && <span class="mention-excerpt" id={excerptId} role="tooltip">{item.excerpt}</span>}
+                {item.excerpt && (
+                  <span class:list={{ "mention-excerpt": true, "has-figure": item.figure }} id={excerptId} role="tooltip">
+                    {item.figure && <img src={item.figure} alt="" loading="lazy" />}
+                    {item.excerpt}
+                  </span>
+                )}
               </li>
             );
           })}
