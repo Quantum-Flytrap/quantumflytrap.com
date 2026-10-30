@@ -255,7 +255,7 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem 3rem;
 }
-.quote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); }
+.quote { position: relative; margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); }
 .quote blockquote { margin: 0 0 .5rem; font-size: 1.1rem; line-height: 1.45; }
 .quote figcaption { color: var(--muted); font-size: .88rem; }
 .mention-groups { padding-top: 0; }
@@ -281,7 +281,10 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 .mention-excerpt.has-figure { width: min(32rem, 100%); }
 .mention-excerpt img { width: 100%; margin-bottom: .5rem; border: 1px solid var(--line); }
 .mention-list li:hover .mention-excerpt,
-.mention-list li:focus-within .mention-excerpt { display: block; }
+.mention-list li:focus-within .mention-excerpt,
+.quote:hover .mention-excerpt,
+.quote:focus-within .mention-excerpt { display: block; }
+.mention-contact p { margin: 0; }
 .mention-by { color: var(--muted); }
 .mention-list a { text-decoration-color: #b9b0c3; text-underline-offset: .2rem; }
 .mention-list a:hover { text-decoration-color: currentColor; }

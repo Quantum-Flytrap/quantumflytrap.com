@@ -1,5 +1,6 @@
 ---
 import Attribution from "../components/Attribution.astro";
+import Excerpt from "../components/Excerpt.astro";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import { mentionGroups } from "../data/mentions";
 
@@ -7,6 +8,9 @@ const quotes = mentionGroups
   .flatMap((group) => group.items)
   .filter((item) => item.quote)
   .sort((a, b) => (a.featured ?? Infinity) - (b.featured ?? Infinity));
+const listedGroups = mentionGroups
+  .map((group) => ({ ...group, items: group.items.filter((item) => !item.quote) }))
+  .filter((group) => group.items.length > 0);
 ---
 
 <SiteLayout title="Mentions" description="Courses, research papers, and press that use or discuss Virtual Lab by Quantum Flytrap.">
@@ -19,38 +23,38 @@ const quotes = mentionGroups
   <section class="content-section">
     <h2 id="quotes">What people say</h2>
     <div class="quote-grid">
-      {quotes.map((item) => (
-        <figure class="quote">
+      {quotes.map((item, index) => (
+        <figure class="quote" tabindex={item.excerpt ? "0" : undefined} aria-describedby={item.excerpt ? `quote-${index}` : undefined}>
           <blockquote>“{item.quote}”</blockquote>
           <figcaption><Attribution item={item} /></figcaption>
+          <Excerpt item={item} id={`quote-${index}`} />
         </figure>
       ))}
     </div>
   </section>
 
   <section class="content-section mention-groups">
-    {mentionGroups.map((group) => (
+    {listedGroups.map((group) => (
       <>
         <h2 id={group.id}>{group.title}</h2>
         <ul class="mention-list">
           {group.items.map((item, index) => {
-            const excerptId = item.excerpt ? `${group.id}-${index}` : undefined;
+            const excerptId = `${group.id}-${index}`;
             const details = [item.authors, item.venue, item.year].filter(Boolean).join(", ");
             return (
               <li>
-                <a href={item.url} aria-describedby={excerptId}>{item.title}</a>{details && <span class="mention-by">. {details}</span>}
-                {item.excerpt && (
-                  <span class:list={{ "mention-excerpt": true, "has-figure": item.figure }} id={excerptId} role="tooltip">
-                    {item.figure && <img src={item.figure} alt="" loading="lazy" />}
-                    {item.excerpt}
-                  </span>
-                )}
+                <a href={item.url} aria-describedby={item.excerpt ? excerptId : undefined}>{item.title}</a>{details && <span class="mention-by">. {details}</span>}
+                <Excerpt item={item} id={excerptId} />
               </li>
             );
           })}
         </ul>
       </>
     ))}
-    <p class="meta">Using Virtual Lab in your course, paper, or event? Let us know at <a href="mailto:contact@quantumflytrap.com">contact@quantumflytrap.com</a>.</p>
+  </section>
+
+  <section class="content-section content-section--tinted mention-contact">
+    <h2>Using Virtual Lab?</h2>
+    <p>If you use Virtual Lab in a course, paper, workshop, or event, email <a href="mailto:contact@quantumflytrap.com">contact@quantumflytrap.com</a> with a link and we will add it to this page.</p>
   </section>
 </SiteLayout>
