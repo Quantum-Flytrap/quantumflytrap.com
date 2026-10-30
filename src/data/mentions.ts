@@ -719,6 +719,7 @@ export const mentionGroups: MentionGroup[] = [
         url: "https://www.aliroquantum.com/blog/seven-quantum-networking-simulators-list",
         authors: "Daniel Winton",
         venue: "Aliro Quantum",
+        quote: "The game is quite challenging, but it is also educational and a lot of fun.",
       },
       {
         title: "BB84 protocol",
