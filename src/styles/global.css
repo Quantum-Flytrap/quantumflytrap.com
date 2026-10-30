@@ -255,7 +255,6 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 .educators .actions { margin-top: 0; align-items: center; gap: .75rem; }
 .text-link { font-size: .85rem; font-weight: 600; color: var(--ink); text-decoration: none; }
 .text-link:hover { color: var(--lilac); }
-.section-more { display: inline-block; margin-top: 1.75rem; }
 .section-title {
   display: flex;
   align-items: baseline;
