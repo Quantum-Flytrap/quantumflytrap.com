@@ -1,0 +1,12 @@
+---
+import type { Mention } from "../data/mentions";
+
+interface Props {
+  item: Mention;
+  focusable?: boolean;
+}
+
+const { item, focusable = true } = Astro.props;
+---
+
+{item.authors && `${item.authors}, `}<a href={item.url} tabindex={focusable ? undefined : "-1"}>{item.venue ?? item.title}</a>{item.year && `, ${item.year}`}{item.note && ` (${item.note})`}

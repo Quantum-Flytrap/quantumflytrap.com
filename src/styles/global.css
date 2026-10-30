@@ -250,6 +250,31 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 .project-row h3, .project-row p { margin: 0; }
 .project-row p { color: var(--muted); }
 
+.prose > .mention-list { max-width: 960px; margin: 0 0 2.5rem; padding: 0; list-style: none; }
+.prose .mention-list li { position: relative; margin-bottom: .6rem; }
+.mention-excerpt {
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  left: 0;
+  max-width: min(36rem, 100%);
+  margin-top: .25rem;
+  padding: .6rem .8rem;
+  display: none;
+  border: 1px solid var(--line);
+  background: white;
+  box-shadow: 0 6px 20px rgb(25 7 47 / .12);
+  color: var(--ink);
+  font-size: .85rem;
+  line-height: 1.45;
+}
+.mention-list li:hover .mention-excerpt,
+.mention-list li:focus-within .mention-excerpt { display: block; }
+.mention-by { color: var(--muted); }
+.mention-list a { text-decoration-color: #b9b0c3; text-underline-offset: .2rem; }
+.mention-list a:hover { text-decoration-color: currentColor; }
+
+
 @media (max-width: 850px) {
   .hero-simple { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

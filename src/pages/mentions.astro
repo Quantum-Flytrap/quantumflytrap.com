@@ -1,0 +1,37 @@
+---
+import Attribution from "../components/Attribution.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { mentionGroups } from "../data/mentions";
+---
+
+<SiteLayout title="Mentions" description="Courses, research papers, and press that use or discuss Virtual Lab by Quantum Flytrap.">
+  <header class="page-hero">
+    <p class="eyebrow">Mentions</p>
+    <h1>Virtual Lab in the wild</h1>
+    <p class="lead">Courses, research papers, and press that use or discuss Virtual Lab and the Quantum Game. Hover over an entry to see what the source says.</p>
+  </header>
+
+  <article class="prose">
+    {mentionGroups.map((group) => (
+      <>
+        <h2 id={group.id}>{group.title}</h2>
+        <ul class="mention-list">
+          {group.items.map((item, index) => {
+            const excerptId = item.excerpt ? `${group.id}-${index}` : undefined;
+            return (
+              <li>
+                {item.quote ? (
+                  <>“{item.quote}” <span class="mention-by">– <Attribution item={item} /></span></>
+                ) : (
+                  <><a href={item.url} aria-describedby={excerptId}>{item.title}</a> <span class="mention-by">– {[item.authors, item.venue, item.year].filter(Boolean).join(", ")}</span></>
+                )}
+                {item.excerpt && <span class="mention-excerpt" id={excerptId} role="tooltip">{item.excerpt}</span>}
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    ))}
+    <p class="meta">Using Virtual Lab in your course, paper, or event? Let us know at <a href="mailto:contact@quantumflytrap.com">contact@quantumflytrap.com</a>.</p>
+  </article>
+</SiteLayout>
