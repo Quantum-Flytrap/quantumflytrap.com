@@ -441,6 +441,7 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 .testimonial-carousel { display: grid; }
 .testimonial {
   grid-area: 1 / 1;
+  align-self: start;
   margin: 0;
   visibility: hidden;
   opacity: 0;
@@ -462,8 +463,9 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 .testimonial .attribution-name { color: var(--ink); }
 .testimonial-controls { margin-bottom: 1.75rem; grid-template-columns: repeat(var(--count), minmax(0, 1fr)); }
 .testimonial-control.is-active::after { animation: carousel-progress 8s linear forwards; }
-.testimonials:hover .testimonial-control.is-active::after,
-.testimonials:focus-within .testimonial-control.is-active::after,
+/* Pause only while the pointer or keyboard focus is on the quote itself. */
+.testimonials:has(.testimonial.is-active:hover) .testimonial-control.is-active::after,
+.testimonials:has(.testimonial.is-active:focus-within) .testimonial-control.is-active::after,
 .testimonials.is-offscreen .testimonial-control.is-active::after { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .testimonial { transition: none; } }
 
