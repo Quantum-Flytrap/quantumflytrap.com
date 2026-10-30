@@ -503,12 +503,12 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 /* Logos come in many colours; showing them all in white keeps the column calm on the dark page. */
 .mention-logos img { width: 100%; max-height: 2.75rem; object-fit: contain; filter: brightness(0) invert(1); opacity: .7; }
 .mention-split:has(.mention-pages) { grid-template-columns: minmax(0, 1fr) 22rem; }
-.mention-pages { display: grid; gap: 1.5rem; }
+.mention-pages { display: grid; gap: 1.5rem; align-items: start; }
 .mention-pages a { display: block; overflow: hidden; border: 1px solid var(--line-strong); border-radius: var(--radius); transition: border-color .25s; }
 .mention-pages a:hover { border-color: var(--lilac); }
 .mention-pages img { width: 100%; }
 @media (max-width: 850px) {
-  .mention-split { grid-template-columns: 1fr; gap: 1.5rem; }
+  .mention-split, .mention-split:has(.mention-pages) { grid-template-columns: 1fr; gap: 1.5rem; }
   .mention-logos { grid-template-columns: repeat(3, 1fr); }
   .mention-pages { grid-template-columns: repeat(2, 1fr); }
 }
