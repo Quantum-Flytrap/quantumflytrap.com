@@ -250,8 +250,18 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 .project-row h3, .project-row p { margin: 0; }
 .project-row p { color: var(--muted); }
 
-.prose > .mention-list { max-width: 960px; margin: 0 0 2.5rem; padding: 0; list-style: none; }
-.prose .mention-list li { position: relative; margin-bottom: .6rem; }
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 3rem;
+}
+.quote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); }
+.quote blockquote { margin: 0 0 .5rem; font-size: 1.1rem; line-height: 1.45; }
+.quote figcaption { color: var(--muted); font-size: .88rem; }
+.mention-groups { padding-top: 0; }
+.mention-groups h2 { margin-top: 2.5rem; }
+.mention-list { max-width: 960px; margin: 0; padding: 0; list-style: none; }
+.mention-list li { position: relative; margin-bottom: .6rem; }
 .mention-excerpt {
   position: absolute;
   z-index: 5;
@@ -312,6 +322,7 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 @media (prefers-reduced-motion: reduce) { .testimonial { transition: none; } }
 
 @media (max-width: 850px) {
+  .quote-grid { grid-template-columns: 1fr; }
   .hero-simple { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .publication-grid { grid-template-columns: 1fr; }
