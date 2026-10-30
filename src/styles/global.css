@@ -169,7 +169,8 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   grid-template-columns: repeat(4, 1fr);
   gap: .5rem;
 }
-.carousel-control {
+.carousel-control,
+.testimonial-control {
   position: relative;
   height: 14px;
   padding: 0;
@@ -178,7 +179,9 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   cursor: pointer;
 }
 .carousel-control::before,
-.carousel-control::after {
+.carousel-control::after,
+.testimonial-control::before,
+.testimonial-control::after {
   position: absolute;
   left: 0;
   top: 6px;
@@ -186,9 +189,9 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   border-radius: 2px;
   content: "";
 }
-.carousel-control::before { right: 0; background: var(--line-strong); transition: background .2s; }
-.carousel-control:hover::before { background: rgba(255, 255, 255, .35); }
-.carousel-control::after { width: 0; background: var(--ink); }
+.carousel-control::before, .testimonial-control::before { right: 0; background: var(--line-strong); transition: background .2s; }
+.carousel-control:hover::before, .testimonial-control:hover::before { background: rgba(255, 255, 255, .35); }
+.carousel-control::after, .testimonial-control::after { width: 0; background: var(--ink); }
 .carousel-control.is-active::after { animation: carousel-progress 6s linear forwards; }
 @keyframes carousel-progress { to { width: 100%; } }
 .carousel-caption {
@@ -203,7 +206,7 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-experiment img { transition: none; }
-  .carousel-control.is-active::after { width: 100%; animation: none; }
+  .carousel-control.is-active::after, .testimonial-control.is-active::after { width: 100%; animation: none; }
 }
 
 .project-status {
@@ -371,9 +374,105 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 .project-row h3, .project-row p { margin: 0; }
 .project-row p { color: var(--muted); }
 
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.quote {
+  position: relative;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+}
+.quote blockquote { margin: 0 0 1.1rem; color: var(--ink); font-size: 1.05rem; line-height: 1.55; }
+.quote figcaption { margin-top: auto; color: var(--muted); font-size: .84rem; }
+.quote figcaption a, .testimonial figcaption a { color: var(--text); }
+/* Sections on the mentions page follow each other closely, with one even gap between them. */
+.mentions-page .content-section + .content-section { padding-top: 0; }
+.mentions-intro h1 { margin-bottom: 1.5rem; font-size: clamp(2.25rem, 4.5vw, 3.5rem); }
+.section-links { margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.section-links a {
+  padding: .45rem .9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-button);
+  background: var(--bg-raised);
+  color: var(--ink);
+  font-size: .85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+.section-links a:hover { background: var(--bg-raised-hover); border-color: rgba(255, 255, 255, .3); }
+.mentions-prompt { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; }
+.mentions-prompt p { margin: 0; color: var(--muted); font-size: .9rem; }
+.mention-list { max-width: 960px; margin: 0; padding: 0; list-style: none; font-size: .92rem; }
+.mention-list li { position: relative; margin-bottom: .7rem; line-height: 1.6; }
+.mention-list a { color: var(--ink); }
+.mention-list a:hover { color: var(--lilac); }
+.mention-by { color: var(--muted); }
+.mention-excerpt {
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  left: 0;
+  max-width: min(36rem, 100%);
+  margin-top: .35rem;
+  padding: .75rem .9rem;
+  display: none;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: #1e1533;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .45);
+  color: var(--text);
+  font-size: .82rem;
+  line-height: 1.55;
+}
+.mention-excerpt.has-figure { width: min(32rem, 100%); }
+.mention-excerpt img { width: 100%; margin-bottom: .6rem; border-radius: var(--radius-button); }
+.mention-list li:hover .mention-excerpt,
+.mention-list li:focus-within .mention-excerpt { display: block; }
+
+/* Every quote occupies the same grid cell, so the box is always as tall as the longest one and nothing on the page moves when quotes change. */
+.testimonial-carousel { display: grid; }
+.testimonial {
+  grid-area: 1 / 1;
+  align-self: start;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.testimonial.is-active { visibility: visible; opacity: 1; }
+.testimonial blockquote {
+  max-width: 58ch;
+  margin: 0 0 .75rem;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+}
+.testimonial figcaption { color: var(--muted); font-size: .95rem; }
+.attribution-name { color: var(--text); font-weight: 500; }
+.testimonial .attribution-name { color: var(--ink); }
+.testimonial-controls { margin-bottom: 1.75rem; grid-template-columns: repeat(var(--count), minmax(0, 1fr)); }
+.testimonial-control.is-active::after { animation: carousel-progress 8s linear forwards; }
+/* Pause only while the pointer or keyboard focus is on the quote itself. */
+.testimonials:has(.testimonial.is-active:hover) .testimonial-control.is-active::after,
+.testimonials:has(.testimonial.is-active:focus-within) .testimonial-control.is-active::after,
+.testimonials.is-offscreen .testimonial-control.is-active::after { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .testimonial { transition: none; } }
+
 :focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; }
 
 @media (max-width: 850px) {
+  .quote-grid { grid-template-columns: 1fr; }
   .hero-simple { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .publication-grid { grid-template-columns: 1fr; }
@@ -395,4 +494,26 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   .section-title > a { display: inline-block; margin: -1rem 0 2rem; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }
+}
+
+.mention-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 14rem;
+  gap: 3rem;
+  align-items: start;
+}
+.mention-logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1.25rem; align-items: center; }
+/* Logos come in many colours; showing them all in white keeps the column calm on the dark page. */
+.mention-logos img { width: 100%; max-height: 2.75rem; object-fit: contain; filter: brightness(0) invert(1); opacity: .7; }
+.mention-split:has(.mention-pages) { grid-template-columns: minmax(0, 1fr) 22rem; }
+.mention-pages { display: grid; gap: 1.5rem; align-items: start; }
+.mention-pages a { display: block; overflow: hidden; border: 1px solid var(--line-strong); border-radius: var(--radius); transition: border-color .25s; }
+.mention-pages a:hover { border-color: var(--lilac); }
+.mention-pages img { width: 100%; }
+@media (max-width: 850px) {
+  .mention-split, .mention-split:has(.mention-pages) { grid-template-columns: 1fr; gap: 1.5rem; }
+  .mention-logos { grid-template-columns: repeat(3, 1fr); }
+  /* On phones quotes drop their cards and stack compactly; figures follow the Research list at full width. */
+  .quote-grid { display: block; }
+  .quote { padding: 1.25rem 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: none; }
 }

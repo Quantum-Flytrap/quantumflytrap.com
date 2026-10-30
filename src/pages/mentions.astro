@@ -1,0 +1,88 @@
+---
+import Attribution from "../components/Attribution.astro";
+import Excerpt from "../components/Excerpt.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { mentionGroups } from "../data/mentions";
+
+const quotes = mentionGroups
+  .flatMap((group) => group.items)
+  .filter((item) => item.quote)
+  .sort((a, b) => (a.featured ?? Infinity) - (b.featured ?? Infinity));
+// Research stays a complete list; elsewhere a quoted entry appears only once, at the top.
+const listedGroups = mentionGroups
+  .map((group) => ({ ...group, items: group.id === "research" ? group.items : group.items.filter((item) => !item.quote) }))
+  .filter((group) => group.items.length > 0);
+const sections = [{ id: "quotes", title: "What people say" }, ...listedGroups.map((group) => ({ id: group.id, title: group.title }))];
+const mailBody = ["Where you use Virtual Lab (course, paper, workshop, or event, with a link if there is one):", "", "How you use it:", "", "May we quote you here, and under what name?", ""].join("\n");
+const mailto = `mailto:contact@quantumflytrap.com?subject=${encodeURIComponent("How I use Virtual Lab")}&body=${encodeURIComponent(mailBody)}`;
+---
+
+<SiteLayout title="How others use Virtual Lab" description="Courses, research papers, and press that use or discuss Virtual Lab by Quantum Flytrap.">
+  <div class="mentions-page">
+    <section class="content-section mentions-intro">
+      <div>
+        <h1>How others use Virtual Lab</h1>
+        <nav class="section-links" aria-label="On this page">
+          {sections.map((section) => (
+            <a href={`#${section.id}`}>{section.title}</a>
+          ))}
+        </nav>
+        <div class="mentions-prompt"><a class="button button--primary" href={mailto}>Tell us how you use it</a><p>Teaching or researching with Virtual Lab? Write a few lines and we will add it here.</p></div>
+      </div>
+    </section>
+
+    <section id="quotes" class="content-section">
+      <h2>What people say</h2>
+      <div class="quote-grid">
+        {quotes.map((item) => (
+          <figure class="quote">
+            <blockquote>“{item.quote}”</blockquote>
+            <figcaption><Attribution item={item} /></figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+
+    {listedGroups.map((group) => (
+      <section id={group.id} class="content-section">
+        <h2>{group.title}</h2>
+        <div class="mention-split">
+          <ul class="mention-list">
+            {group.items.map((item, index) => {
+              const excerptId = `${group.id}-${index}`;
+              const details = [item.authors, item.venue, item.year].filter(Boolean).join(", ");
+              return (
+                <li>
+                  <a href={item.url} aria-describedby={item.excerpt ? excerptId : undefined}>{item.title}</a>{details && <span class="mention-by">. {details}</span>}
+                  <Excerpt item={item} id={excerptId} />
+                </li>
+              );
+            })}
+          </ul>
+          {group.id === "teaching" && (
+            <aside class="mention-logos" aria-label="Institutions">
+              {[...new Set(group.items.map((item) => item.logo).filter(Boolean))].map((logo) => (
+                <img src={logo} alt={group.items.find((item) => item.logo === logo)?.venue} loading="lazy" />
+              ))}
+            </aside>
+          )}
+          {group.id === "research" && (
+            <aside class="mention-pages" aria-label="Figures from these papers">
+              {group.items.filter((item) => item.page).map((item) => (
+                <a href={item.url}><img src={item.page} alt={item.excerpt} loading="lazy" /></a>
+              ))}
+            </aside>
+          )}
+        </div>
+      </section>
+    ))}
+
+    <section class="content-section">
+      <h2>Add your course, paper, or event</h2>
+      <p>If you use Quantum Game or Virtual Lab by Quantum Flytrap in a course, paper, workshop, or event, send us a few lines and a link, and we will add it to this page.</p>
+      <div class="actions">
+        <a class="button button--primary" href={mailto}>Tell us how you use it</a>
+      </div>
+    </section>
+  </div>
+</SiteLayout>

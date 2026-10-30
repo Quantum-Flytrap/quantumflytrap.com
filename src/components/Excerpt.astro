@@ -1,0 +1,17 @@
+---
+import type { Mention } from "../data/mentions";
+
+interface Props {
+  item: Mention;
+  id: string;
+}
+
+const { item, id } = Astro.props;
+---
+
+{item.excerpt && (
+  <span class:list={{ "mention-excerpt": true, "has-figure": item.figure }} id={id} role="tooltip">
+    {item.figure && <img src={item.figure} alt="" loading="lazy" />}
+    {item.excerpt}
+  </span>
+)}
