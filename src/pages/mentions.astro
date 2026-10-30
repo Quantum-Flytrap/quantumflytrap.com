@@ -8,8 +8,9 @@ const quotes = mentionGroups
   .flatMap((group) => group.items)
   .filter((item) => item.quote)
   .sort((a, b) => (a.featured ?? Infinity) - (b.featured ?? Infinity));
+// Research stays a complete list; elsewhere a quoted entry appears only once, at the top.
 const listedGroups = mentionGroups
-  .map((group) => ({ ...group, items: group.items.filter((item) => !item.quote) }))
+  .map((group) => ({ ...group, items: group.id === "research" ? group.items : group.items.filter((item) => !item.quote) }))
   .filter((group) => group.items.length > 0);
 ---
 
