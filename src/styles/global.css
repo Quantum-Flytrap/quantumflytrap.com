@@ -346,3 +346,20 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }
 }
+
+.mention-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 14rem;
+  gap: 3rem;
+  align-items: start;
+}
+.mention-logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1.25rem; align-items: center; }
+.mention-logos img { width: 100%; max-height: 3rem; object-fit: contain; }
+.mention-split:has(.mention-pages) { grid-template-columns: minmax(0, 1fr) 22rem; }
+.mention-pages { display: grid; gap: 1.5rem; }
+.mention-pages img { width: 100%; border: 1px solid var(--line); }
+@media (max-width: 850px) {
+  .mention-split { grid-template-columns: 1fr; gap: 1.5rem; }
+  .mention-logos { grid-template-columns: repeat(3, 1fr); }
+  .mention-pages { grid-template-columns: repeat(2, 1fr); }
+}

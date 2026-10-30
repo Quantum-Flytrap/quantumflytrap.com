@@ -38,18 +38,34 @@ const listedGroups = mentionGroups
     {listedGroups.map((group) => (
       <>
         <h2 id={group.id}>{group.title}</h2>
-        <ul class="mention-list">
-          {group.items.map((item, index) => {
-            const excerptId = `${group.id}-${index}`;
-            const details = [item.authors, item.venue, item.year].filter(Boolean).join(", ");
-            return (
-              <li>
-                <a href={item.url} aria-describedby={item.excerpt ? excerptId : undefined}>{item.title}</a>{details && <span class="mention-by">. {details}</span>}
-                <Excerpt item={item} id={excerptId} />
-              </li>
-            );
-          })}
-        </ul>
+        <div class="mention-split">
+          <ul class="mention-list">
+            {group.items.map((item, index) => {
+              const excerptId = `${group.id}-${index}`;
+              const details = [item.authors, item.venue, item.year].filter(Boolean).join(", ");
+              return (
+                <li>
+                  <a href={item.url} aria-describedby={item.excerpt ? excerptId : undefined}>{item.title}</a>{details && <span class="mention-by">. {details}</span>}
+                  <Excerpt item={item} id={excerptId} />
+                </li>
+              );
+            })}
+          </ul>
+          {group.id === "teaching" && (
+            <aside class="mention-logos" aria-label="Institutions">
+              {[...new Set(group.items.map((item) => item.logo).filter(Boolean))].map((logo) => (
+                <img src={logo} alt={group.items.find((item) => item.logo === logo)?.venue} loading="lazy" />
+              ))}
+            </aside>
+          )}
+          {group.id === "research" && (
+            <aside class="mention-pages" aria-label="Figures from these papers">
+              {group.items.filter((item) => item.page).map((item) => (
+                <a href={item.url}><img src={item.page} alt={item.excerpt} loading="lazy" /></a>
+              ))}
+            </aside>
+          )}
+        </div>
       </>
     ))}
   </section>

@@ -8,6 +8,9 @@ export interface Mention {
   note?: string;
   excerpt?: string;
   figure?: string;
+  /** Figure cropped from the paper together with its typeset caption. */
+  page?: string;
+  logo?: string;
   featured?: number;
 }
 
@@ -23,38 +26,17 @@ export const mentionGroups: MentionGroup[] = [
     title: "Teaching",
     items: [
       {
-        title: "Der Elitzur-Vaidman-Bombentest",
-        url: "https://www.science-on-stage.de/material/der-elitzur-vaidman-bombentest-aufgaben-teil-1-2-mit-loesungen",
-        authors: "Jörg Thorwart",
-        venue: "Science on Stage",
-        year: "2026",
+        title: "Introduction to Quantum Information Science",
+        url: "https://qubit.guide/",
+        authors: "Artur Ekert, Tom Hosgood, Alastair Kay, and Chiara Macchiavello",
+        venue: "University of Oxford",
+        logo: "/logos/university-of-oxford.svg",
       },
       {
-        title: "QuExplained: Quantencomputer für Schüler*innen",
-        url: "https://web.archive.org/web/20251113180208/https://iug.htw-berlin.de/oer_quexplained/",
-        authors: "Katharina Simbeck",
-        venue: "HTW Berlin",
-        year: "2022",
-      },
-      {
-        title: "Introduction to Quantum Flytrap and Michelson Interferometer",
-        url: "https://marconivan.org/wp-content/uploads/2021/09/michelson-interferometer.pdf",
-        authors: "Marconi Van",
-        venue: "Magdalen College Oxford",
-        year: "2021",
-      },
-      {
-        title: "Quantum Optics Lab",
-        url: "https://quantum-summer-school.github.io/labs/day3/Quantum%20Optics%20Lab.pdf",
-        venue: "Nile University Quantum Computing Summer School",
-        year: "2025",
-      },
-      {
-        title: "CS 4134 Quantum Computation",
-        url: "https://sites.google.com/site/jamiesikora/teaching/fall-2024-cs-4134",
-        authors: "Jamie Sikora",
-        venue: "Virginia Tech",
-        year: "2024",
+        title: "Outreach",
+        url: "https://www.cqt.sg/outreach/",
+        venue: "Centre for Quantum Technologies, National University of Singapore",
+        logo: "/logos/cqt-singapore.png",
       },
       {
         title: "Physics 116: Quantum Information Science",
@@ -62,12 +44,43 @@ export const mentionGroups: MentionGroup[] = [
         authors: "James D. Whitfield",
         venue: "Dartmouth College",
         year: "2022",
+        logo: "/logos/dartmouth-college.svg",
       },
       {
-        title: "Introduction to Quantum Information Science",
-        url: "https://qubit.guide/",
-        authors: "Artur Ekert, Tom Hosgood, Alastair Kay, and Chiara Macchiavello",
-        venue: "University of Oxford",
+        title: "CS 4134 Quantum Computation",
+        url: "https://sites.google.com/site/jamiesikora/teaching/fall-2024-cs-4134",
+        authors: "Jamie Sikora",
+        venue: "Virginia Tech",
+        year: "2024",
+        logo: "/logos/virginia-tech.svg",
+      },
+      {
+        title: "Introduction to Quantum Flytrap and Michelson Interferometer",
+        url: "https://marconivan.org/wp-content/uploads/2021/09/michelson-interferometer.pdf",
+        authors: "Marconi Van",
+        venue: "Magdalen College Oxford",
+        year: "2021",
+        logo: "/logos/university-of-oxford.svg",
+      },
+      {
+        title: "Researchers merged quantum optics with a treasure hunt",
+        url: "https://www.aalto.fi/en/news/researchers-merged-quantum-optics-with-a-treasure-hunt",
+        venue: "QPlayLearn, Aalto University",
+        year: "2022",
+        logo: "/logos/aalto-university.svg",
+      },
+      {
+        title: "Quantum School for Teachers",
+        url: "https://outreach.icfo.eu/quantum-school-teachers/",
+        venue: "ICFO",
+        logo: "/logos/icfo.png",
+      },
+      {
+        title: "Quantum Optics Lab",
+        url: "https://quantum-summer-school.github.io/labs/day3/Quantum%20Optics%20Lab.pdf",
+        venue: "Nile University Quantum Computing Summer School",
+        year: "2025",
+        logo: "/logos/nile-university.png",
       },
       {
         title: "PhotonBrno",
@@ -75,17 +88,23 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Abuzer Yakaryılmaz",
         venue: "QWorld, Brno University of Technology",
         year: "2024",
+        logo: "/logos/brno-university-of-technology.svg",
       },
       {
-        title: "Researchers merged quantum optics with a treasure hunt",
-        url: "https://www.aalto.fi/en/news/researchers-merged-quantum-optics-with-a-treasure-hunt",
-        venue: "QPlayLearn, Aalto University",
+        title: "Der Elitzur-Vaidman-Bombentest",
+        url: "https://www.science-on-stage.de/material/der-elitzur-vaidman-bombentest-aufgaben-teil-1-2-mit-loesungen",
+        authors: "Jörg Thorwart",
+        venue: "Science on Stage",
+        year: "2026",
+        logo: "/logos/science-on-stage-dark-recolored.svg",
+      },
+      {
+        title: "QuExplained: Quantencomputer für Schüler*innen",
+        url: "https://web.archive.org/web/20251113180208/https://iug.htw-berlin.de/oer_quexplained/",
+        authors: "Katharina Simbeck",
+        venue: "HTW Berlin",
         year: "2022",
-      },
-      {
-        title: "Quantum School for Teachers",
-        url: "https://outreach.icfo.eu/quantum-school-teachers/",
-        venue: "ICFO",
+        logo: "/logos/htw-berlin.svg",
       },
     ],
   },
@@ -100,9 +119,10 @@ export const mentionGroups: MentionGroup[] = [
         venue: "arXiv",
         year: "2026",
         quote: "Everybody enjoyed working with the Quantum Flytrap […] at the same time very engaging, entertaining and also very effective.",
-        featured: 4,
+        featured: 5,
         excerpt: "Figure 14: Quantum seeing in the dark (student solution).",
         figure: "/mentions/german-2026-pathways.png",
+        page: "/mentions/pages/german-2026-pathways.png",
       },
       {
         title: "Jumpstarting Quantum Computing in the Middle and High-School Classroom: A Guide for Teachers and Learners",
@@ -111,7 +131,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "ACM Inroads",
         year: "2025",
         quote: "We hereby strongly encourage its use in the classroom and labs.",
-        featured: 6,
+        featured: 7,
         excerpt: "Figure 14. Experimental proof in Quantum Flytrap (via a Mach-Zehnder Interferometer) that stacking two PETE boxes leaves the input unchanged.",
         figure: "/mentions/german-2025-inroads.png",
       },
@@ -122,9 +142,10 @@ export const mentionGroups: MentionGroup[] = [
         venue: "American Journal of Physics",
         year: "2025",
         quote: "The Virtual Lab is an excellent resource for simulating photonic interference.",
-        featured: 2,
+        featured: 3,
         excerpt: "FIG. 7. Screenshot of our setup in QF’s VL after 100 experimental trials have been completed. We see that P2,3 ≠ 0 as 1/100 = 1% of the trials have resulted in a D2 D3 coincidence (shown using VL’s AND logic gate and output “stat counter”).",
         figure: "/mentions/randles-2025-interference.png",
+        page: "/mentions/pages/randles-2025-interference.png",
       },
       {
         title: "Defining quantum games",
@@ -133,9 +154,10 @@ export const mentionGroups: MentionGroup[] = [
         venue: "EPJ Quantum Technology",
         year: "2025",
         quote: "The player can test the behaviour of laser beams using tools that resemble actual quantum optics lab equipment, and these actions are depicted in a scientifically accurate manner.",
-        featured: 7,
+        featured: 8,
         excerpt: "Figure 4 Screenshots from the educational games (a) Quantum TiqTaqToe (2019) and (b) Quantum Game by Quantum Flytrap (2020). […] In Quantum Game the player solves puzzles introducing the basic actions and logic of quantum optics equipment",
         figure: "/mentions/piispanen-2025-quantum-games.png",
+        page: "/mentions/pages/piispanen-2025-quantum-games.png",
       },
       {
         title: "From staging to insight: an educational path to understanding Bell’s inequalities",
@@ -144,7 +166,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "EPJ Quantum Technology",
         year: "2025",
         quote: "Flytrap simulation of the experiment allows performing step-by-step measurements and verifying the violation of [Bell inequalities].",
-        featured: 8,
+        featured: 9,
         excerpt: "Then, the real experiment can be discussed, both exploiting computer simulations, such as e.g. the one available from the Flytrap project [32, 33], and presenting one historical experiment […]. Flytrap simulation of the experiment allows performing step-by step measurements and verifying the violation of BI (when statistics is high enough).",
       },
       {
@@ -164,6 +186,7 @@ export const mentionGroups: MentionGroup[] = [
         year: "2026",
         excerpt: "Figure 3. Tablet-based hands-on station thematizing superposition and basic quantum gates using Quantum FlyTrap (Migdał et al., 2022) (the authors’ own photograph)",
         figure: "/mentions/toth-2026-workshop.png",
+        page: "/mentions/pages/toth-2026-workshop.png",
       },
       {
         title: "An analysis of demonstration materials in quantum physics education",
@@ -182,6 +205,7 @@ export const mentionGroups: MentionGroup[] = [
         year: "2025",
         excerpt: "Fig. 1: Selection of known graphical representations of single-qubit states provided for consideration with examples. c) from ”Visualizing quantum mechanics in an interactive simulation – Virtual Lab by Quantum Flytrap” by Migdal, P., Jankiewicz, K., Grabarz, P., Decaroli, C., and Cochin, P., 2022, Optical Engineering, 61(08), 81808 […]. Copyright 2022 by the authors.",
         figure: "/mentions/rexigel-2025-representations.png",
+        page: "/mentions/pages/rexigel-2025-representations.png",
       },
       {
         title: "Exploring and designing interactive physical-digital tools for quantum physics education",
@@ -209,6 +233,7 @@ export const mentionGroups: MentionGroup[] = [
         year: "2023",
         excerpt: "Figura 10. Simulação do Algoritmo de Deutsch-Jozsa com dois resultados: Balanceada e Constante.",
         figure: "/mentions/rosa-2023-deutsch-jozsa.png",
+        page: "/mentions/pages/rosa-2023-deutsch-jozsa.png",
       },
       {
         title: "Quantum Physics Literacy Aimed at K12 and the General Public",
@@ -536,13 +561,22 @@ export const mentionGroups: MentionGroup[] = [
     title: "Press and recognition",
     items: [
       {
+        title: "Play new quantum game",
+        url: "https://quantumlah.org/about/highlight/2020-04-play-new-quantum-game",
+        authors: "Artur Ekert",
+        venue: "Centre for Quantum Technologies",
+        year: "2020",
+        quote: "All I want is the coolest quantum game in the known multiverse, please!",
+        featured: 1,
+      },
+      {
         title: "Quantum Games -- Really!",
         url: "https://backreaction.blogspot.com/2022/07/quantum-games-really.html",
         authors: "Sabine Hossenfelder",
         venue: "Backreaction",
         year: "2022",
         quote: "I've found this to be a quite remarkable simulator. You can even use it to click together your own experiment.",
-        featured: 1,
+        featured: 2,
       },
       {
         title: "Can You Beat This Quantum Puzzle Game?",
@@ -550,7 +584,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "Discover Magazine",
         year: "2022",
         quote: "The result is polished, educational and challenging. It's also free and surprisingly entertaining.",
-        featured: 3,
+        featured: 4,
       },
       {
         title: "Post on X",
@@ -558,7 +592,7 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Bartosz Naskręcki",
         year: "2025",
         quote: "Colorful, limitless, engaging and mathematically very deep.",
-        featured: 5,
+        featured: 6,
       },
       {
         title: "Comment on Hacker News",
@@ -566,7 +600,7 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Craig Gidney",
         year: "2022",
         quote: "I really like quantum flytrap.",
-        featured: 9,
+        featured: 10,
       },
       {
         title: "Virtual Quantum Lab Nominated for Webby Award",
