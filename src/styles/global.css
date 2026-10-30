@@ -169,7 +169,8 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   grid-template-columns: repeat(4, 1fr);
   gap: .5rem;
 }
-.carousel-control {
+.carousel-control,
+.testimonial-control {
   position: relative;
   height: 14px;
   padding: 0;
@@ -178,7 +179,9 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   cursor: pointer;
 }
 .carousel-control::before,
-.carousel-control::after {
+.carousel-control::after,
+.testimonial-control::before,
+.testimonial-control::after {
   position: absolute;
   left: 0;
   top: 6px;
@@ -186,9 +189,9 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   border-radius: 2px;
   content: "";
 }
-.carousel-control::before { right: 0; background: var(--line-strong); transition: background .2s; }
-.carousel-control:hover::before { background: rgba(255, 255, 255, .35); }
-.carousel-control::after { width: 0; background: var(--ink); }
+.carousel-control::before, .testimonial-control::before { right: 0; background: var(--line-strong); transition: background .2s; }
+.carousel-control:hover::before, .testimonial-control:hover::before { background: rgba(255, 255, 255, .35); }
+.carousel-control::after, .testimonial-control::after { width: 0; background: var(--ink); }
 .carousel-control.is-active::after { animation: carousel-progress 6s linear forwards; }
 @keyframes carousel-progress { to { width: 100%; } }
 .carousel-caption {
@@ -203,7 +206,7 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-experiment img { transition: none; }
-  .carousel-control.is-active::after { width: 100%; animation: none; }
+  .carousel-control.is-active::after, .testimonial-control.is-active::after { width: 100%; animation: none; }
 }
 
 .project-status {
@@ -422,48 +425,26 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 .quote:hover .mention-excerpt,
 .quote:focus-within .mention-excerpt { display: block; }
 
-.testimonial-carousel { display: grid; }
+.educator-quotes { margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.75rem; border-top: 1px solid var(--line); }
+/* Only the active quote takes up space; the script eases the box to its height. */
+.testimonial-carousel { position: relative; overflow: hidden; transition: height .4s ease; }
 .testimonial {
-  grid-area: 1 / 1;
+  position: absolute;
+  inset: 0 0 auto;
   margin: 0;
   visibility: hidden;
   opacity: 0;
-  transition: opacity .4s ease;
+  transition: opacity .6s ease;
 }
-.testimonial.is-active { visibility: visible; opacity: 1; }
-.testimonial blockquote { margin: 0 0 1rem; }
-.testimonial blockquote p {
-  max-width: 52ch;
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: -.01em;
-}
-.testimonial figcaption { color: var(--muted); font-size: .84rem; }
-.testimonial-more { display: inline-block; margin-top: 1.5rem; }
-.testimonial-controls {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  font-size: .8rem;
-  color: var(--muted);
-}
-.testimonial-step {
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-button);
-  background: var(--bg-raised);
-  color: var(--ink);
-  font: inherit;
-  cursor: pointer;
-  transition: background .2s, border-color .2s;
-}
-.testimonial-step:hover { background: var(--bg-raised-hover); border-color: rgba(255, 255, 255, .3); }
-@media (prefers-reduced-motion: reduce) { .testimonial { transition: none; } }
+.testimonial.is-active { position: relative; visibility: visible; opacity: 1; }
+.testimonial blockquote { max-width: 68ch; margin: 0 0 .35rem; color: var(--ink); font-size: 1rem; line-height: 1.6; }
+.testimonial figcaption { color: var(--muted); font-size: .8rem; }
+.testimonial-controls { grid-template-columns: repeat(var(--count), 1fr); max-width: 32rem; }
+.testimonial-control.is-active::after { animation: carousel-progress 8s linear forwards; }
+.educator-quotes:hover .testimonial-control.is-active::after,
+.educator-quotes:focus-within .testimonial-control.is-active::after,
+.educator-quotes.is-offscreen .testimonial-control.is-active::after { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .testimonial, .testimonial-carousel { transition: none; } }
 
 :focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; }
 
@@ -487,7 +468,6 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   .hero-simple h1 { font-size: 2.75rem; }
   .project-grid { grid-template-columns: 1fr; }
   .section-title { display: block; }
-  .section-title .testimonial-controls { margin-bottom: 1.25rem; }
   .section-title > a { display: inline-block; margin: -1rem 0 2rem; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }
@@ -510,5 +490,20 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 @media (max-width: 850px) {
   .mention-split, .mention-split:has(.mention-pages) { grid-template-columns: 1fr; gap: 1.5rem; }
   .mention-logos { grid-template-columns: repeat(3, 1fr); }
-  .mention-pages { grid-template-columns: repeat(2, 1fr); }
+  /* On phones quotes drop their cards and stack compactly; figures become a strip to swipe through, ahead of the Research list. */
+  .quote-grid { display: block; }
+  .quote { padding: 1.25rem 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: none; }
+  .quote:hover, .quote:focus-within { background: none; }
+  .quote .mention-excerpt { display: none !important; }
+  .mention-pages {
+    order: -1;
+    margin-right: calc(-1 * var(--gutter));
+    padding-right: var(--gutter);
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .mention-pages a { flex: 0 0 85%; scroll-snap-align: start; }
 }

@@ -134,6 +134,7 @@ export const mentionGroups: MentionGroup[] = [
         featured: 7,
         excerpt: "Figure 14. Experimental proof in Quantum Flytrap (via a Mach-Zehnder Interferometer) that stacking two PETE boxes leaves the input unchanged.",
         figure: "/mentions/german-2025-inroads.png",
+        page: "/mentions/pages/german-2025-inroads.png",
       },
       {
         title: "Interference of interference effects",
@@ -196,6 +197,7 @@ export const mentionGroups: MentionGroup[] = [
         year: "2026",
         excerpt: "Figure 11 Examples of DM for single quanta interference. From LRTB: Computer simulation MZI Experiment [117], single photon interference analogy with attenuated laser [119], Mach–Zehnder interferometer in Quantum Game [42], “Build a Mach-Zehnder Interferometer” simulation [118]",
         figure: "/mentions/folkers-2026-demonstration.png",
+        page: "/mentions/pages/folkers-2026-demonstration.png",
       },
       {
         title: "Investigating the use of multiple representations in university courses on quantum technologies",
@@ -215,6 +217,7 @@ export const mentionGroups: MentionGroup[] = [
         year: "2025",
         excerpt: "Figure 2.9. Two virtual labs dedicated to quantum optics. a) an experiment on Virtual Quantum Optics Laboratory. b) an experiment on Virtual Lab by Quantum Flytrap.",
         figure: "/mentions/casamayou-2025-thesis.png",
+        page: "/mentions/pages/casamayou-2025-thesis.png",
       },
       {
         title: "Introducing quantum physics concepts and Dirac notation at the secondary school level: Insights into student reasoning from an acceptance survey",
@@ -224,6 +227,7 @@ export const mentionGroups: MentionGroup[] = [
         year: "2024",
         excerpt: "FIG. 10. Michelson interferometer as it is displayed on the Quantum Flytrap website [62]. The program visualizes the superposition state of a single photon by splitting it into two fainter parts, which subsequently follow a straight line up to the mirrors.",
         figure: "/mentions/hennig-2024-dirac.png",
+        page: "/mentions/pages/hennig-2024-dirac.png",
       },
       {
         title: "Aplicando Gamificação para Interpretação do Algoritmo de Deutsch-Jozsa via Plataforma Quantum FlyTrap",

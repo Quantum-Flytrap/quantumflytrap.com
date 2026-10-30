@@ -84,31 +84,27 @@ const experiments = [
         <a class="button button--primary" href="mailto:contact@quantumflytrap.com">Tell us how you use it</a>
         <a class="button" href="/mentions/#teaching">How others use it</a>
       </div>
-    </div>
-  </section>
-
-  <section class="content-section testimonial-section" aria-labelledby="testimonials-title">
-    <div class="section-title">
-      <h2 id="testimonials-title">What people say</h2>
-      <div class="testimonial-controls">
-        <button type="button" class="testimonial-step" data-step="-1" aria-label="Previous quote">←</button>
-        <span id="testimonial-position" aria-live="polite">1 / {featuredMentions.length}</span>
-        <button type="button" class="testimonial-step" data-step="1" aria-label="Next quote">→</button>
+      <div class="educator-quotes">
+        <div class="testimonial-carousel">
+          {featuredMentions.map((mention, index) => (
+            <figure class:list={{ testimonial: true, "is-active": index === 0 }} aria-hidden={index === 0 ? undefined : "true"}>
+              <blockquote>“{mention.quote}”</blockquote>
+              <figcaption><Attribution item={mention} focusable={index === 0} /></figcaption>
+            </figure>
+          ))}
+        </div>
+        <div class="carousel-controls testimonial-controls" style={`--count: ${featuredMentions.length}`} aria-label="Quotes about Virtual Lab">
+          {featuredMentions.map((_, index) => (
+            <button
+              class:list={{ "testimonial-control": true, "is-active": index === 0 }}
+              type="button"
+              aria-label={`Quote ${index + 1}`}
+              aria-pressed={index === 0 ? "true" : "false"}
+            ></button>
+          ))}
+        </div>
       </div>
     </div>
-    <div class="testimonial-carousel">
-      {featuredMentions.map((mention, index) => (
-        <figure class:list={{ testimonial: true, "is-active": index === 0 }} aria-hidden={index === 0 ? "false" : "true"}>
-          <blockquote>
-            <p>“{mention.quote}”</p>
-          </blockquote>
-          <figcaption>
-            <Attribution item={mention} focusable={index === 0} />
-          </figcaption>
-        </figure>
-      ))}
-    </div>
-    <a class="text-link testimonial-more" href="/mentions/">All mentions →</a>
   </section>
 
   <section class="content-section">
@@ -245,37 +241,42 @@ const experiments = [
     });
 
     const quotes = [...document.querySelectorAll<HTMLElement>(".testimonial")];
-    const quoteCarousel = document.querySelector<HTMLElement>(".testimonial-section");
-    const quotePosition = document.querySelector<HTMLElement>("#testimonial-position");
-    let currentQuote = 0;
-    let quotePaused = false;
+    const quoteBox = document.querySelector<HTMLElement>(".testimonial-carousel");
+    const quoteArea = document.querySelector<HTMLElement>(".educator-quotes");
+    const fitQuote = () => {
+      const active = quotes.find((quote) => quote.classList.contains("is-active"));
+      if (quoteBox && active) quoteBox.style.height = `${active.offsetHeight}px`;
+    };
+    const quoteControls = [...document.querySelectorAll<HTMLButtonElement>(".testimonial-control")];
 
     const showQuote = (index: number) => {
-      currentQuote = (index + quotes.length) % quotes.length;
       quotes.forEach((quote, i) => {
-        const active = i === currentQuote;
+        const active = i === index;
         quote.classList.toggle("is-active", active);
-        quote.setAttribute("aria-hidden", String(!active));
+        quote.toggleAttribute("aria-hidden", !active);
         const link = quote.querySelector("a");
         if (active) link?.removeAttribute("tabindex");
         else link?.setAttribute("tabindex", "-1");
       });
-      if (quotePosition) quotePosition.textContent = `${currentQuote + 1} / ${quotes.length}`;
+      quoteControls.forEach((control, i) => {
+        control.classList.toggle("is-active", i === index);
+        control.setAttribute("aria-pressed", String(i === index));
+      });
+      fitQuote();
     };
 
-    document.querySelectorAll<HTMLButtonElement>(".testimonial-step").forEach((button) =>
-      button.addEventListener("click", () => showQuote(currentQuote + Number(button.dataset.step))),
-    );
-    quoteCarousel?.addEventListener("mouseenter", () => (quotePaused = true));
-    quoteCarousel?.addEventListener("mouseleave", () => (quotePaused = false));
-    quoteCarousel?.addEventListener("focusin", () => (quotePaused = true));
-    quoteCarousel?.addEventListener("focusout", () => (quotePaused = false));
-
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      window.setInterval(() => {
-        if (!quotePaused) showQuote(currentQuote + 1);
-      }, 8000);
+    window.addEventListener("resize", fitQuote);
+    fitQuote();
+    // Rotate only while the quotes are on screen, so the changing height never moves what a reader is looking at.
+    if (quoteArea) {
+      new IntersectionObserver(([entry]) => quoteArea.classList.toggle("is-offscreen", !entry.isIntersecting)).observe(quoteArea);
     }
+
+    quoteControls.forEach((control, index) => {
+      control.addEventListener("click", () => showQuote(index));
+      // As with the experiments, the progress bar drives the rotation; hovering the quotes pauses it.
+      control.addEventListener("animationend", () => showQuote((index + 1) % quoteControls.length));
+    });
 
     // The rock's eyes follow the pointer, as in Virtual Lab; without pointer movement they glance around.
     const rock = document.querySelector<SVGSVGElement>("#rock");
