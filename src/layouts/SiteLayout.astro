@@ -20,9 +20,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#190044" />
+    <meta name="theme-color" content="#150e26" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -35,13 +38,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="/" aria-label="Quantum Flytrap home">
-        <img src="/assets/quantum-flytrap-logo.png" alt="Quantum Flytrap" />
+        <img src="/assets/quantum-flytrap-logo-horizontal.png" alt="Quantum Flytrap" width="712" height="130" />
       </a>
       <nav aria-label="Main navigation">
-        <a href="https://lab.quantumflytrap.com/">Virtual Lab</a>
-        <a href="https://quantumgame.io/">Quantum Game</a>
         <a href="/#publications">Publications</a>
         <a href="/#contact">Contact</a>
+        <a href="https://quantumgame.io/">Quantum Game</a>
+        <a class="nav-cta" href="https://lab.quantumflytrap.com/">Virtual Lab</a>
       </nav>
     </header>
     <main id="content">
