@@ -28,7 +28,6 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Jörg Thorwart",
         venue: "Science on Stage",
         year: "2026",
-        excerpt: "Dieses Spiel wurde von Piotr Migdał entwickelt und von Klem Jankiewicz designt.",
       },
       {
         title: "QuExplained: Quantencomputer für Schüler*innen",
@@ -36,7 +35,6 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Katharina Simbeck",
         venue: "HTW Berlin",
         year: "2022",
-        excerpt: "Die ersten beiden Kurse nutzen Quantum Flytrap und erklären grundlegende Prinzipien der Quantenphysik.",
       },
       {
         title: "Introduction to Quantum Flytrap and Michelson Interferometer",
@@ -50,7 +48,6 @@ export const mentionGroups: MentionGroup[] = [
         url: "https://quantum-summer-school.github.io/labs/day3/Quantum%20Optics%20Lab.pdf",
         venue: "Nile University Quantum Computing Summer School",
         year: "2025",
-        excerpt: "Part 1: Introduction to Quantum Optics (Quantum Flytrap)",
       },
       {
         title: "CS 4134 Quantum Computation",
@@ -58,7 +55,6 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Jamie Sikora",
         venue: "Virginia Tech",
         year: "2024",
-        excerpt: "Demo: Quantum Flytrap",
       },
       {
         title: "Physics 116: Quantum Information Science",
@@ -66,14 +62,12 @@ export const mentionGroups: MentionGroup[] = [
         authors: "James D. Whitfield",
         venue: "Dartmouth College",
         year: "2022",
-        excerpt: "4. Quantum flytrap (sandbox, game)",
       },
       {
         title: "Introduction to Quantum Information Science",
         url: "https://qubit.guide/",
         authors: "Artur Ekert, Tom Hosgood, Alastair Kay, and Chiara Macchiavello",
         venue: "University of Oxford",
-        excerpt: "There are also lots of other things you can do in this virtual lab — go have a look!",
       },
       {
         title: "PhotonBrno",
@@ -92,7 +86,6 @@ export const mentionGroups: MentionGroup[] = [
         title: "Quantum School for Teachers",
         url: "https://outreach.icfo.eu/quantum-school-teachers/",
         venue: "ICFO",
-        excerpt: "The Quantum Game by Quantum Flytrap is a game to learn quantum physics through simulations and puzzles. In Virtual Lab you can find simulations of important experiments…",
       },
     ],
   },
