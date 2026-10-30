@@ -88,7 +88,7 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Abuzer Yakaryılmaz",
         venue: "QWorld, Brno University of Technology",
         year: "2024",
-        logo: "/logos/brno-university-of-technology.svg",
+        logo: "/logos/brno-university-of-technology.png",
       },
       {
         title: "Der Elitzur-Vaidman-Bombentest",
@@ -96,7 +96,7 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Jörg Thorwart",
         venue: "Science on Stage",
         year: "2026",
-        logo: "/logos/science-on-stage-dark-recolored.svg",
+        logo: "/logos/science-on-stage-white.svg",
       },
       {
         title: "QuExplained: Quantencomputer für Schüler*innen",
