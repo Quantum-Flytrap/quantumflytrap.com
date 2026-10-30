@@ -274,6 +274,42 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
 .mention-list a { text-decoration-color: #b9b0c3; text-underline-offset: .2rem; }
 .mention-list a:hover { text-decoration-color: currentColor; }
 
+.testimonial-carousel { display: grid; }
+.testimonial {
+  grid-area: 1 / 1;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.testimonial.is-active { visibility: visible; opacity: 1; }
+.testimonial blockquote { margin: 0 0 1rem; }
+.testimonial blockquote p {
+  max-width: 52ch;
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.4;
+}
+.testimonial figcaption { color: var(--muted); font-size: .88rem; }
+.testimonial-more { display: inline-block; margin-top: 1.25rem; }
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .82rem;
+  color: var(--muted);
+}
+.testimonial-step {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+.testimonial-step:hover { border-color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { .testimonial { transition: none; } }
 
 @media (max-width: 850px) {
   .hero-simple { grid-template-columns: 1fr; }
@@ -289,6 +325,7 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25rem; }
   .hero-simple h1 { font-size: 2.5rem; }
   .project-grid { grid-template-columns: 1fr; }
   .section-title { display: block; }
+  .section-title .testimonial-controls { margin-bottom: 1.25rem; }
   .section-title > a { display: inline-block; margin: -1rem 0 2rem; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }

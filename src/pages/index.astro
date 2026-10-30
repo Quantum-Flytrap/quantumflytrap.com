@@ -1,5 +1,7 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
+import Attribution from "../components/Attribution.astro";
+import { featuredMentions } from "../data/mentions";
 
 const experiments = [
   {
@@ -65,6 +67,30 @@ const experiments = [
   </section>
 
   <p class="project-status"><strong>Virtual Lab is active and supported.</strong> The Quantum Flytrap startup closed in 2022. The Lab is owned and supported by Piotr Migdał and Klem Jankiewicz and will remain online indefinitely.</p>
+
+  <section class="content-section testimonial-section" aria-labelledby="testimonials-title">
+    <div class="section-title">
+      <h2 id="testimonials-title">What people say</h2>
+      <div class="testimonial-controls">
+        <button type="button" class="testimonial-step" data-step="-1" aria-label="Previous quote">←</button>
+        <span id="testimonial-position" aria-live="polite">1 / {featuredMentions.length}</span>
+        <button type="button" class="testimonial-step" data-step="1" aria-label="Next quote">→</button>
+      </div>
+    </div>
+    <div class="testimonial-carousel">
+      {featuredMentions.map((mention, index) => (
+        <figure class:list={{ testimonial: true, "is-active": index === 0 }} aria-hidden={index === 0 ? "false" : "true"}>
+          <blockquote>
+            <p>“{mention.quote}”</p>
+          </blockquote>
+          <figcaption>
+            <Attribution item={mention} focusable={index === 0} />
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+    <a class="text-link testimonial-more" href="/mentions/">All mentions →</a>
+  </section>
 
   <section class="content-section">
     <h2>Other work</h2>
@@ -192,11 +218,41 @@ const experiments = [
 
     controls.forEach((control) => control.addEventListener("click", () => showExperiment(control)));
 
+    const quotes = [...document.querySelectorAll<HTMLElement>(".testimonial")];
+    const quoteCarousel = document.querySelector<HTMLElement>(".testimonial-section");
+    const quotePosition = document.querySelector<HTMLElement>("#testimonial-position");
+    let currentQuote = 0;
+    let quotePaused = false;
+
+    const showQuote = (index: number) => {
+      currentQuote = (index + quotes.length) % quotes.length;
+      quotes.forEach((quote, i) => {
+        const active = i === currentQuote;
+        quote.classList.toggle("is-active", active);
+        quote.setAttribute("aria-hidden", String(!active));
+        const link = quote.querySelector("a");
+        if (active) link?.removeAttribute("tabindex");
+        else link?.setAttribute("tabindex", "-1");
+      });
+      if (quotePosition) quotePosition.textContent = `${currentQuote + 1} / ${quotes.length}`;
+    };
+
+    document.querySelectorAll<HTMLButtonElement>(".testimonial-step").forEach((button) =>
+      button.addEventListener("click", () => showQuote(currentQuote + Number(button.dataset.step))),
+    );
+    quoteCarousel?.addEventListener("mouseenter", () => (quotePaused = true));
+    quoteCarousel?.addEventListener("mouseleave", () => (quotePaused = false));
+    quoteCarousel?.addEventListener("focusin", () => (quotePaused = true));
+    quoteCarousel?.addEventListener("focusout", () => (quotePaused = false));
+
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       window.setInterval(() => {
         const current = controls.findIndex((control) => control.classList.contains("is-active"));
         showExperiment(controls[(current + 1) % controls.length]);
       }, 6000);
+      window.setInterval(() => {
+        if (!quotePaused) showQuote(currentQuote + 1);
+      }, 8000);
     }
   </script>
 </SiteLayout>
