@@ -1,15 +1,7 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
 import Attribution from "../components/Attribution.astro";
-import { featuredMentions, type Mention } from "../data/mentions";
-
-// Short name for a quote's progress bar label: the first author's surname, or the outlet when no author is named.
-const speaker = (mention: Mention) => {
-  const first = mention.authors?.split(/ and | et al\.|, /)[0].split(" ");
-  if (!first) return mention.venue ?? mention.title;
-  const afterInitials = first.filter((part) => !part.includes("."));
-  return afterInitials.length < first.length ? afterInitials.join(" ") : first.at(-1);
-};
+import { featuredMentions } from "../data/mentions";
 
 const experiments = [
   {
@@ -105,7 +97,7 @@ const experiments = [
         <button
           class:list={{ "testimonial-control": true, "is-active": index === 0 }}
           type="button"
-          aria-label={`Quote by ${speaker(mention)}`}
+          aria-label={`Quote by ${mention.quotedBy ?? mention.authors ?? mention.venue}`}
           aria-pressed={index === 0 ? "true" : "false"}
         ></button>
       ))}

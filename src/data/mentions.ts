@@ -2,6 +2,8 @@ export interface Mention {
   title: string;
   url: string;
   authors?: string;
+  /** Full names shown with a quote, where the citation uses initials. */
+  quotedBy?: string;
   venue?: string;
   year?: string;
   quote?: string;
@@ -116,6 +118,7 @@ export const mentionGroups: MentionGroup[] = [
         title: "Pathways to Quantum Science for High-School and Incoming College Students",
         url: "https://arxiv.org/abs/2608.12437",
         authors: "D.-A. German et al.",
+        quotedBy: "Dan-Adrian German et al.",
         venue: "arXiv",
         year: "2026",
         quote: "Everybody enjoyed working with the Quantum Flytrap […] at the same time very engaging, entertaining and also very effective.",
@@ -128,6 +131,7 @@ export const mentionGroups: MentionGroup[] = [
         title: "Jumpstarting Quantum Computing in the Middle and High-School Classroom: A Guide for Teachers and Learners",
         url: "https://homes.luddy.indiana.edu/dgerman/2025/inroads/may/14.pdf",
         authors: "D.-A. German",
+        quotedBy: "Dan-Adrian German",
         venue: "ACM Inroads",
         year: "2025",
         quote: "We hereby strongly encourage its use in the classroom and labs.",
@@ -139,6 +143,7 @@ export const mentionGroups: MentionGroup[] = [
         title: "Interference of interference effects",
         url: "https://doi.org/10.1119/5.0256745",
         authors: "K. J. Randles and S. J. van Enk",
+        quotedBy: "Kevin J. Randles and Steven J. van Enk",
         venue: "American Journal of Physics",
         year: "2025",
         quote: "The Virtual Lab is an excellent resource for simulating photonic interference.",
@@ -151,6 +156,7 @@ export const mentionGroups: MentionGroup[] = [
         title: "Defining quantum games",
         url: "https://doi.org/10.1140/epjqt/s40507-025-00308-7",
         authors: "L. Piispanen et al.",
+        quotedBy: "Laura Piispanen et al.",
         venue: "EPJ Quantum Technology",
         year: "2025",
         quote: "The player can test the behaviour of laser beams using tools that resemble actual quantum optics lab equipment, and these actions are depicted in a scientifically accurate manner.",
@@ -163,6 +169,7 @@ export const mentionGroups: MentionGroup[] = [
         title: "From staging to insight: an educational path to understanding Bell’s inequalities",
         url: "https://doi.org/10.1140/epjqt/s40507-025-00415-5",
         authors: "V. De Renzi, M. G. A. Paris, and M. Bondani",
+        quotedBy: "Valentina De Renzi, Matteo G. A. Paris, and Maria Bondani",
         venue: "EPJ Quantum Technology",
         year: "2025",
         quote: "Flytrap simulation of the experiment allows performing step-by-step measurements and verifying the violation of [Bell inequalities].",
@@ -173,6 +180,7 @@ export const mentionGroups: MentionGroup[] = [
         title: "A Physics Lab Inside Your Head: Quantum Thought Experiments as an Educational Tool",
         url: "https://doi.org/10.1109/QCE57702.2023.20325",
         authors: "M. Violaris",
+        quotedBy: "Maria Violaris",
         venue: "IEEE QCE",
         year: "2023",
         quote: "Another useful tool for playing with quantum thought experiments […] is the drag-and-drop Virtual Lab developed by Quantum Flytrap.",

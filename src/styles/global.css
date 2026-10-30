@@ -458,7 +458,9 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   line-height: 1.35;
   letter-spacing: -.01em;
 }
-.testimonial figcaption { color: var(--muted); font-size: .85rem; }
+.testimonial figcaption { color: var(--muted); font-size: .95rem; }
+.attribution-name { color: var(--text); font-weight: 500; }
+.testimonial .attribution-name { color: var(--ink); }
 .testimonial-controls { margin-bottom: 1.75rem; grid-template-columns: repeat(var(--count), minmax(0, 1fr)); }
 .testimonial-control.is-active::after { animation: carousel-progress 8s linear forwards; }
 .testimonials:hover .testimonial-control.is-active::after,

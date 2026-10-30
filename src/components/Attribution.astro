@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { item, focusable = true } = Astro.props;
+const name = item.quotedBy ?? item.authors;
 ---
 
-{item.authors && `${item.authors}, `}<a href={item.url} tabindex={focusable ? undefined : "-1"}>{item.venue ?? item.title}</a>{item.year && `, ${item.year}`}{item.note && ` (${item.note})`}
+{name && <><span class="attribution-name">{name}</span>, </>}<a href={item.url} tabindex={focusable ? undefined : "-1"}>{item.venue ?? item.title}</a>{item.year && `, ${item.year}`}{item.note && ` (${item.note})`}
