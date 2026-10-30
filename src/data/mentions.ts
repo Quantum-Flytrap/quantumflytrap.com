@@ -702,13 +702,6 @@ export const mentionGroups: MentionGroup[] = [
         year: "2024",
       },
       {
-        title: "Building Quantum Intuition",
-        url: "https://www.youtube.com/watch?v=zvRSSuzSwEw",
-        authors: "Bryan Goldstein",
-        venue: "YouTube",
-        year: "2025",
-      },
-      {
         title: "Quantum Networking Basics: Introduction to qubits with real-world examples",
         url: "https://www.aliroquantum.com/blog/qn-basics-introduction-to-qubits-with-real-world-examples",
         authors: "Daniel Winton",
@@ -726,20 +719,6 @@ export const mentionGroups: MentionGroup[] = [
         url: "https://qsnp.eu/glossary/bb84-protocol/",
         venue: "Quantum Secure Networks Partnership glossary",
         year: "2025",
-      },
-      {
-        title: "The Quantum Game: Complete Playthrough, All Solutions",
-        url: "https://www.youtube.com/watch?v=saviC0xrJ1A",
-        authors: "Pete Laric",
-        venue: "YouTube",
-        year: "2019",
-      },
-      {
-        title: "Quantum Game Solutions 1 - 34",
-        url: "https://www.youtube.com/watch?v=QZBgfy9-zi8",
-        authors: "Danylo Yakymenko",
-        venue: "YouTube",
-        year: "2018",
       },
       {
         title: "\"Quantum Game with Photons\", as played by Dr James Wootton",
