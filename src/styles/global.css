@@ -510,18 +510,7 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 @media (max-width: 850px) {
   .mention-split, .mention-split:has(.mention-pages) { grid-template-columns: 1fr; gap: 1.5rem; }
   .mention-logos { grid-template-columns: repeat(3, 1fr); }
-  /* On phones quotes drop their cards and stack compactly; figures become a strip to swipe through, ahead of the Research list. */
+  /* On phones quotes drop their cards and stack compactly; figures follow the Research list at full width. */
   .quote-grid { display: block; }
   .quote { padding: 1.25rem 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: none; }
-  .mention-pages {
-    order: -1;
-    margin-right: calc(-1 * var(--gutter));
-    padding-right: var(--gutter);
-    display: flex;
-    align-items: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-  .mention-pages a { flex: 0 0 85%; scroll-snap-align: start; }
 }
