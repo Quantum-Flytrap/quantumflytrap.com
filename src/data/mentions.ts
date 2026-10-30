@@ -12,8 +12,6 @@ export interface Mention {
   page?: string;
   logo?: string;
   featured?: number;
-  /** Name on the homepage quote bar, when the author's surname or the outlet is too long or missing. */
-  short?: string;
 }
 
 export interface MentionGroup {
@@ -590,7 +588,6 @@ export const mentionGroups: MentionGroup[] = [
         year: "2022",
         quote: "The result is polished, educational and challenging. It's also free and surprisingly entertaining.",
         featured: 4,
-        short: "Discover",
       },
       {
         title: "Post on X",

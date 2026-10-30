@@ -460,20 +460,6 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 }
 .testimonial figcaption { color: var(--muted); font-size: .85rem; }
 .testimonial-controls { margin-bottom: 1.75rem; grid-template-columns: repeat(var(--count), minmax(0, 1fr)); }
-/* Each bar is labelled with who is quoted, so the row reads as a list of voices, not a bare progress meter. */
-.testimonial-control {
-  height: auto;
-  padding-top: 14px;
-  overflow: hidden;
-  color: var(--muted);
-  font: inherit;
-  font-size: .75rem;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: color .2s;
-}
-.testimonial-control:hover, .testimonial-control.is-active { color: var(--ink); }
 .testimonial-control.is-active::after { animation: carousel-progress 8s linear forwards; }
 .testimonials:hover .testimonial-control.is-active::after,
 .testimonials:focus-within .testimonial-control.is-active::after,
@@ -503,7 +489,6 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   .project-grid { grid-template-columns: 1fr; }
   .section-title { display: block; }
   .section-title > a { display: inline-block; margin: -1rem 0 2rem; }
-  .testimonial-control { font-size: 0; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }
 }
