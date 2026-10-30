@@ -12,6 +12,8 @@ export interface Mention {
   page?: string;
   logo?: string;
   featured?: number;
+  /** Name on the homepage quote bar, when the author's surname or the outlet is too long or missing. */
+  short?: string;
 }
 
 export interface MentionGroup {
@@ -131,7 +133,6 @@ export const mentionGroups: MentionGroup[] = [
         venue: "ACM Inroads",
         year: "2025",
         quote: "We hereby strongly encourage its use in the classroom and labs.",
-        featured: 7,
         excerpt: "Figure 14. Experimental proof in Quantum Flytrap (via a Mach-Zehnder Interferometer) that stacking two PETE boxes leaves the input unchanged.",
         figure: "/mentions/german-2025-inroads.png",
         page: "/mentions/pages/german-2025-inroads.png",
@@ -155,7 +156,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "EPJ Quantum Technology",
         year: "2025",
         quote: "The player can test the behaviour of laser beams using tools that resemble actual quantum optics lab equipment, and these actions are depicted in a scientifically accurate manner.",
-        featured: 8,
+        featured: 7,
         excerpt: "Figure 4 Screenshots from the educational games (a) Quantum TiqTaqToe (2019) and (b) Quantum Game by Quantum Flytrap (2020). […] In Quantum Game the player solves puzzles introducing the basic actions and logic of quantum optics equipment",
         figure: "/mentions/piispanen-2025-quantum-games.png",
         page: "/mentions/pages/piispanen-2025-quantum-games.png",
@@ -167,7 +168,7 @@ export const mentionGroups: MentionGroup[] = [
         venue: "EPJ Quantum Technology",
         year: "2025",
         quote: "Flytrap simulation of the experiment allows performing step-by-step measurements and verifying the violation of [Bell inequalities].",
-        featured: 9,
+        featured: 8,
         excerpt: "Then, the real experiment can be discussed, both exploiting computer simulations, such as e.g. the one available from the Flytrap project [32, 33], and presenting one historical experiment […]. Flytrap simulation of the experiment allows performing step-by step measurements and verifying the violation of BI (when statistics is high enough).",
       },
       {
@@ -589,6 +590,7 @@ export const mentionGroups: MentionGroup[] = [
         year: "2022",
         quote: "The result is polished, educational and challenging. It's also free and surprisingly entertaining.",
         featured: 4,
+        short: "Discover",
       },
       {
         title: "Post on X",
@@ -604,7 +606,7 @@ export const mentionGroups: MentionGroup[] = [
         authors: "Craig Gidney",
         year: "2022",
         quote: "I really like quantum flytrap.",
-        featured: 10,
+        featured: 9,
       },
       {
         title: "Virtual Quantum Lab Nominated for Webby Award",

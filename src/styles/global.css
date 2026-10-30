@@ -394,8 +394,25 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 .quote blockquote { margin: 0 0 1.1rem; color: var(--ink); font-size: 1.05rem; line-height: 1.55; }
 .quote figcaption { margin-top: auto; color: var(--muted); font-size: .84rem; }
 .quote figcaption a, .testimonial figcaption a { color: var(--text); }
-.mention-groups { padding-top: 0; }
-.mention-groups h2 { margin-top: clamp(2.5rem, 5vw, 4rem); }
+/* Sections on the mentions page follow each other closely, with one even gap between them. */
+.mentions-page .content-section + .content-section { padding-top: 0; }
+.mentions-intro h1 { margin-bottom: 1.5rem; font-size: clamp(2.25rem, 4.5vw, 3.5rem); }
+.section-links { margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.section-links a {
+  padding: .45rem .9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-button);
+  background: var(--bg-raised);
+  color: var(--ink);
+  font-size: .85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+.section-links a:hover { background: var(--bg-raised-hover); border-color: rgba(255, 255, 255, .3); }
+.section-links span { margin-left: .3rem; color: var(--muted); font-weight: 400; }
+.mentions-prompt { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; }
+.mentions-prompt p { margin: 0; color: var(--muted); font-size: .9rem; }
 .mention-list { max-width: 960px; margin: 0; padding: 0; list-style: none; font-size: .92rem; }
 .mention-list li { position: relative; margin-bottom: .7rem; line-height: 1.6; }
 .mention-list a { color: var(--ink); }
@@ -425,7 +442,7 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
 .quote:hover .mention-excerpt,
 .quote:focus-within .mention-excerpt { display: block; }
 
-.educator-quotes { margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.75rem; border-top: 1px solid var(--line); }
+.educator-quotes { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
 /* Only the active quote takes up space; the script eases the box to its height. */
 .testimonial-carousel { position: relative; overflow: hidden; transition: height .4s ease; }
 .testimonial {
@@ -437,9 +454,32 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   transition: opacity .6s ease;
 }
 .testimonial.is-active { position: relative; visibility: visible; opacity: 1; }
-.testimonial blockquote { max-width: 68ch; margin: 0 0 .35rem; color: var(--ink); font-size: 1rem; line-height: 1.6; }
-.testimonial figcaption { color: var(--muted); font-size: .8rem; }
-.testimonial-controls { grid-template-columns: repeat(var(--count), 1fr); max-width: 32rem; }
+.testimonial blockquote {
+  max-width: 46ch;
+  margin: 0 0 .75rem;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+}
+.testimonial figcaption { color: var(--muted); font-size: .85rem; }
+.testimonial-controls { margin-top: 1.5rem; grid-template-columns: repeat(var(--count), minmax(0, 1fr)); }
+/* Each bar is labelled with who is quoted, so the row reads as a list of voices, not a bare progress meter. */
+.testimonial-control {
+  height: auto;
+  padding-top: 14px;
+  overflow: hidden;
+  color: var(--muted);
+  font: inherit;
+  font-size: .75rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color .2s;
+}
+.testimonial-control:hover, .testimonial-control.is-active { color: var(--ink); }
 .testimonial-control.is-active::after { animation: carousel-progress 8s linear forwards; }
 .educator-quotes:hover .testimonial-control.is-active::after,
 .educator-quotes:focus-within .testimonial-control.is-active::after,
@@ -469,6 +509,7 @@ nav .nav-cta:hover { color: white; background: var(--accent-hover); }
   .project-grid { grid-template-columns: 1fr; }
   .section-title { display: block; }
   .section-title > a { display: inline-block; margin: -1rem 0 2rem; }
+  .testimonial-control { font-size: 0; }
   .project-row { grid-template-columns: 1fr auto; }
   .project-row p { grid-column: 1 / -1; }
 }
